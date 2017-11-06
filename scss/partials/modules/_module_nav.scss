@@ -1,0 +1,54 @@
+/* ------------------------------------------------------------ *\
+	Navigations
+\* ------------------------------------------------------------ */
+
+nav.menu {
+    & .toggle-nav {
+        position: absolute;
+        top: 63px;
+        right: 6%;
+        & .fa-bars:before {
+            color: $red;
+        }
+    }
+    & ul {
+        display: none;
+        & li {
+            padding: 10px 0;
+            font-size: 15px;
+            background: $dark;
+        }
+        & a {
+            color: $white;
+            padding: 10px 0;
+        }
+    }
+}
+
+@media #{$desktop} {
+    nav.menu {
+        & .toggle-nav {
+            display: none;
+        }
+        & ul {
+            display: block;
+            margin-top: -50px;
+            text-align: right;
+            & li {
+                display: inline-block;
+                padding: 0 15px;
+                font-size: 17px;
+                background: none;
+                & a {
+                    color: $white;
+                    padding: 10px 10px;
+                }
+                a {
+                    &:hover {
+                        border-bottom: 1px solid $white;
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,43 @@
+/* ------------------------------------------------------------ *\
+    Screen-three
+\* ------------------------------------------------------------ */
+
+.screen-three {
+    background-color: $red;
+    & .upper-main-content {
+        background: url("/css/images/background.png") repeat;
+        padding-top: 30px;
+        border-bottom: 4px dotted $red;
+        & .main-content-inner {
+            width: 90%;
+            margin: 0 auto;
+        }
+        @media #{$desktop} {
+            .main-content-inner {
+                width: 980px;
+            }
+        }
+    }
+    & .main-content .main-content-inner {
+        width: 90%;
+        margin: 0 auto;
+    }
+    @media #{$desktop} {
+        .main-content .main-content-inner {
+            width: 980px;
+        }
+    }
+    & h1 {
+        font-size: 20px;
+        font-weight: $font-weight-2;
+        font-family: $font-family-1;
+        color: $red;
+        text-align: center;
+        padding-bottom: 20px;
+    }
+    @media #{$tablet} {
+        h1 {
+            font-size: $font-size-30;
+        }
+    }
+}

@@ -1,0 +1,20 @@
+/* ------------------------------------------------------------ *\
+    Footer-text
+\* ------------------------------------------------------------ */
+
+.cr-text {
+    color: $gray;
+    font-size: 16px;
+    text-align: center;
+    padding: 10px 0;
+    text-transform: uppercase;
+}
+
+@media #{$desktop} {
+    .cr-text {
+        text-align: left;
+        font-size: 12px;
+        display: inline-block;
+        padding-top: 30px;
+    }
+}

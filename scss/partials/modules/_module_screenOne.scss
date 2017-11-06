@@ -1,0 +1,45 @@
+/* ------------------------------------------------------------ *\
+    Screen-one
+\* ------------------------------------------------------------ */
+
+.screen-one {
+    background: $red;
+    & .main {
+        background: url("/css/images/screen-1.jpg") no-repeat center;
+        background-size: cover;
+        width: 100%;
+        height: 850px;
+        font-size: 15px;
+        position: relative;
+        & .main-inner {
+            width: 90%;
+            margin: 0 auto;
+        }
+        @media #{$desktop} {
+            .main-inner {
+                width: 980px;
+            }
+        }
+        & .reservation-form {
+            width: 90%;
+            background: rgba(0, 0, 0, 0.55);
+            position: absolute;
+            top: 24%;
+            right: 0;
+            left: 0;
+            bottom: 21%;
+            margin: auto;
+        }
+        @media #{$desktop} {
+            .reservation-form {
+                height: 300px;
+                width: 600px;
+                top: 0;
+                & .reservation-form-center {
+                    width: 540px;
+                    margin: 10px auto;
+                }
+            }
+        }
+    }
+}

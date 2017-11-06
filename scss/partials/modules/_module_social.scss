@@ -1,0 +1,28 @@
+/* ------------------------------------------------------------ *\
+	Footer-payments
+\* ------------------------------------------------------------ */
+
+.social {
+    color: $gray;
+    font-size: 16px;
+    text-align: center;
+    padding: 10px 0;
+    & a {
+        color: $white;
+        &:after {
+            content: url("/css/images/fb.png");
+            display: inline-block;
+            vertical-align: middle;
+            padding-left: 15px;
+        }
+    }
+}
+
+@media #{$desktop} {
+    .social {
+        margin-left: 132px;
+        font-size: 12px;
+        display: inline-block;
+        padding-top: 30px;
+    }
+}

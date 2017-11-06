@@ -1,0 +1,18 @@
+/* ------------------------------------------------------------ *\
+  Footer-clients
+\* ------------------------------------------------------------ */
+
+.clients {
+    width: 251px;
+    margin: 0 auto;
+    & img {
+        width: 100%;
+    }
+}
+
+@media #{$desktop} {
+    .clients {
+        float: none;
+        display: inline-block;
+    }
+}

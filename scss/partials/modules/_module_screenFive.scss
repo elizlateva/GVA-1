@@ -1,0 +1,26 @@
+/* ------------------------------------------------------------ *\
+    Screen-five
+\* ------------------------------------------------------------ */
+
+.screen-five {
+    color: $black;
+    & .main-content {
+        padding: 30px 0;
+    }
+    & .main-content-inner {
+        width: 90%;
+        margin: 0 auto;
+    }
+}
+
+@media #{$desktop} {
+    .screen-five {
+        .main-content {
+            padding: 200px 0;
+        }
+        .main-content-inner {
+            width: 980px;
+            margin: 0 auto;
+        }
+    }
+}

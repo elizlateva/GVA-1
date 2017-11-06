@@ -1,0 +1,31 @@
+/* ------------------------------------------------------------ *\
+	Footer-payments
+\* ------------------------------------------------------------ */
+
+.payments {
+    width: 251px;
+    margin: 10px auto;
+    & ul li {
+        display: inline-block;
+        & img {
+            width: 93px;
+            height: 36px;
+            &.round-border {
+                border-radius: 6px;
+                width: 58px;
+            }
+            &.image-center {
+                width: 58px;
+                height: 36px;
+                margin: 15px 1px
+            }
+        }
+    }
+}
+
+@media #{$desktop} {
+    .payments {
+        float: none;
+        display: inline-block;
+    }
+}

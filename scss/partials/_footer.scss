@@ -1,0 +1,20 @@
+/* ------------------------------------------------------------ *\
+    Footer
+\* ------------------------------------------------------------ */
+
+footer {
+    background-color: $dark;
+    & .footer-inner {
+        width: 90%;
+        margin: 0 auto;
+        padding: 20px 0;
+    }
+    @media #{$desktop} {
+        .footer-inner {
+            width: 980px;
+            & .image-center {
+                float: right;
+            }
+        }
+    }
+}
