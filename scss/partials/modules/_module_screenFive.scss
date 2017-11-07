@@ -4,6 +4,7 @@
 
 .screen-five {
     color: $black;
+    border-top: 4px dotted $red;
     & .main-content {
         padding: 30px 0;
     }
