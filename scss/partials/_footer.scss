@@ -12,7 +12,8 @@ footer {
     @media #{$desktop} {
         .footer-inner {
             width: 980px;
-            & .image-center {
+            & .footer-image-center {
+                width: 527px;
                 float: right;
             }
         }

@@ -3,12 +3,11 @@
 \* ------------------------------------------------------------ */
 
 .social {
-    color: $gray;
     font-size: 16px;
     text-align: center;
     padding: 10px 0;
     & a {
-        color: $white;
+        color: $gray;
         &:after {
             content: url("/css/images/fb.png");
             display: inline-block;
@@ -20,9 +19,7 @@
 
 @media #{$desktop} {
     .social {
-        margin-left: 132px;
-        font-size: 12px;
-        display: inline-block;
-        padding-top: 30px;
+        padding-top: 23px;
+        float: right;
     }
 }

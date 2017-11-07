@@ -948,7 +948,8 @@ footer .footer-inner {
   footer .footer-inner {
     width: 980px;
   }
-  footer .footer-inner .image-center {
+  footer .footer-inner .footer-image-center {
+    width: 527px;
     float: right;
   }
 }
@@ -977,7 +978,6 @@ footer .footer-inner {
 @media only screen and (min-width: 1024px) {
   .contact {
     display: inline-block;
-    vertical-align: top;
   }
 }
 
@@ -988,13 +988,9 @@ footer .footer-inner {
   margin: 0 auto;
 }
 
-.clients img {
-  width: 100%;
-}
-
 @media only screen and (min-width: 1024px) {
   .clients {
-    float: none;
+    margin-right: 20px;
     display: inline-block;
   }
 }
@@ -1003,7 +999,7 @@ footer .footer-inner {
 \* ------------------------------------------------------------ */
 .payments {
   width: 251px;
-  margin: 10px auto;
+  margin: 20px auto;
 }
 
 .payments ul li {
@@ -1023,13 +1019,14 @@ footer .footer-inner {
 .payments ul li img.image-center {
   width: 58px;
   height: 36px;
-  margin: 15px 1px;
+  margin-bottom: 22px;
+  margin-left: 2px;
 }
 
 @media only screen and (min-width: 1024px) {
   .payments {
-    float: none;
     display: inline-block;
+    vertical-align: middle;
   }
 }
 
@@ -1046,7 +1043,6 @@ footer .footer-inner {
 @media only screen and (min-width: 1024px) {
   .cr-text {
     text-align: left;
-    font-size: 12px;
     display: inline-block;
     padding-top: 30px;
   }
@@ -1055,14 +1051,13 @@ footer .footer-inner {
 /* ------------------------------------------------------------ *	Footer-payments
 \* ------------------------------------------------------------ */
 .social {
-  color: #a1a1a1;
   font-size: 16px;
   text-align: center;
   padding: 10px 0;
 }
 
 .social a {
-  color: #fff;
+  color: #a1a1a1;
 }
 
 .social a:after {
@@ -1074,10 +1069,8 @@ footer .footer-inner {
 
 @media only screen and (min-width: 1024px) {
   .social {
-    margin-left: 132px;
-    font-size: 12px;
-    display: inline-block;
-    padding-top: 30px;
+    padding-top: 23px;
+    float: right;
   }
 }
  
