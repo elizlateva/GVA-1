@@ -312,7 +312,7 @@ nav.menu ul a {
 
 /* ------------------------------------------------------------ *	Main
 \* ------------------------------------------------------------ */
-/* ------------------------------------------------------------ *    Screen-one
+/* ------------------------------------------------------------ *    Reservation-section
 \* ------------------------------------------------------------ */
 .reservation-section {
   background: #bf1e2d;
@@ -449,7 +449,7 @@ form .select-center .select-wrapper select {
   margin: 30px 0;
 }
 
-/* ------------------------------------------------------------ *    Screen-one footer
+/* ------------------------------------------------------------ *    Reservation-section-footer
 \* ------------------------------------------------------------ */
 .reservation-section-footer {
   position: relative;
@@ -497,28 +497,28 @@ form .select-center .select-wrapper select {
   }
 }
 
-/* ------------------------------------------------------------ *    Screen-two
+/* ------------------------------------------------------------ *    Content-section
 \* ------------------------------------------------------------ */
-.screen-two {
+.content-section {
   background: url("/css/images/background.png") repeat;
 }
 
-.screen-two .main-content {
+.content-section .main-content {
   padding: 30px 0;
 }
 
-.screen-two .main-content .main-content-inner {
+.content-section .main-content .main-content-inner {
   width: 90%;
   margin: 0 auto;
 }
 
 @media only screen and (min-width: 1024px) {
-  .screen-two .main-content .main-content-inner {
+  .content-section .main-content .main-content-inner {
     width: 980px;
   }
 }
 
-.screen-two .main-content h1 {
+.content-section .main-content h1 {
   font-size: 20px;
   font-weight: bold;
   font-family: "Raleway", sans-serif;
@@ -529,37 +529,12 @@ form .select-center .select-wrapper select {
 }
 
 @media only screen and (min-width: 768px) {
-  .screen-two .main-content h1 {
+  .content-section .main-content h1 {
     font-size: 30px;
   }
 }
 
-.screen-two .main-content .text {
-  padding: 40px 0;
-  color: #000;
-  font-size: 13px;
-  line-height: 30px;
-  word-wrap: break-word;
-  word-break: break-all;
-}
-
-@media only screen and (min-width: 768px) {
-  .screen-two .main-content .text {
-    font-size: 16px;
-  }
-}
-
-@media only screen and (min-width: 1024px) {
-  .screen-two .main-content .text {
-    padding: 200px 0;
-  }
-}
-
-.screen-two .main-content p {
-  padding: 10px 0;
-}
-
-/* ------------------------------------------------------------ *    Screen-two-content
+/* ------------------------------------------------------------ *    Content-section-text
 \* ------------------------------------------------------------ */
 .text {
   padding: 40px 0;
