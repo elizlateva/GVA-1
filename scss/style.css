@@ -561,41 +561,41 @@ form .select-center .select-wrapper select {
   }
 }
 
-/* ------------------------------------------------------------ *    Screen-three
+/* ------------------------------------------------------------ *    Service-section
 \* ------------------------------------------------------------ */
-.screen-three {
+.service-section {
   background-color: #bf1e2d;
 }
 
-.screen-three .upper-main-content {
+.service-section .upper-main-content {
   background: url("/css/images/background.png") repeat;
   padding-top: 30px;
   border-bottom: 4px dotted #bf1e2d;
 }
 
-.screen-three .upper-main-content .main-content-inner {
+.service-section .upper-main-content .main-content-inner {
   width: 90%;
   margin: 0 auto;
 }
 
 @media only screen and (min-width: 1024px) {
-  .screen-three .upper-main-content .main-content-inner {
+  .service-section .upper-main-content .main-content-inner {
     width: 980px;
   }
 }
 
-.screen-three .main-content .main-content-inner {
+.service-section .main-content .main-content-inner {
   width: 90%;
   margin: 0 auto;
 }
 
 @media only screen and (min-width: 1024px) {
-  .screen-three .main-content .main-content-inner {
+  .service-section .main-content .main-content-inner {
     width: 980px;
   }
 }
 
-.screen-three h1 {
+.service-section h1 {
   font-size: 20px;
   font-weight: bold;
   font-family: "Raleway", sans-serif;
@@ -605,12 +605,12 @@ form .select-center .select-wrapper select {
 }
 
 @media only screen and (min-width: 768px) {
-  .screen-three h1 {
+  .service-section h1 {
     font-size: 30px;
   }
 }
 
-/* ------------------------------------------------------------ *    Screen-three-content
+/* ------------------------------------------------------------ *    Service-section-content
 \* ------------------------------------------------------------ */
 .content {
   color: #fff;
