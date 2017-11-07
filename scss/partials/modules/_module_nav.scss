@@ -3,10 +3,12 @@
 \* ------------------------------------------------------------ */
 
 nav.menu {
+    position: relative;
+    background: $dark;
     & .toggle-nav {
         position: absolute;
-        top: 63px;
-        right: 6%;
+        top: -57px;
+        right: 1%;
         & .fa-bars:before {
             color: $red;
         }
@@ -16,7 +18,6 @@ nav.menu {
         & li {
             padding: 10px 0;
             font-size: 15px;
-            background: $dark;
         }
         & a {
             color: $white;
@@ -32,11 +33,12 @@ nav.menu {
         }
         & ul {
             display: block;
-            margin-top: -50px;
-            text-align: right;
+            position: absolute;
+            top: -50px;
+            left: 100px;
             & li {
                 display: inline-block;
-                padding: 0 15px;
+                padding: 0 17px;
                 font-size: 17px;
                 background: none;
                 & a {

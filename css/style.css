@@ -228,11 +228,6 @@ h3 {
   display: inline-block;
 }
 
-.header .logo img {
-  max-width: 100%;
-  display: inline-block;
-}
-
 @media only screen and (min-width: 1024px) {
   .header .header-inner {
     width: 980px;
@@ -242,10 +237,15 @@ h3 {
 
 /* ------------------------------------------------------------ *	Navigations
 \* ------------------------------------------------------------ */
+nav.menu {
+  position: relative;
+  background: #333;
+}
+
 nav.menu .toggle-nav {
   position: absolute;
-  top: 63px;
-  right: 6%;
+  top: -57px;
+  right: 1%;
 }
 
 nav.menu .toggle-nav .fa-bars:before {
@@ -259,7 +259,6 @@ nav.menu ul {
 nav.menu ul li {
   padding: 10px 0;
   font-size: 15px;
-  background: #333;
 }
 
 nav.menu ul a {
@@ -273,12 +272,13 @@ nav.menu ul a {
   }
   nav.menu ul {
     display: block;
-    margin-top: -50px;
-    text-align: right;
+    position: absolute;
+    top: -50px;
+    left: 100px;
   }
   nav.menu ul li {
     display: inline-block;
-    padding: 0 15px;
+    padding: 0 17px;
     font-size: 17px;
     background: none;
   }
@@ -294,6 +294,7 @@ nav.menu ul a {
 /* ------------------------------------------------------------ *	Select-language
 \* ------------------------------------------------------------ */
 .select-lang {
+  display: none;
   background: #bf1e2d;
   border-radius: 4px;
   width: 47px;
@@ -304,10 +305,19 @@ nav.menu ul a {
   background: url("/css/images/polygon.png") no-repeat 80% 50%;
   color: #fff;
   font-size: 16px;
-  text-indent: 4px;
+  text-indent: 10px;
   border: none;
   width: 47px;
   height: 30px;
+}
+
+@media only screen and (min-width: 1024px) {
+  .select-lang {
+    display: block;
+    position: absolute;
+    right: 0;
+    top: -57px;
+  }
 }
 
 /* ------------------------------------------------------------ *	Main

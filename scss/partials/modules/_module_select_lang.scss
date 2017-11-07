@@ -3,6 +3,7 @@
 \* ------------------------------------------------------------ */
 
 .select-lang {
+    display: none;
     background: $red;
     border-radius: 4px;
     width: 47px;
@@ -11,9 +12,18 @@
         background: url("/css/images/polygon.png") no-repeat 80% 50%;
         color: $white;
         font-size: 16px;
-        text-indent: 4px;
+        text-indent: 10px;
         border: none;
         width: 47px;
         height: 30px;
+    }
+}
+
+@media #{$desktop} {
+    .select-lang {
+        display: block;
+        position: absolute;
+        right: 0;
+        top: -57px;
     }
 }

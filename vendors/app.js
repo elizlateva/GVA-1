@@ -2,6 +2,7 @@ $(document).ready(function() {
     $('.toggle-nav').click(function(e) {
         $(this).toggleClass('active');
         $('nav.menu ul').slideToggle();
+        $('.select-lang').slideToggle().css('display', 'block');
         e.preventDefault();
     });
 
