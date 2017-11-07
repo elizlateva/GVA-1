@@ -2,8 +2,7 @@
     Screen-one footer
 \* ------------------------------------------------------------ */
 
-.section-one-footer {
-    background-color: $red;
+.reservation-section-footer {
     position: relative;
     &:before {
         content: "";
@@ -13,7 +12,7 @@
         position: absolute;
         top: -6px;
     }
-    & .section-one-footer-center {
+    & .reservation-section-footer-center {
         padding: 20px 0;
         width: 330px;
         margin: 0 auto;
@@ -37,10 +36,12 @@
 }
 
 @media #{$tablet} {
-    .section-one-footer-center {
-        width: 450px;
-        & p {
-            font-size: 48px;
+    .reservation-section-footer {
+        .reservation-section-footer-center {
+            width: 450px;
+            & p {
+                font-size: 48px;
+            }
         }
     }
 }

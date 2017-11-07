@@ -2,7 +2,7 @@
     Screen-one
 \* ------------------------------------------------------------ */
 
-.screen-one {
+.reservation-section {
     background: $red;
     & .main {
         background: url("/css/images/screen-1.jpg") no-repeat center;
@@ -34,7 +34,6 @@
             .reservation-form {
                 height: 300px;
                 width: 600px;
-                top: 0;
                 & .reservation-form-center {
                     width: 540px;
                     margin: 10px auto;

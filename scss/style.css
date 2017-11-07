@@ -154,6 +154,10 @@ select {
   outline: none;
 }
 
+input {
+  outline: none;
+}
+
 /* ------------------------------------------------------------ *	Base
 \* ------------------------------------------------------------ */
 body {
@@ -310,11 +314,11 @@ nav.menu ul a {
 \* ------------------------------------------------------------ */
 /* ------------------------------------------------------------ *    Screen-one
 \* ------------------------------------------------------------ */
-.screen-one {
+.reservation-section {
   background: #bf1e2d;
 }
 
-.screen-one .main {
+.reservation-section .main {
   background: url("/css/images/screen-1.jpg") no-repeat center;
   background-size: cover;
   width: 100%;
@@ -323,18 +327,18 @@ nav.menu ul a {
   position: relative;
 }
 
-.screen-one .main .main-inner {
+.reservation-section .main .main-inner {
   width: 90%;
   margin: 0 auto;
 }
 
 @media only screen and (min-width: 1024px) {
-  .screen-one .main .main-inner {
+  .reservation-section .main .main-inner {
     width: 980px;
   }
 }
 
-.screen-one .main .reservation-form {
+.reservation-section .main .reservation-form {
   width: 90%;
   background: rgba(0, 0, 0, 0.55);
   position: absolute;
@@ -346,12 +350,11 @@ nav.menu ul a {
 }
 
 @media only screen and (min-width: 1024px) {
-  .screen-one .main .reservation-form {
+  .reservation-section .main .reservation-form {
     height: 300px;
     width: 600px;
-    top: 0;
   }
-  .screen-one .main .reservation-form .reservation-form-center {
+  .reservation-section .main .reservation-form .reservation-form-center {
     width: 540px;
     margin: 10px auto;
   }
@@ -448,12 +451,12 @@ form .select-center .select-wrapper select {
 
 /* ------------------------------------------------------------ *    Screen-one footer
 \* ------------------------------------------------------------ */
-.section-one-footer {
+.reservation-section-footer {
   background-color: #bf1e2d;
   position: relative;
 }
 
-.section-one-footer:before {
+.reservation-section-footer:before {
   content: "";
   width: 100%;
   display: inline-block;
@@ -462,13 +465,13 @@ form .select-center .select-wrapper select {
   top: -6px;
 }
 
-.section-one-footer .section-one-footer-center {
+.reservation-section-footer .reservation-section-footer-center {
   padding: 20px 0;
   width: 330px;
   margin: 0 auto;
 }
 
-.section-one-footer .section-one-footer-center p {
+.reservation-section-footer .reservation-section-footer-center p {
   display: inline;
   font-size: 26px;
   letter-spacing: 2px;
@@ -478,7 +481,7 @@ form .select-center .select-wrapper select {
   padding: 15px 0;
 }
 
-.section-one-footer img {
+.reservation-section-footer img {
   width: 60px;
   height: 60px;
   display: inline-block;
@@ -487,10 +490,10 @@ form .select-center .select-wrapper select {
 }
 
 @media only screen and (min-width: 768px) {
-  .section-one-footer-center {
+  .reservation-section-footer .reservation-section-footer-center {
     width: 450px;
   }
-  .section-one-footer-center p {
+  .reservation-section-footer .reservation-section-footer-center p {
     font-size: 48px;
   }
 }
