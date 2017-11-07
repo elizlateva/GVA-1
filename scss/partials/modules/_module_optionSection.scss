@@ -1,8 +1,8 @@
 /* ------------------------------------------------------------ *\
-    Screen-five
+    Option-section
 \* ------------------------------------------------------------ */
 
-.screen-five {
+.option-section {
     color: $black;
     border-top: 4px dotted $red;
     & .main-content {
@@ -15,13 +15,14 @@
 }
 
 @media #{$desktop} {
-    .screen-five {
-        .main-content {
+    .option-section {
+        border-top: none;
+        & .main-content {
             padding: 200px 0;
-        }
-        .main-content-inner {
-            width: 980px;
-            margin: 0 auto;
+            & .main-content-inner {
+                width: 980px;
+                margin: 0 auto;
+            }
         }
     }
 }

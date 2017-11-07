@@ -3,7 +3,6 @@
 \* ------------------------------------------------------------ */
 
 table {
-    border-collapse: collapse;
     width: 100%;
     color: $gray;
     font-size: 10px;
@@ -47,44 +46,47 @@ table {
 }
 
 @media #{$desktop} {
-    table {
-        border: 1px solid $red;
-        font-size: 16px;
-        & thead {
-            display: table-header-group;
-            color: $white;
-            font-size: 18px;
-            & th {
-                text-align: left;
-                background: $red;
-            }
-        }
-        & tr {
-            display: table-row;
-            border: none;
-            & td {
-                display: table-cell;
-                text-align: left;
-                padding-right: 0;
-                padding-left: 0;
-                color: #404040;
-                font-weight: none;
-                &.title {
-                    background: none;
+    .table {
+        padding: 200px 0;
+        & table {
+            border: 1px solid $red;
+            font-size: 16px;
+            & thead {
+                display: table-header-group;
+                color: $white;
+                font-size: 18px;
+                & th {
                     text-align: left;
-                    text-indent: 10px;
+                    background: $red;
+                }
+            }
+            & tr {
+                display: table-row;
+                border: none;
+                & td {
+                    display: table-cell;
+                    text-align: left;
+                    padding-right: 0;
+                    padding-left: 0;
                     color: #404040;
                     font-weight: none;
+                    &.title {
+                        background: none;
+                        text-align: left;
+                        text-indent: 10px;
+                        color: #404040;
+                        font-weight: none;
+                    }
+                    &::before {
+                        display: none;
+                    }
+                    &:hover {
+                        color: $black;
+                    }
                 }
-                &::before {
-                    display: none;
+                &:nth-child(2n+1) {
+                    background: #f8e6e8;
                 }
-                &:hover {
-                    color: $black;
-                }
-            }
-            &:nth-child(2n+1) {
-                background: #f8e6e8;
             }
         }
     }

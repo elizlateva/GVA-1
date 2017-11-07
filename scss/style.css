@@ -672,23 +672,28 @@ form .select-center .select-wrapper select {
   }
 }
 
-/* ------------------------------------------------------------ *    Screen-four
+/* ------------------------------------------------------------ *    Content-section
 \* ------------------------------------------------------------ */
-.screen-four {
+.content-section {
   background: url("/css/images/background.png") repeat;
-  border-bottom: 4px dotted #bf1e2d;
 }
 
-.screen-four .main-content {
+.content-section .main-content {
   padding: 30px 0;
 }
 
-.screen-four .main-content .main-content-inner {
+.content-section .main-content .main-content-inner {
   width: 90%;
   margin: 0 auto;
 }
 
-.screen-four .main-content .main-content-inner h1 {
+@media only screen and (min-width: 1024px) {
+  .content-section .main-content .main-content-inner {
+    width: 980px;
+  }
+}
+
+.content-section .main-content h1 {
   font-size: 20px;
   font-weight: bold;
   font-family: "Raleway", sans-serif;
@@ -699,28 +704,14 @@ form .select-center .select-wrapper select {
 }
 
 @media only screen and (min-width: 768px) {
-  .screen-four .main-content .main-content-inner h1 {
+  .content-section .main-content h1 {
     font-size: 30px;
   }
 }
 
-@media only screen and (min-width: 1024px) {
-  .screen-four {
-    border-bottom: none;
-  }
-  .screen-four .main-content {
-    padding: 200px 0;
-  }
-  .screen-four .main-content .main-content-inner {
-    width: 980px;
-    margin: 0 auto;
-  }
-}
-
-/* ------------------------------------------------------------ *    Screen-four-table
+/* ------------------------------------------------------------ *    Content-section-table
 \* ------------------------------------------------------------ */
 table {
-  border-collapse: collapse;
   width: 100%;
   color: #a1a1a1;
   font-size: 10px;
@@ -771,24 +762,27 @@ table tr td::before {
 }
 
 @media only screen and (min-width: 1024px) {
-  table {
+  .table {
+    padding: 200px 0;
+  }
+  .table table {
     border: 1px solid #bf1e2d;
     font-size: 16px;
   }
-  table thead {
+  .table table thead {
     display: table-header-group;
     color: #fff;
     font-size: 18px;
   }
-  table thead th {
+  .table table thead th {
     text-align: left;
     background: #bf1e2d;
   }
-  table tr {
+  .table table tr {
     display: table-row;
     border: none;
   }
-  table tr td {
+  .table table tr td {
     display: table-cell;
     text-align: left;
     padding-right: 0;
@@ -796,50 +790,54 @@ table tr td::before {
     color: #404040;
     font-weight: none;
   }
-  table tr td.title {
+  .table table tr td.title {
     background: none;
     text-align: left;
     text-indent: 10px;
     color: #404040;
     font-weight: none;
   }
-  table tr td::before {
+  .table table tr td::before {
     display: none;
   }
-  table tr td:hover {
+  .table table tr td:hover {
     color: #000;
   }
-  table tr:nth-child(2n+1) {
+  .table table tr:nth-child(2n+1) {
     background: #f8e6e8;
   }
 }
 
-/* ------------------------------------------------------------ *    Screen-five
+/* ------------------------------------------------------------ *    Option-section
 \* ------------------------------------------------------------ */
-.screen-five {
+.option-section {
   color: #000;
+  border-top: 4px dotted #bf1e2d;
 }
 
-.screen-five .main-content {
+.option-section .main-content {
   padding: 30px 0;
 }
 
-.screen-five .main-content-inner {
+.option-section .main-content-inner {
   width: 90%;
   margin: 0 auto;
 }
 
 @media only screen and (min-width: 1024px) {
-  .screen-five .main-content {
+  .option-section {
+    border-top: none;
+  }
+  .option-section .main-content {
     padding: 200px 0;
   }
-  .screen-five .main-content-inner {
+  .option-section .main-content .main-content-inner {
     width: 980px;
     margin: 0 auto;
   }
 }
 
-/* ------------------------------------------------------------ *    Screen-five-accordion
+/* ------------------------------------------------------------ *    Option-section-accordion
 \* ------------------------------------------------------------ */
 .accordion {
   width: 300px;
