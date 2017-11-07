@@ -215,7 +215,7 @@ h3 {
   width: 100%;
 }
 
-.header .header_inner {
+.header .header-inner {
   width: 90%;
   margin: 0 auto;
 }
@@ -230,7 +230,7 @@ h3 {
 }
 
 @media only screen and (min-width: 1024px) {
-  .header .header_inner {
+  .header .header-inner {
     width: 980px;
     margin: 0 auto;
   }
@@ -306,6 +306,8 @@ nav.menu ul a {
   height: 30px;
 }
 
+/* ------------------------------------------------------------ *	Main
+\* ------------------------------------------------------------ */
 /* ------------------------------------------------------------ *    Screen-one
 \* ------------------------------------------------------------ */
 .screen-one {
@@ -555,6 +557,33 @@ form .select-center .select-wrapper select {
   padding: 10px 0;
 }
 
+/* ------------------------------------------------------------ *    Screen-two-content
+\* ------------------------------------------------------------ */
+.text {
+  padding: 40px 0;
+  color: #000;
+  font-size: 13px;
+  line-height: 30px;
+  word-wrap: break-word;
+  word-break: break-all;
+}
+
+.text p {
+  padding: 10px 0;
+}
+
+@media only screen and (min-width: 768px) {
+  .text {
+    font-size: 16px;
+  }
+}
+
+@media only screen and (min-width: 1024px) {
+  .text {
+    padding: 200px 0;
+  }
+}
+
 /* ------------------------------------------------------------ *    Screen-three
 \* ------------------------------------------------------------ */
 .screen-three {
@@ -564,6 +593,7 @@ form .select-center .select-wrapper select {
 .screen-three .upper-main-content {
   background: url("/css/images/background.png") repeat;
   padding-top: 30px;
+  border-bottom: 4px dotted #bf1e2d;
 }
 
 .screen-three .upper-main-content .main-content-inner {
@@ -577,6 +607,17 @@ form .select-center .select-wrapper select {
   }
 }
 
+.screen-three .main-content .main-content-inner {
+  width: 90%;
+  margin: 0 auto;
+}
+
+@media only screen and (min-width: 1024px) {
+  .screen-three .main-content .main-content-inner {
+    width: 980px;
+  }
+}
+
 .screen-three h1 {
   font-size: 20px;
   font-weight: bold;
@@ -584,7 +625,6 @@ form .select-center .select-wrapper select {
   color: #bf1e2d;
   text-align: center;
   padding-bottom: 20px;
-  border-bottom: 4px dotted #bf1e2d;
 }
 
 @media only screen and (min-width: 768px) {
@@ -593,29 +633,20 @@ form .select-center .select-wrapper select {
   }
 }
 
-.screen-three .lower-main-content .main-content-inner {
-  width: 90%;
-  margin: 0 auto;
-}
-
-@media only screen and (min-width: 1024px) {
-  .screen-three .lower-main-content .main-content-inner {
-    width: 980px;
-  }
-}
-
-.screen-three .lower-main-content .content {
+/* ------------------------------------------------------------ *    Screen-three-content
+\* ------------------------------------------------------------ */
+.content {
   color: #fff;
   font-size: 13px;
   line-height: 26px;
   text-align: center;
 }
 
-.screen-three .lower-main-content .content div {
+.content div {
   padding: 20px 0;
 }
 
-.screen-three .lower-main-content .content div h2 {
+.content div h2 {
   color: #fff;
   font-size: 16px;
   text-align: center;
@@ -623,28 +654,25 @@ form .select-center .select-wrapper select {
 }
 
 @media only screen and (min-width: 768px) {
-  .screen-three .lower-main-content .content div h2 {
-    font-size: 26px;
-  }
-}
-
-@media only screen and (min-width: 768px) {
-  .screen-three .lower-main-content .content {
+  .content {
     padding: 100px 0;
   }
-  .screen-three .lower-main-content .content div {
+  .content div {
     width: 50%;
     display: inline-block;
   }
-  .screen-three .lower-main-content .content div p {
-    width: 70%;
+  .content div h2 {
+    font-size: 26px;
+  }
+  .content div p {
+    width: 85%;
     margin: 0 auto;
   }
-  .screen-three .lower-main-content .content div:nth-child(even) {
+  .content div:nth-child(even) {
     float: right;
     overflow: hidden;
   }
-  .screen-three .lower-main-content .content div:nth-child(even):after {
+  .content div:nth-child(even):after {
     clear: both;
     display: block;
     content: "";
@@ -652,16 +680,16 @@ form .select-center .select-wrapper select {
 }
 
 @media only screen and (min-width: 1024px) {
-  .screen-three .lower-main-content .content {
+  .content {
     padding: 200px 0;
   }
-  .screen-three .lower-main-content .content div {
-    width: 24%;
+  .content div {
+    width: 25%;
     padding: 0;
     float: left;
     overflow: hidden;
   }
-  .screen-three .lower-main-content .content div:nth-child(even) {
+  .content div:nth-child(even) {
     float: left;
     overflow: hidden;
   }
@@ -699,56 +727,6 @@ form .select-center .select-wrapper select {
   }
 }
 
-.screen-four .main-content .main-content-inner table {
-  border-collapse: collapse;
-  width: 100%;
-  color: #a1a1a1;
-  font-size: 10px;
-}
-
-@media only screen and (min-width: 768px) {
-  .screen-four .main-content .main-content-inner table {
-    font-size: 13px;
-  }
-}
-
-.screen-four .main-content .main-content-inner thead {
-  display: none;
-}
-
-.screen-four .main-content .main-content-inner thead th {
-  padding: 5px 0;
-}
-
-.screen-four .main-content .main-content-inner tr {
-  border: 1px solid #bf1e2d;
-  display: block;
-  margin-bottom: 10px;
-}
-
-.screen-four .main-content .main-content-inner tr td {
-  padding: 5px 0;
-  display: block;
-  text-align: right;
-  font-weight: bold;
-  padding: 5px 10px;
-}
-
-.screen-four .main-content .main-content-inner tr td.title {
-  font-weight: bold;
-  background: #f8e6e8;
-  text-align: center;
-  color: #000;
-}
-
-.screen-four .main-content .main-content-inner tr td::before {
-  content: attr(data-label);
-  float: left;
-  font-weight: bold;
-  color: #000;
-  text-transform: uppercase;
-}
-
 @media only screen and (min-width: 1024px) {
   .screen-four {
     border-bottom: none;
@@ -760,24 +738,80 @@ form .select-center .select-wrapper select {
     width: 980px;
     margin: 0 auto;
   }
-  .screen-four .main-content .main-content-inner table {
+}
+
+/* ------------------------------------------------------------ *    Screen-four-table
+\* ------------------------------------------------------------ */
+table {
+  border-collapse: collapse;
+  width: 100%;
+  color: #a1a1a1;
+  font-size: 10px;
+  text-transform: uppercase;
+}
+
+@media only screen and (min-width: 768px) {
+  table table {
+    font-size: 13px;
+  }
+}
+
+table thead {
+  display: none;
+}
+
+table thead th {
+  padding: 5px 0;
+}
+
+table tr {
+  border: 1px solid #bf1e2d;
+  display: block;
+  margin-bottom: 10px;
+}
+
+table tr td {
+  padding: 5px 0;
+  display: block;
+  text-align: right;
+  font-weight: bold;
+  padding: 5px 10px;
+}
+
+table tr td.title {
+  font-weight: bold;
+  background: #f8e6e8;
+  text-align: center;
+  color: #000;
+}
+
+table tr td::before {
+  content: attr(data-label);
+  float: left;
+  font-weight: bold;
+  color: #000;
+  text-transform: uppercase;
+}
+
+@media only screen and (min-width: 1024px) {
+  table {
     border: 1px solid #bf1e2d;
     font-size: 16px;
   }
-  .screen-four .main-content .main-content-inner table thead {
+  table thead {
     display: table-header-group;
     color: #fff;
     font-size: 18px;
   }
-  .screen-four .main-content .main-content-inner table thead th {
+  table thead th {
     text-align: left;
     background: #bf1e2d;
   }
-  .screen-four .main-content .main-content-inner table tr {
+  table tr {
     display: table-row;
     border: none;
   }
-  .screen-four .main-content .main-content-inner table tr td {
+  table tr td {
     display: table-cell;
     text-align: left;
     padding-right: 0;
@@ -785,20 +819,20 @@ form .select-center .select-wrapper select {
     color: #404040;
     font-weight: none;
   }
-  .screen-four .main-content .main-content-inner table tr td.title {
+  table tr td.title {
     background: none;
     text-align: left;
     text-indent: 10px;
     color: #404040;
     font-weight: none;
   }
-  .screen-four .main-content .main-content-inner table tr td::before {
+  table tr td::before {
     display: none;
   }
-  .screen-four .main-content .main-content-inner table tr td:hover {
+  table tr td:hover {
     color: #000;
   }
-  .screen-four .main-content .main-content-inner table tr:nth-child(2n+1) {
+  table tr:nth-child(2n+1) {
     background: #f8e6e8;
   }
 }
@@ -813,28 +847,29 @@ form .select-center .select-wrapper select {
   padding: 30px 0;
 }
 
-@media only screen and (min-width: 1024px) {
-  .screen-five .main-content {
-    padding: 200px 0;
-  }
-}
-
 .screen-five .main-content-inner {
   width: 90%;
   margin: 0 auto;
 }
 
-.screen-five .main-content-inner .item-center {
-  width: 100%;
-  margin: 0 auto;
+@media only screen and (min-width: 1024px) {
+  .screen-five .main-content {
+    padding: 200px 0;
+  }
+  .screen-five .main-content-inner {
+    width: 980px;
+    margin: 0 auto;
+  }
 }
 
-.screen-five .main-content-inner .item-center .accordion {
+/* ------------------------------------------------------------ *    Screen-five-accordion
+\* ------------------------------------------------------------ */
+.accordion {
   width: 300px;
   margin: 0 auto;
 }
 
-.screen-five .main-content-inner .item-center .accordion h3 {
+.accordion h3 {
   font-size: 16;
   font-weight: bold;
   padding: 20px 0;
@@ -842,35 +877,36 @@ form .select-center .select-wrapper select {
   text-align: center;
 }
 
-.screen-five .main-content-inner .item-center .accordion-section-title {
+.accordion .accordion-section-title {
   cursor: pointer;
   display: block;
   font-weight: bold;
   font-size: 13px;
-  padding: 10px 0;
+  padding: 15px 0;
   word-break: break-all;
 }
 
-.screen-five .main-content-inner .item-center .accordion-section-title::before {
+.accordion .accordion-section-title::before {
   content: url("/css/images/arrow-down.png");
   display: inline;
   vertical-align: -webkit-baseline-middle;
   margin-right: 10px;
 }
 
-.screen-five .main-content-inner .item-center .accordion-section-content {
+.accordion .accordion-section-content {
   display: none;
   font-size: 13px;
   word-break: break-all;
   color: #333;
   width: 100%;
+  line-height: 16px;
 }
 
-.screen-five .main-content-inner .item-center .active {
+.accordion .active {
   color: #bf1e2d;
 }
 
-.screen-five .main-content-inner .item-center .accordion-section-title.active::before {
+.accordion .accordion-section-title.active::before {
   content: url("/css/images/arrow-up.png");
   display: inline;
   vertical-align: -webkit-baseline-middle;
@@ -878,22 +914,18 @@ form .select-center .select-wrapper select {
 }
 
 @media only screen and (min-width: 1024px) {
-  .screen-five .main-content-inner {
-    width: 980px;
-    margin: 0 auto;
-  }
-  .screen-five .main-content-inner .item-center .accordion {
+  .accordion {
     width: 33%;
     float: left;
     padding: 0 15px;
   }
-  .screen-five .main-content-inner .item-center .accordion h3 {
+  .accordion h3 {
     font-size: 23px;
   }
-  .screen-five .main-content-inner .item-center .accordion:last-child {
+  .accordion:last-child {
     float: right;
   }
-  .screen-five .main-content-inner .item-center .accordion ::after {
+  .accordion ::after {
     clear: both;
     display: block;
     content: "";
@@ -970,12 +1002,28 @@ footer .footer-inner {
 /* ------------------------------------------------------------ *	Footer-payments
 \* ------------------------------------------------------------ */
 .payments {
-  width: 287px;
-  margin: 0 auto;
+  width: 251px;
+  margin: 10px auto;
 }
 
-.payments img {
-  width: 100%;
+.payments ul li {
+  display: inline-block;
+}
+
+.payments ul li img {
+  width: 93px;
+  height: 36px;
+}
+
+.payments ul li img.round-border {
+  border-radius: 6px;
+  width: 58px;
+}
+
+.payments ul li img.image-center {
+  width: 58px;
+  height: 36px;
+  margin: 15px 1px;
 }
 
 @media only screen and (min-width: 1024px) {
@@ -992,6 +1040,7 @@ footer .footer-inner {
   font-size: 16px;
   text-align: center;
   padding: 10px 0;
+  text-transform: uppercase;
 }
 
 @media only screen and (min-width: 1024px) {
