@@ -34,7 +34,7 @@ $(document).ready(function() {
                 $("header").css({ "background": "rgba(0,0,0,0.55)" });
             } else {
                 $("header").css({ "background": "#333" });
-                $.scrollify.setOptions({ offset: -126 })
+                $.scrollify.setOptions({ offset: -141 })
             }
         }
     });
