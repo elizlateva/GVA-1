@@ -8,10 +8,9 @@ $(document).ready(function() {
 
     $("button.btn").click(function() {
         $(".select-lang ul").slideToggle();
-    })
+    });
 
     $('.accordion-section-title').click(function(e) {
-
         if ($(e.target).is('.active')) {
             $('.accordion .accordion-section-title').removeClass('active');
             $('.accordion .accordion-section-content.open').slideUp(300).removeClass('open');
@@ -22,8 +21,6 @@ $(document).ready(function() {
             $(this).next().slideDown(300).addClass('open');
         }
     });
-
-
 
     $.scrollify({
         section: "section",
