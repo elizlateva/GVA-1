@@ -1,0 +1,35 @@
+/* ------------------------------------------------------------ *\
+    Reservation-wrapper
+\* ------------------------------------------------------------ */
+
+.reservation-wrapper {
+    background: $dark;
+    padding: 10% 0;
+}
+
+@media #{$smartphone} {
+    & .reservation-form-wrapper {
+        width: 80%;
+        border: 1px solid $gray;
+        margin: 0 auto;
+        padding: 20px 0 40px;
+        & .wrapper {
+            width: 300px;
+            margin: 0 auto;
+        }
+    }
+}
+
+@media #{$desktop} {
+    .reservation-wrapper {
+        // width: 980px;
+        padding: 50px 0;
+        & .reservation-form-wrapper {
+            width: 880px;
+            & .wrapper {
+                width: 540px;
+                margin: 0 auto;
+            }
+        }
+    }
+}

@@ -571,6 +571,39 @@ form .select-center .select-wrapper select {
   }
 }
 
+/* ------------------------------------------------------------ *    Reservation-wrapper
+\* ------------------------------------------------------------ */
+.reservation-wrapper {
+  background: #333;
+  padding: 10% 0;
+}
+
+@media only screen and (min-width: 480px) {
+  .reservation-form-wrapper {
+    width: 80%;
+    border: 1px solid #a1a1a1;
+    margin: 0 auto;
+    padding: 20px 0 40px;
+  }
+  .reservation-form-wrapper .wrapper {
+    width: 300px;
+    margin: 0 auto;
+  }
+}
+
+@media only screen and (min-width: 1024px) {
+  .reservation-wrapper {
+    padding: 50px 0;
+  }
+  .reservation-wrapper .reservation-form-wrapper {
+    width: 880px;
+  }
+  .reservation-wrapper .reservation-form-wrapper .wrapper {
+    width: 540px;
+    margin: 0 auto;
+  }
+}
+
 /* ------------------------------------------------------------ *    Service-section
 \* ------------------------------------------------------------ */
 .service-section {
