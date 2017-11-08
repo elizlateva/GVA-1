@@ -608,8 +608,125 @@ form .select-center .select-wrapper select {
 \* ------------------------------------------------------------ */
 /* ------------------------------------------------------------ *  Self-parking
 \* ------------------------------------------------------------ */
+.self-parking {
+  background: #bf1e2d;
+  width: 267px;
+  margin: 0 auto;
+  padding: 30px 5px;
+  border-radius: 4px;
+  position: relative;
+}
+
+.self-parking figure {
+  display: inline-block;
+}
+
+.self-parking .parking-inner {
+  float: right;
+  text-align: center;
+  color: #fff;
+}
+
+.self-parking .parking-inner h2 {
+  font-size: 16px;
+  padding-bottom: 10px;
+}
+
+.self-parking .parking-inner .currency {
+  text-transform: uppercase;
+  font-size: 26px;
+  padding-top: 10px;
+}
+
+.self-parking:before {
+  content: url("/css/images/info-white.png");
+  position: absolute;
+  top: 5px;
+  right: 10px;
+}
+
+@media only screen and (min-width: 480px) {
+  .self-parking {
+    width: 350px;
+    padding: 30px;
+  }
+}
+
 /* ------------------------------------------------------------ *  Private-parking
 \* ------------------------------------------------------------ */
+.private-parking {
+  background: #fff;
+  width: 267px;
+  margin: 0 auto;
+  padding: 30px 5px;
+  border-radius: 4px;
+  position: relative;
+}
+
+.private-parking figure {
+  display: inline-block;
+}
+
+.private-parking .parking-inner {
+  float: right;
+  text-align: center;
+  color: #000;
+}
+
+.private-parking .parking-inner h2 {
+  font-size: 16px;
+  padding-bottom: 10px;
+  color: #000;
+}
+
+.private-parking .parking-inner .currency {
+  text-transform: uppercase;
+  font-size: 26px;
+  padding-top: 10px;
+}
+
+.private-parking:before {
+  content: url("/css/images/info-black.png");
+  position: absolute;
+  top: 5px;
+  right: 10px;
+}
+
+@media only screen and (min-width: 480px) {
+  .private-parking {
+    width: 350px;
+    padding: 30px;
+  }
+}
+
+@media only screen and (min-width: 1024px) {
+  .private-parking {
+    margin: 0;
+  }
+}
+
+/* ------------------------------------------------------------ *  Tooltip
+\* ------------------------------------------------------------ */
+.tooltip {
+  width: 267px;
+  height: 49px;
+  margin-top: 10px;
+  margin-left: 82px;
+  background: #e1e1e1;
+  border-radius: 4px;
+  padding: 5px;
+  visibility: visible;
+}
+
+/* ------------------------------------------------------------ *    Parking-wrapper
+\* ------------------------------------------------------------ */
+@media only screen and (min-width: 480px) {
+  .parking-wrapper {
+    width: 350px;
+    margin: 0 auto;
+  }
+}
+
 /* ------------------------------------------------------------ *    Service-section
 \* ------------------------------------------------------------ */
 .service-section {

@@ -1,0 +1,20 @@
+/* ------------------------------------------------------------ *\
+  Tooltip
+\* ------------------------------------------------------------ */
+.tooltip{
+    width: 267px;
+    height: 49px;
+    margin-top: 10px;
+    margin-left: 82px;
+    background: #e1e1e1;
+    border-radius: 4px;
+    padding: 5px;
+    // visibility: hidden;
+    visibility: visible;
+
+}
+// @media #{$desktop}{
+//     .tooltip{  
+//       margin: 10px 82px 0;
+//     }
+//   }

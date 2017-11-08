@@ -1,3 +1,57 @@
 /* ------------------------------------------------------------ *\
   Self-parking
 \* ------------------------------------------------------------ */
+.self-parking{
+  background: $red;
+  width: 267px;
+  margin: 0 auto;
+  padding: 30px 5px;
+  border-radius: 4px;
+  position: relative;
+  & figure{
+    display: inline-block;
+  }
+  & .parking-inner{
+    float: right;
+    text-align: center;
+    color: $white;
+    & h2{
+      font-size: 16px;
+      padding-bottom: 10px;
+    }
+    & .currency{
+      text-transform: uppercase;
+      font-size: 26px;
+      padding-top: 10px;
+    }
+  }
+ &:before{
+   content: url("/css/images/info-white.png");
+   position: absolute;
+   top: 5px;
+   right: 10px;
+  }
+}
+
+
+
+
+@media #{$smartphone}{
+  .self-parking{
+    width: 350px;
+    padding: 30px;
+  }
+}
+
+// @media #{$desktop}{
+//   .self-parking{
+//     font-size: 18px;
+//     margin: 0;
+//     & .parking-inner h2{
+//       font-size: 26px;
+//     }
+//     & .parking-inner .currency{
+//       font-size: 36px;
+//     }
+//   }
+// }
