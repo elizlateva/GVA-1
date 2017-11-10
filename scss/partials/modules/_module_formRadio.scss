@@ -1,0 +1,44 @@
+/* ------------------------------------------------------------ *\
+    Form-radio-selection
+\* ------------------------------------------------------------ */
+
+.radio-selection {
+    position: relative;
+    width: 300px;
+    margin: 0 auto;
+    & .container {
+        width: 300px;
+        margin: 0 auto;
+        display: block;
+        position: relative;
+        padding-left: 29px;
+        line-height: 20px;
+        cursor: pointer;
+        color: $gray;
+        & input[type="radio"] {
+            position: absolute;
+            opacity: 0;
+            &:checked~.checkmark {
+                background-color: $red;
+            }
+        }
+        & .checkmark {
+            position: absolute;
+            top: 5px;
+            left: 0;
+            width: 12px;
+            height: 12px;
+            border: 3px solid $white;
+            border-radius: 100%;
+            background: $white;
+            margin-left: 10px;
+        }
+    }
+}
+
+@media #{$smartphone} {
+    .radio-selection {
+        width: 400px;
+        margin: 0 auto;
+    }
+}
