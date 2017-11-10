@@ -1,3 +1,26 @@
 /* ------------------------------------------------------------ *\
   Parking-selection
 \* ------------------------------------------------------------ */
+
+@media #{$smartphone} {
+    .parking-wrapper {
+        width: 350px;
+        margin: 0 auto;
+    }
+}
+
+@media #{$desktop} {
+    .parking-selection {
+        width: 780px;
+        margin: 0 auto;
+        &:after {
+            clear: both;
+            content: "";
+            display: block;
+        }
+        & .parking-wrapper {
+            margin: 50px 20px 0;
+            float: left;
+        }
+    }
+}
