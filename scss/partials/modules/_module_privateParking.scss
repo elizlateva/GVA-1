@@ -1,47 +1,54 @@
 /* ------------------------------------------------------------ *\
   Private-parking
 \* ------------------------------------------------------------ */
-.private-parking{
-  background: $white;
-  width: 267px;
-  margin: 0 auto;
-  padding: 30px 5px;
-  border-radius: 4px;
-  position: relative;
-  & figure{
-    display: inline-block;
-  }
-  & .parking-inner{
-    float: right;
-    text-align: center;
-    color: $black;
-    & h2{
-      font-size: 16px;
-      padding-bottom: 10px;
-      color: $black;
+
+.private-parking {
+    background: $white;
+    width: 267px;
+    margin: 0 auto;
+    padding: 50px 10px;
+    border-radius: 4px;
+    position: relative;
+    margin-top: 50px;
+    & figure {
+        display: inline-block;
     }
-    & .currency{
-      text-transform: uppercase;
-      font-size: 26px;
-      padding-top: 10px;
+    & .parking-inner {
+        float: right;
+        text-align: center;
+        color: $black;
+        & h2 {
+            font-size: 16px;
+            padding-bottom: 15px;
+            color: $black;
+            margin-top: -20px;
+        }
+        & .currency {
+            text-transform: uppercase;
+            font-size: 26px;
+            padding-top: 15px;
+        }
     }
-  }
-  &:before{
-    content: url("/css/images/info-black.png");
-    position: absolute;
-    top: 5px;
-    right: 10px;
-   }
-}
-@media #{$smartphone}{
-  .private-parking{
-    width: 350px;
-    padding: 30px;
-  }
 }
 
-@media #{$desktop}{
-  .private-parking{
-    margin: 0;
-  }
+@media #{$smartphone} {
+    .private-parking {
+        width: 300px;
+        padding: 30px;
+    }
+}
+
+@media #{$desktop} {
+    .private-parking {
+        width: 360px;
+        padding: 60px 23px;
+        font-size: 16px;
+        margin: 0;
+        & .parking-inner h2 {
+            font-size: 26px;
+        }
+        & .parking-inner .currency {
+            font-size: 30px;
+        }
+    }
 }

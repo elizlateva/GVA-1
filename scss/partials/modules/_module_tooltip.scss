@@ -1,20 +1,32 @@
 /* ------------------------------------------------------------ *\
   Tooltip
 \* ------------------------------------------------------------ */
-.tooltip{
-    width: 267px;
-    height: 49px;
-    margin-top: 10px;
-    margin-left: 82px;
-    background: #e1e1e1;
-    border-radius: 4px;
-    padding: 5px;
-    // visibility: hidden;
-    visibility: visible;
 
+.tooltip {
+    & img {
+        position: absolute;
+        top: 6px;
+        right: 10px;
+    }
+    & span {
+        width: 267px;
+        height: 49px;
+        font-size: 12px;
+        background: #e1e1e1;
+        border-radius: 4px;
+        visibility: hidden;
+        padding: 5px;
+        position: absolute;
+        top: -49px;
+        right: 0;
+    }
+    &:hover span {
+        visibility: visible;
+    }
 }
-// @media #{$desktop}{
-//     .tooltip{  
-//       margin: 10px 82px 0;
-//     }
-//   }
+
+@media #{$desktop} {
+    .tooltip img {
+        top: 10px;
+    }
+}
