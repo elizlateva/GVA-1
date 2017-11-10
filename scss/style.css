@@ -412,7 +412,7 @@ form .select-center .select-wrapper:after {
   width: 2px;
   height: 39px;
   right: 45px;
-  top: -8px;
+  top: -11px;
 }
 
 form .select-center .select-wrapper select {
@@ -593,7 +593,7 @@ form .select-center .select-wrapper select {
 
 @media only screen and (min-width: 1024px) {
   .reservation-wrapper {
-    padding: 50px 0;
+    padding: 34px 0;
   }
   .reservation-wrapper .reservation-form-wrapper {
     width: 880px;
@@ -606,15 +606,39 @@ form .select-center .select-wrapper select {
 
 /* ------------------------------------------------------------ *  Parking-selection
 \* ------------------------------------------------------------ */
+@media only screen and (min-width: 480px) {
+  .parking-wrapper {
+    width: 350px;
+    margin: 0 auto;
+  }
+}
+
+@media only screen and (min-width: 1024px) {
+  .parking-selection {
+    width: 780px;
+    margin: 0 auto;
+  }
+  .parking-selection:after {
+    clear: both;
+    content: "";
+    display: block;
+  }
+  .parking-selection .parking-wrapper {
+    margin: 50px 20px 0;
+    float: left;
+  }
+}
+
 /* ------------------------------------------------------------ *  Self-parking
 \* ------------------------------------------------------------ */
 .self-parking {
   background: #bf1e2d;
   width: 267px;
   margin: 0 auto;
-  padding: 30px 5px;
+  padding: 50px 10px;
   border-radius: 4px;
   position: relative;
+  margin-top: 50px;
 }
 
 .self-parking figure {
@@ -629,26 +653,36 @@ form .select-center .select-wrapper select {
 
 .self-parking .parking-inner h2 {
   font-size: 16px;
-  padding-bottom: 10px;
+  padding-bottom: 15px;
+  margin-top: -20px;
 }
 
 .self-parking .parking-inner .currency {
   text-transform: uppercase;
   font-size: 26px;
-  padding-top: 10px;
-}
-
-.self-parking:before {
-  content: url("/css/images/info-white.png");
-  position: absolute;
-  top: 5px;
-  right: 10px;
+  padding-top: 15px;
 }
 
 @media only screen and (min-width: 480px) {
   .self-parking {
-    width: 350px;
-    padding: 30px;
+    width: 300px;
+    padding: 26px;
+  }
+}
+
+@media only screen and (min-width: 1024px) {
+  .self-parking {
+    width: 360px;
+    padding: 60px 29px;
+    margin-top: 50px;
+    font-size: 16px;
+    margin: 0;
+  }
+  .self-parking .parking-inner h2 {
+    font-size: 26px;
+  }
+  .self-parking .parking-inner .currency {
+    font-size: 30px;
   }
 }
 
@@ -658,9 +692,10 @@ form .select-center .select-wrapper select {
   background: #fff;
   width: 267px;
   margin: 0 auto;
-  padding: 30px 5px;
+  padding: 50px 10px;
   border-radius: 4px;
   position: relative;
+  margin-top: 50px;
 }
 
 .private-parking figure {
@@ -675,56 +710,245 @@ form .select-center .select-wrapper select {
 
 .private-parking .parking-inner h2 {
   font-size: 16px;
-  padding-bottom: 10px;
+  padding-bottom: 15px;
   color: #000;
+  margin-top: -20px;
 }
 
 .private-parking .parking-inner .currency {
   text-transform: uppercase;
   font-size: 26px;
-  padding-top: 10px;
-}
-
-.private-parking:before {
-  content: url("/css/images/info-black.png");
-  position: absolute;
-  top: 5px;
-  right: 10px;
+  padding-top: 15px;
 }
 
 @media only screen and (min-width: 480px) {
   .private-parking {
-    width: 350px;
+    width: 300px;
     padding: 30px;
   }
 }
 
 @media only screen and (min-width: 1024px) {
   .private-parking {
+    width: 360px;
+    padding: 60px 23px;
+    font-size: 16px;
     margin: 0;
+  }
+  .private-parking .parking-inner h2 {
+    font-size: 26px;
+  }
+  .private-parking .parking-inner .currency {
+    font-size: 30px;
   }
 }
 
 /* ------------------------------------------------------------ *  Tooltip
 \* ------------------------------------------------------------ */
-.tooltip {
+.tooltip img {
+  position: absolute;
+  top: 6px;
+  right: 10px;
+}
+
+.tooltip span {
   width: 267px;
   height: 49px;
-  margin-top: 10px;
-  margin-left: 82px;
+  font-size: 12px;
   background: #e1e1e1;
   border-radius: 4px;
+  visibility: hidden;
   padding: 5px;
+  position: absolute;
+  top: -49px;
+  right: 0;
+}
+
+.tooltip:hover span {
   visibility: visible;
 }
 
-/* ------------------------------------------------------------ *    Parking-wrapper
+@media only screen and (min-width: 1024px) {
+  .tooltip img {
+    top: 10px;
+  }
+}
+
+/* ------------------------------------------------------------ *  Carwash-selection
 \* ------------------------------------------------------------ */
+.carwash-selection {
+  width: 300px;
+  margin: 40px auto 0;
+}
+
+.carwash-selection p {
+  font-size: 16px;
+  color: #fff;
+  font-weight: font-weight-2;
+  text-align: center;
+}
+
 @media only screen and (min-width: 480px) {
-  .parking-wrapper {
-    width: 350px;
+  .carwash-selection p {
+    text-align: left;
+    text-indent: 10px;
+  }
+}
+
+.carwash-selection .image-wrapper {
+  display: none;
+  position: absolute;
+  left: 12px;
+  top: 23px;
+  width: 40px;
+  height: 40px;
+  background: #fff;
+  border-radius: 4px;
+}
+
+.carwash-selection .image-wrapper img {
+  position: absolute;
+  left: 4px;
+  top: 6px;
+}
+
+@media only screen and (min-width: 480px) {
+  .carwash-selection .image-wrapper {
+    display: block;
+  }
+}
+
+/* ------------------------------------------------------------ *    Form-radio-selection
+\* ------------------------------------------------------------ */
+.radio-selection {
+  position: relative;
+  width: 300px;
+  margin: 0 auto;
+}
+
+.radio-selection .container {
+  width: 300px;
+  margin: 0 auto;
+  display: block;
+  position: relative;
+  padding-left: 29px;
+  line-height: 20px;
+  cursor: pointer;
+  color: #a1a1a1;
+}
+
+.radio-selection .container input[type="radio"] {
+  position: absolute;
+  opacity: 0;
+}
+
+.radio-selection .container input[type="radio"]:checked ~ .checkmark {
+  background-color: #bf1e2d;
+}
+
+.radio-selection .container .checkmark {
+  position: absolute;
+  top: 5px;
+  left: 0;
+  width: 12px;
+  height: 12px;
+  border: 3px solid #fff;
+  border-radius: 100%;
+  background: #fff;
+  margin-left: 10px;
+}
+
+@media only screen and (min-width: 480px) {
+  .radio-selection {
+    width: 400px;
     margin: 0 auto;
   }
+}
+
+/* ------------------------------------------------------------ *    Reservation-form-button
+\* ------------------------------------------------------------ */
+.reservation-form-button {
+  width: 100%;
+  margin: 0 auto;
+}
+
+.reservation-form-button button {
+  width: 100%;
+  height: 46px;
+  border-radius: 10px;
+  background: #bf1e2d;
+  border: none;
+  color: #fff;
+  text-transform: uppercase;
+  font-size: 14px;
+  margin: 30px 0 0;
+}
+
+@media only screen and (min-width: 480px) {
+  .reservation-form-button {
+    width: 80%;
+  }
+}
+
+@media only screen and (min-width: 1024px) {
+  .reservation-form-button {
+    width: 880px;
+  }
+  .reservation-form-button button {
+    width: 880px;
+  }
+}
+
+/* ------------------------------------------------------------ *    Reservation-form-footer
+\* ------------------------------------------------------------ */
+.footer-reservation-form {
+  background: #716f6f;
+}
+
+.footer-reservation-form .footer-inner {
+  width: 90%;
+  margin: 0 auto;
+  padding: 20px 0;
+}
+
+@media only screen and (min-width: 1024px) {
+  .footer-reservation-form .footer-inner {
+    width: 980px;
+  }
+}
+
+.footer-reservation-form .footer-inner .reservation-form-payments {
+  width: 310px;
+  margin: 0 auto;
+}
+
+@media only screen and (min-width: 1024px) {
+  .footer-reservation-form .footer-inner .reservation-form-payments {
+    float: right;
+  }
+}
+
+.footer-reservation-form .footer-inner ul li {
+  display: inline-block;
+}
+
+.footer-reservation-form .footer-inner ul li img.round-border {
+  border-radius: 6px;
+  width: 58px;
+  height: 36px;
+}
+
+.footer-reservation-form .footer-inner ul li img.image-center {
+  width: 58px;
+  height: 36px;
+}
+
+.footer-reservation-form .cr-text {
+  color: #a1a1a1;
+  font-size: 13px;
+  text-align: center;
+  padding: 10px 0;
+  text-transform: uppercase;
 }
 
 /* ------------------------------------------------------------ *    Service-section
@@ -1075,21 +1299,21 @@ table tr td::before {
 
 /* ------------------------------------------------------------ *    Footer
 \* ------------------------------------------------------------ */
-footer {
+.footer {
   background-color: #333;
 }
 
-footer .footer-inner {
+.footer .footer-inner {
   width: 90%;
   margin: 0 auto;
   padding: 20px 0;
 }
 
 @media only screen and (min-width: 1024px) {
-  footer .footer-inner {
+  .footer .footer-inner {
     width: 980px;
   }
-  footer .footer-inner .footer-image-center {
+  .footer .footer-inner .footer-image-center {
     width: 527px;
     float: right;
   }
