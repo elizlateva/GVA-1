@@ -9,6 +9,17 @@ $(document).ready(function() {
     $("button.btn").click(function() {
         $(".select-lang ul").slideToggle();
     });
+    $("button.choose").click(function() {
+        if ($(this).text() == "Choissez") {
+            $(this).text("Choisir");
+        } else {
+            $(this).text("Choissez");
+        };
+    });
+    $("button.choose").click(function() {
+        $(".choose-car").css({ "background-color": "gray", "color": "white" });
+    });
+
 
     $('.accordion-section-title').click(function(e) {
         if ($(e.target).is('.active')) {

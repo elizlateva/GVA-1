@@ -1,0 +1,29 @@
+/* ------------------------------------------------------------ *\
+   Full-form
+\* ------------------------------------------------------------ */
+
+.full-form {
+    width: 90%;
+    margin: 10px auto;
+    & .address-form {
+        width: 100%;
+        & .title-form {
+            font-size: 20px;
+            text-align: left;
+            margin-bottom: 20px;
+            & span {
+                color: $red;
+            }
+        }
+    }
+}
+
+@media #{$desktop} {
+    .full-form {
+        width: 980px;
+        margin: 10px auto;
+        & .address-form .title-form {
+            font-size: 35px;
+        }
+    }
+}
