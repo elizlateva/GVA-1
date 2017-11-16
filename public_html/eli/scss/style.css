@@ -302,7 +302,7 @@ nav.menu ul a {
 }
 
 .select-lang select {
-  background: url("/css/images/polygon.png") no-repeat 80% 50%;
+  background: url("/eli/css/images/polygon.png") no-repeat 80% 50%;
   color: #fff;
   font-size: 16px;
   text-indent: 10px;
@@ -320,8 +320,6 @@ nav.menu ul a {
   }
 }
 
-/* ------------------------------------------------------------ *	Main
-\* ------------------------------------------------------------ */
 /* ------------------------------------------------------------ *    Reservation-section
 \* ------------------------------------------------------------ */
 .reservation-section {
@@ -329,7 +327,7 @@ nav.menu ul a {
 }
 
 .reservation-section .main {
-  background: url("/css/images/screen-1.jpg") no-repeat center;
+  background: url("/eli/css/images/screen-1.jpg") no-repeat center;
   background-size: cover;
   width: 100%;
   height: 850px;
@@ -373,11 +371,11 @@ nav.menu ul a {
 /* ------------------------------------------------------------ *    User-section
 \* ------------------------------------------------------------ */
 .user-section {
-  background: url("/css/images/background.png") repeat;
+  background: url("/eli/css/images/background.png") repeat;
 }
 
 .user-section .user-section-inner {
-  background: #bf1e2d url("/css/images/User_profile.jpg") no-repeat top;
+  background: #bf1e2d url("/eli/css/images/User_profile.jpg") no-repeat top;
   width: 100%;
   height: 140px;
   position: relative;
@@ -601,19 +599,19 @@ fieldset.right {
 
 /* ------------------------------------------------------------ *    Form
 \* ------------------------------------------------------------ */
-form {
+.input-inline {
   width: 267px;
   margin: 0 auto;
 }
 
-form label {
+.input-inline label {
   color: #fff;
   display: block;
   padding: 20px 0 10px;
   font-weight: bold;
 }
 
-form input {
+.input-inline input {
   width: 267px;
   height: 40px;
   border-radius: 4px;
@@ -623,17 +621,17 @@ form input {
   font-size: 14px;
 }
 
-form .select-center {
+.input-inline .select-center {
   width: 267px;
   margin: 0 auto;
 }
 
-form .select-center .select-wrapper {
+.input-inline .select-center .select-wrapper {
   display: inline;
   position: relative;
 }
 
-form .select-center .select-wrapper:after {
+.input-inline .select-center .select-wrapper:after {
   content: "";
   display: block;
   position: absolute;
@@ -644,7 +642,7 @@ form .select-center .select-wrapper:after {
   top: -11px;
 }
 
-form .select-center .select-wrapper select {
+.input-inline .select-center .select-wrapper select {
   width: 115px;
   height: 40px;
   border-radius: 4px;
@@ -653,19 +651,16 @@ form .select-center .select-wrapper select {
   text-indent: 10px;
   color: #a1a1a1;
   font-size: 14px;
-  background: url("/css/images/reservation-arrow.png") no-repeat 83% 50%;
+  background: url("/eli/css/images/reservation-arrow.png") no-repeat 83% 50%;
   background-color: #fff;
 }
 
 @media only screen and (min-width: 1024px) {
-  form {
+  .input-inline {
     display: inline-block;
   }
-  form .label-center {
-    margin-left: 6%;
-  }
-  form .select-wrapper select {
-    margin-left: 6%;
+  .input-inline .label-center {
+    margin-left: 5%;
   }
 }
 
@@ -709,7 +704,7 @@ form .select-center .select-wrapper select {
   margin: 0 auto;
 }
 
-.reservation-section-footer .reservation-section-footer-center p {
+.reservation-section-footer .reservation-section-footer-center .reservation-footer-text {
   display: inline;
   font-size: 26px;
   letter-spacing: 2px;
@@ -719,7 +714,7 @@ form .select-center .select-wrapper select {
   padding: 15px 0;
 }
 
-.reservation-section-footer img {
+.reservation-section-footer .reservation-section-footer-center img {
   width: 60px;
   height: 60px;
   display: inline-block;
@@ -731,7 +726,7 @@ form .select-center .select-wrapper select {
   .reservation-section-footer .reservation-section-footer-center {
     width: 450px;
   }
-  .reservation-section-footer .reservation-section-footer-center p {
+  .reservation-section-footer .reservation-section-footer-center .reservation-footer-text {
     font-size: 48px;
   }
 }
@@ -739,7 +734,7 @@ form .select-center .select-wrapper select {
 /* ------------------------------------------------------------ *    Content-section
 \* ------------------------------------------------------------ */
 .content-section {
-  background: url("/css/images/background.png") repeat;
+  background: url("/eli/css/images/background.png") repeat;
 }
 
 .content-section .main-content {
@@ -1187,7 +1182,7 @@ form .select-center .select-wrapper select {
 }
 
 .service-section .upper-main-content {
-  background: url("/css/images/background.png") repeat;
+  background: url("/eli/css/images/background.png") repeat;
   padding-top: 30px;
   border-bottom: 4px dotted #bf1e2d;
 }
@@ -1238,11 +1233,11 @@ form .select-center .select-wrapper select {
   text-align: center;
 }
 
-.content div {
+.content .service-inner {
   padding: 20px 0;
 }
 
-.content div h2 {
+.content .service-inner h2 {
   color: #fff;
   font-size: 16px;
   text-align: center;
@@ -1253,22 +1248,22 @@ form .select-center .select-wrapper select {
   .content {
     padding: 100px 0;
   }
-  .content div {
+  .content .service-inner {
     width: 50%;
     display: inline-block;
   }
-  .content div h2 {
+  .content .service-inner h2 {
     font-size: 26px;
   }
-  .content div p {
+  .content .service-inner p {
     width: 85%;
     margin: 0 auto;
   }
-  .content div:nth-child(even) {
+  .content .service-inner:nth-child(even) {
     float: right;
     overflow: hidden;
   }
-  .content div:nth-child(even):after {
+  .content .service-inner:nth-child(even):after {
     clear: both;
     display: block;
     content: "";
@@ -1279,13 +1274,13 @@ form .select-center .select-wrapper select {
   .content {
     padding: 200px 0;
   }
-  .content div {
+  .content .service-inner {
     width: 25%;
     padding: 0;
     float: left;
     overflow: hidden;
   }
-  .content div:nth-child(even) {
+  .content .service-inner:nth-child(even) {
     float: left;
     overflow: hidden;
   }
@@ -1294,7 +1289,7 @@ form .select-center .select-wrapper select {
 /* ------------------------------------------------------------ *    Content-section
 \* ------------------------------------------------------------ */
 .content-section {
-  background: url("/css/images/background.png") repeat;
+  background: url("/eli/css/images/background.png") repeat;
 }
 
 .content-section .main-content {
@@ -1330,100 +1325,109 @@ form .select-center .select-wrapper select {
 
 /* ------------------------------------------------------------ *    Content-section-table
 \* ------------------------------------------------------------ */
-table {
+.table {
   width: 100%;
-  color: #a1a1a1;
-  font-size: 10px;
+  color: #000;
   text-transform: uppercase;
+  outline: 1px solid #bf1e2d;
+  font-size: 14px;
 }
 
-@media only screen and (min-width: 768px) {
-  table table {
-    font-size: 13px;
-  }
+.table table.left,
+.table table.right {
+  width: 100%;
+  border-collapse: initial;
 }
 
-table thead {
+.table table.left thead,
+.table table.right thead {
+  display: table-header-group;
+  color: #fff;
+  font-size: 15px;
+  background: #bf1e2d;
+  outline: 1px solid #bf1e2d;
+}
+
+.table table.left thead th,
+.table table.right thead th {
+  padding: 10px 0;
+}
+
+.table table.left tbody tr td,
+.table table.right tbody tr td {
+  width: 150px;
+  padding: 10px 0;
+  text-align: center;
+  background: #f8f8f8;
+  border: 1px solid #fff;
+}
+
+.table table.left tbody tr td.title,
+.table table.right tbody tr td.title {
+  background: #f8e6e8;
+}
+
+.table table.left tbody :hover,
+.table table.right tbody :hover {
+  font-weight: bold;
+}
+
+.table table.right thead {
   display: none;
 }
 
-table thead th {
-  padding: 5px 0;
-}
-
-table tr {
-  border: 1px solid #bf1e2d;
-  display: block;
-  margin-bottom: 10px;
-}
-
-table tr td {
-  padding: 5px 0;
-  display: block;
-  text-align: right;
-  font-weight: bold;
-  padding: 5px 10px;
-}
-
-table tr td.title {
-  font-weight: bold;
-  background: #f8e6e8;
-  text-align: center;
-  color: #000;
-}
-
-table tr td::before {
-  content: attr(data-label);
-  float: left;
-  font-weight: bold;
-  color: #000;
-  text-transform: uppercase;
+@media only screen and (min-width: 768px) {
+  .table {
+    font-size: 16px;
+  }
+  .table table.left,
+  .table table.right {
+    width: 50%;
+    float: left;
+  }
+  .table table.left tbody tr td,
+  .table table.right tbody tr td {
+    width: 170px;
+  }
+  .table table.right thead {
+    display: table-header-group;
+  }
+  .table:after {
+    clear: both;
+    content: "";
+    display: block;
+  }
 }
 
 @media only screen and (min-width: 1024px) {
   .table {
-    padding: 200px 0;
+    width: 980px;
+    margin: 100px 0 0;
   }
-  .table table {
-    border: 1px solid #bf1e2d;
-    font-size: 16px;
-  }
-  .table table thead {
-    display: table-header-group;
-    color: #fff;
-    font-size: 18px;
-  }
-  .table table thead th {
-    text-align: left;
-    background: #bf1e2d;
-  }
-  .table table tr {
-    display: table-row;
-    border: none;
-  }
-  .table table tr td {
-    display: table-cell;
-    text-align: left;
-    padding-right: 0;
-    padding-left: 0;
-    color: #404040;
-    font-weight: none;
-  }
-  .table table tr td.title {
-    background: none;
-    text-align: left;
-    text-indent: 10px;
-    color: #404040;
-    font-weight: none;
-  }
-  .table table tr td::before {
-    display: none;
-  }
-  .table table tr td:hover {
-    color: #000;
-  }
-  .table table tr:nth-child(2n+1) {
-    background: #f8e6e8;
+}
+
+/* ------------------------------------------------------------ *    Table-reservation-button
+\* ------------------------------------------------------------ */
+.table-reservation-button {
+  width: 100%;
+  margin: 0 auto;
+}
+
+.table-reservation-button .table-button {
+  width: 100%;
+  height: 60px;
+  border-radius: 4px;
+  background: #bf1e2d;
+  border: none;
+  color: #fff;
+  text-transform: uppercase;
+  font-size: 16px;
+  margin: 30px 0 0;
+}
+
+@media only screen and (min-width: 1024px) {
+  .table-reservation-button .table-button {
+    font-size: 20px;
   }
 }
 
@@ -1481,7 +1485,7 @@ table tr td::before {
 }
 
 .accordion .accordion-section-title::before {
-  content: url("/css/images/arrow-down.png");
+  content: url("/eli/css/images/arrow-down.png");
   display: inline;
   vertical-align: -webkit-baseline-middle;
   margin-right: 10px;
@@ -1501,7 +1505,7 @@ table tr td::before {
 }
 
 .accordion .accordion-section-title.active::before {
-  content: url("/css/images/arrow-up.png");
+  content: url("/eli/css/images/arrow-up.png");
   display: inline;
   vertical-align: -webkit-baseline-middle;
   margin-right: 10px;
@@ -1563,7 +1567,7 @@ table tr td::before {
 }
 
 .contact p:before {
-  content: url("/css/images/phone.png");
+  content: url("/eli/css/images/phone.png");
   display: inline-block;
   vertical-align: middle;
   padding-right: 40px;
@@ -1655,7 +1659,7 @@ table tr td::before {
 }
 
 .social a:after {
-  content: url("/css/images/fb.png");
+  content: url("/eli/css/images/fb.png");
   display: inline-block;
   vertical-align: middle;
   padding-left: 15px;

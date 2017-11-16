@@ -16,7 +16,7 @@
         padding: 20px 0;
         width: 330px;
         margin: 0 auto;
-        & p {
+        & .reservation-footer-text {
             display: inline;
             font-size: $font-size-26;
             letter-spacing: 2px;
@@ -25,21 +25,21 @@
             text-align: center;
             padding: 15px 0;
         }
-    }
-    & img {
-        width: 60px;
-        height: 60px;
-        display: inline-block;
-        vertical-align: middle;
-        margin: 0 10px;
+        & img {
+            width: 60px;
+            height: 60px;
+            display: inline-block;
+            vertical-align: middle;
+            margin: 0 10px;
+        }
     }
 }
 
 @media #{$tablet} {
     .reservation-section-footer {
-        .reservation-section-footer-center {
+        & .reservation-section-footer-center {
             width: 450px;
-            & p {
+            & .reservation-footer-text {
                 font-size: 48px;
             }
         }

@@ -1,0 +1,359 @@
+{
+    "type": "d",
+    "name": "",
+    "size": 4096,
+    "files": [
+        {
+            "type": "-",
+            "name": ".DS_Store",
+            "size": 8196
+        },
+        {
+            "type": "-",
+            "name": ".awstats-htpasswd",
+            "size": 22
+        },
+        {
+            "type": "-",
+            "name": ".bash_history",
+            "size": 299
+        },
+        {
+            "type": "-",
+            "name": ".bash_logout",
+            "size": 18
+        },
+        {
+            "type": "-",
+            "name": ".bash_profile",
+            "size": 176
+        },
+        {
+            "type": "-",
+            "name": ".bashrc",
+            "size": 124
+        },
+        {
+            "type": "d",
+            "name": ".composer",
+            "size": 4096,
+            "files": []
+        },
+        {
+            "type": "d",
+            "name": ".config",
+            "size": 4096,
+            "files": []
+        },
+        {
+            "type": "-",
+            "name": ".env",
+            "size": 294
+        },
+        {
+            "type": "-",
+            "name": ".env.example",
+            "size": 491
+        },
+        {
+            "type": "-",
+            "name": ".ftpconfig",
+            "size": 301
+        },
+        {
+            "type": "-",
+            "name": ".gitattributes",
+            "size": 61
+        },
+        {
+            "type": "-",
+            "name": ".gitignore",
+            "size": 80
+        },
+        {
+            "type": "-",
+            "name": ".htaccess",
+            "size": 553
+        },
+        {
+            "type": "-",
+            "name": ".htaccess 2",
+            "size": 573
+        },
+        {
+            "type": "-",
+            "name": ".stats-htpasswd",
+            "size": 22
+        },
+        {
+            "type": "d",
+            "name": ".subversion",
+            "size": 4096,
+            "files": []
+        },
+        {
+            "type": "d",
+            "name": ".usermin",
+            "size": 4096,
+            "files": []
+        },
+        {
+            "type": "d",
+            "name": "Maildir",
+            "size": 4096,
+            "files": []
+        },
+        {
+            "type": "d",
+            "name": "app",
+            "size": 4096,
+            "files": []
+        },
+        {
+            "type": "-",
+            "name": "artisan",
+            "size": 1646
+        },
+        {
+            "type": "d",
+            "name": "awstats",
+            "size": 4096,
+            "files": []
+        },
+        {
+            "type": "d",
+            "name": "bootstrap",
+            "size": 4096,
+            "files": []
+        },
+        {
+            "type": "d",
+            "name": "cgi-bin",
+            "size": 4096,
+            "files": []
+        },
+        {
+            "type": "-",
+            "name": "composer.json",
+            "size": 1393
+        },
+        {
+            "type": "-",
+            "name": "composer.lock",
+            "size": 107000
+        },
+        {
+            "type": "d",
+            "name": "config",
+            "size": 4096,
+            "files": []
+        },
+        {
+            "type": "-",
+            "name": "contributors.txt",
+            "size": 22
+        },
+        {
+            "type": "d",
+            "name": "database",
+            "size": 4096,
+            "files": []
+        },
+        {
+            "type": "d",
+            "name": "etc",
+            "size": 4096,
+            "files": []
+        },
+        {
+            "type": "d",
+            "name": "fcgi-bin",
+            "size": 4096,
+            "files": []
+        },
+        {
+            "type": "-",
+            "name": "grumphp.yml",
+            "size": 67
+        },
+        {
+            "type": "-",
+            "name": "gulpfile.js",
+            "size": 1778
+        },
+        {
+            "type": "d",
+            "name": "homes",
+            "size": 4096,
+            "files": []
+        },
+        {
+            "type": "-",
+            "name": "index 2.php",
+            "size": 1972
+        },
+        {
+            "type": "-",
+            "name": "index.php",
+            "size": 573
+        },
+        {
+            "type": "d",
+            "name": "logs",
+            "size": 4096,
+            "files": []
+        },
+        {
+            "type": "d",
+            "name": "node_modules",
+            "size": 12288,
+            "files": []
+        },
+        {
+            "type": "-",
+            "name": "package.json",
+            "size": 460
+        },
+        {
+            "type": "-",
+            "name": "phpunit.xml",
+            "size": 930
+        },
+        {
+            "type": "d",
+            "name": "public_html",
+            "size": 4096,
+            "files": [
+                {
+                    "type": "d",
+                    "name": "eli",
+                    "size": 0,
+                    "files": [
+                        {
+                            "type": "d",
+                            "name": "scss",
+                            "size": 0,
+                            "files": [
+                                {
+                                    "type": "-",
+                                    "name": "style.css.map",
+                                    "size": 31426
+                                },
+                                {
+                                    "type": "-",
+                                    "name": "style.css",
+                                    "size": 31315
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "type": "-",
+            "name": "readme.md",
+            "size": 1918
+        },
+        {
+            "type": "d",
+            "name": "resources",
+            "size": 4096,
+            "files": [
+                {
+                    "type": "d",
+                    "name": "views",
+                    "size": 0,
+                    "files": [
+                        {
+                            "type": "d",
+                            "name": "layouts",
+                            "size": 0,
+                            "files": [
+                                {
+                                    "type": "-",
+                                    "name": "eli.blade.php",
+                                    "size": 9352
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "type": "d",
+            "name": "routes",
+            "size": 4096,
+            "files": []
+        },
+        {
+            "type": "-",
+            "name": "server.php",
+            "size": 563
+        },
+        {
+            "type": "d",
+            "name": "storage",
+            "size": 4096,
+            "files": []
+        },
+        {
+            "type": "d",
+            "name": "svn",
+            "size": 4096,
+            "files": []
+        },
+        {
+            "type": "d",
+            "name": "tests",
+            "size": 4096,
+            "files": []
+        },
+        {
+            "type": "d",
+            "name": "tmp",
+            "size": 4096,
+            "files": []
+        },
+        {
+            "type": "-",
+            "name": "ueser_profile.html",
+            "size": 7714
+        },
+        {
+            "type": "d",
+            "name": "untitled folder",
+            "size": 4096,
+            "files": []
+        },
+        {
+            "type": "-",
+            "name": "user_profile.html",
+            "size": 7714
+        },
+        {
+            "type": "d",
+            "name": "vendor",
+            "size": 4096,
+            "files": []
+        },
+        {
+            "type": "d",
+            "name": "vendor_2",
+            "size": 4096,
+            "files": []
+        },
+        {
+            "type": "d",
+            "name": "vendor_3",
+            "size": 4096,
+            "files": []
+        },
+        {
+            "type": "-",
+            "name": "Нова папка.rar",
+            "size": 1204430
+        }
+    ]
+}

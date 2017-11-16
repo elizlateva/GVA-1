@@ -2,7 +2,7 @@
     Form
 \* ------------------------------------------------------------ */
 
-form {
+.input-inline {
     width: 267px;
     margin: 0 auto;
     & label {
@@ -45,7 +45,7 @@ form {
                 text-indent: 10px;
                 color: $gray;
                 font-size: 14px;
-                background: url("/css/images/reservation-arrow.png") no-repeat 83% 50%;
+                background: url("/eli/css/images/reservation-arrow.png") no-repeat 83% 50%;
                 background-color: $white;
             }
         }
@@ -53,13 +53,10 @@ form {
 }
 
 @media #{$desktop} {
-    form {
+    .input-inline {
         display: inline-block;
         & .label-center {
-            margin-left: 6%;
-        }
-        & .select-wrapper select {
-            margin-left: 6%;
+            margin-left: 5%;
         }
     }
 }

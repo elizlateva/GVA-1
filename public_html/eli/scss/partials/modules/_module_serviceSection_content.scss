@@ -7,7 +7,7 @@
     font-size: $font-size-13;
     line-height: 26px;
     text-align: center;
-    & div {
+    & .service-inner {
         padding: 20px 0;
         & h2 {
             color: $white;
@@ -21,7 +21,7 @@
 @media #{$tablet} {
     .content {
         padding: 100px 0;
-        & div {
+        & .service-inner {
             width: 50%;
             display: inline-block;
             h2 {
@@ -47,7 +47,7 @@
 @media #{$desktop} {
     .content {
         padding: 200px 0;
-        & div {
+        & .service-inner {
             width: 25%;
             padding: 0;
             float: left;
