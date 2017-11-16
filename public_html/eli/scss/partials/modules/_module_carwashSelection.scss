@@ -1,0 +1,36 @@
+/* ------------------------------------------------------------ *\
+  Carwash-selection
+\* ------------------------------------------------------------ */
+
+.carwash-selection {
+    width: 300px;
+    margin: 40px auto 0;
+    p {
+        font-size: 16px;
+        color: $white;
+        font-weight: font-weight-2;
+        text-align: center;
+        @media #{$smartphone} {
+            text-align: left;
+            text-indent: 10px;
+        }
+    }
+    & .image-wrapper {
+        display: none;
+        position: absolute;
+        left: 12px;
+        top: 23px;
+        width: 40px;
+        height: 40px;
+        background: $white;
+        border-radius: 4px;
+        & img {
+            position: absolute;
+            left: 4px;
+            top: 6px;
+        }
+        @media #{$smartphone} {
+            display: block;
+        }
+    }
+}

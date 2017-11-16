@@ -563,7 +563,7 @@ fieldset.right {
   font-size: 20px;
 }
 
-.choose-car.chosen {
+.choose-car .chosen {
   background-color: #333;
   color: #fff;
 }
@@ -684,7 +684,7 @@ form .select-center .select-wrapper select {
   border: none;
   color: #fff;
   text-transform: uppercase;
-  font-size: 16px;
+  font-size: 14px;
   margin: 30px 0;
 }
 
@@ -1330,83 +1330,100 @@ form .select-center .select-wrapper select {
 
 /* ------------------------------------------------------------ *    Content-section-table
 \* ------------------------------------------------------------ */
-.table {
+table {
   width: 100%;
-  color: #000;
+  color: #a1a1a1;
+  font-size: 10px;
   text-transform: uppercase;
-  outline: 1px solid #bf1e2d;
-  font-size: 14px;
-}
-
-.table table.left,
-.table table.right {
-  width: 100%;
-  border-collapse: initial;
-}
-
-.table table.left thead,
-.table table.right thead {
-  display: table-header-group;
-  color: #fff;
-  font-size: 15px;
-  background: #bf1e2d;
-  outline: 1px solid #bf1e2d;
-}
-
-.table table.left thead th,
-.table table.right thead th {
-  padding: 10px 0;
-}
-
-.table table.left tbody tr td,
-.table table.right tbody tr td {
-  width: 150px;
-  padding: 10px 0;
-  text-align: center;
-  background: #f8f8f8;
-  border: 1px solid #fff;
-}
-
-.table table.left tbody tr td.title,
-.table table.right tbody tr td.title {
-  background: #f8e6e8;
-}
-
-.table table.left tbody :hover,
-.table table.right tbody :hover {
-  font-weight: bold;
-}
-
-.table table.right thead {
-  display: none;
 }
 
 @media only screen and (min-width: 768px) {
-  .table {
-    font-size: 16px;
+  table table {
+    font-size: 13px;
   }
-  .table table.left,
-  .table table.right {
-    width: 50%;
-    float: left;
-  }
-  .table table.left tbody tr td,
-  .table table.right tbody tr td {
-    width: 170px;
-  }
-  .table table.right thead {
-    display: table-header-group;
-  }
-  :after {
-    clear: both;
-    content: "";
-    display: block;
-  }
+}
+
+table thead {
+  display: none;
+}
+
+table thead th {
+  padding: 5px 0;
+}
+
+table tr {
+  border: 1px solid #bf1e2d;
+  display: block;
+  margin-bottom: 10px;
+}
+
+table tr td {
+  padding: 5px 0;
+  display: block;
+  text-align: right;
+  font-weight: bold;
+  padding: 5px 10px;
+}
+
+table tr td.title {
+  font-weight: bold;
+  background: #f8e6e8;
+  text-align: center;
+  color: #000;
+}
+
+table tr td::before {
+  content: attr(data-label);
+  float: left;
+  font-weight: bold;
+  color: #000;
+  text-transform: uppercase;
 }
 
 @media only screen and (min-width: 1024px) {
   .table {
-    width: 980px;
+    padding: 200px 0;
+  }
+  .table table {
+    border: 1px solid #bf1e2d;
+    font-size: 16px;
+  }
+  .table table thead {
+    display: table-header-group;
+    color: #fff;
+    font-size: 18px;
+  }
+  .table table thead th {
+    text-align: left;
+    background: #bf1e2d;
+  }
+  .table table tr {
+    display: table-row;
+    border: none;
+  }
+  .table table tr td {
+    display: table-cell;
+    text-align: left;
+    padding-right: 0;
+    padding-left: 0;
+    color: #404040;
+    font-weight: none;
+  }
+  .table table tr td.title {
+    background: none;
+    text-align: left;
+    text-indent: 10px;
+    color: #404040;
+    font-weight: none;
+  }
+  .table table tr td::before {
+    display: none;
+  }
+  .table table tr td:hover {
+    color: #000;
+  }
+  .table table tr:nth-child(2n+1) {
+    background: #f8e6e8;
   }
 }
 

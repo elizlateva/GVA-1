@@ -1,0 +1,26 @@
+/* ------------------------------------------------------------ *\
+	Footer-contact
+\* ------------------------------------------------------------ */
+
+.contact {
+    width: 300px;
+    margin: 0 auto;
+    display: none;
+    & p {
+        color: $white;
+        font-size: $font-size-30;
+        padding: 10px 0;
+        &:before {
+            content: url("/css/images/phone.png");
+            display: inline-block;
+            vertical-align: middle;
+            padding-right: 40px;
+        }
+    }
+}
+
+@media #{$desktop} {
+    .contact {
+        display: inline-block;
+    }
+}

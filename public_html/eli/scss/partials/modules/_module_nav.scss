@@ -1,0 +1,56 @@
+/* ------------------------------------------------------------ *\
+	Navigations
+\* ------------------------------------------------------------ */
+
+nav.menu {
+    position: relative;
+    background: $dark;
+    & .toggle-nav {
+        position: absolute;
+        top: -57px;
+        right: 1%;
+        & .fa-bars:before {
+            color: $red;
+        }
+    }
+    & ul {
+        display: none;
+        & li {
+            padding: 10px 0;
+            font-size: 15px;
+        }
+        & a {
+            color: $white;
+            padding: 10px 0;
+        }
+    }
+}
+
+@media #{$desktop} {
+    nav.menu {
+        & .toggle-nav {
+            display: none;
+        }
+        & ul {
+            display: block;
+            position: absolute;
+            top: -50px;
+            left: 100px;
+            & li {
+                display: inline-block;
+                padding: 0 17px;
+                font-size: 17px;
+                background: none;
+                & a {
+                    color: $white;
+                    padding: 10px 10px;
+                }
+                a {
+                    &:hover {
+                        border-bottom: 1px solid $white;
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,41 @@
+/* ------------------------------------------------------------ *\
+    Reservation-form-footer
+\* ------------------------------------------------------------ */
+
+.footer-reservation-form {
+    background: #716f6f;
+    & .footer-inner {
+        width: 90%;
+        margin: 0 auto;
+        padding: 20px 0;
+        @media #{$desktop} {
+            width: 980px;
+        }
+        & .reservation-form-payments {
+            width: 310px;
+            margin: 0 auto;
+            @media #{$desktop} {
+                float: right;
+            }
+        }
+        & ul li {
+            display: inline-block;
+            & img.round-border {
+                border-radius: 6px;
+                width: 58px;
+                height: 36px;
+            }
+            & img.image-center {
+                width: 58px;
+                height: 36px;
+            }
+        }
+    }
+    .cr-text {
+        color: $gray;
+        font-size: 13px;
+        text-align: center;
+        padding: 10px 0;
+        text-transform: uppercase;
+    }
+}

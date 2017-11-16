@@ -1,0 +1,18 @@
+/* ------------------------------------------------------------ *\
+   Submit
+\* ------------------------------------------------------------ */
+
+.submit {
+    margin: 20px 0;
+    & input.submit {
+        font-size: 26px;
+        color: $white;
+        background: #67b962;
+        display: block;
+        width: 257px;
+        height: 60px;
+        border-radius: 10px;
+        border: 1px solid #67b962;
+        margin: 0 auto;
+    }
+}

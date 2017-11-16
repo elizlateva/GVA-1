@@ -1,0 +1,15 @@
+/* ------------------------------------------------------------ *\
+  Footer-clients
+\* ------------------------------------------------------------ */
+
+.clients {
+    width: 251px;
+    margin: 0 auto;
+}
+
+@media #{$desktop} {
+    .clients {
+        margin-right: 20px;
+        display: inline-block;
+    }
+}

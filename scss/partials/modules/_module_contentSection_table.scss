@@ -2,92 +2,81 @@
     Content-section-table
 \* ------------------------------------------------------------ */
 
-table {
+.table {
     width: 100%;
-    color: $gray;
-    font-size: 10px;
+    color: $black;
     text-transform: uppercase;
-    @media #{$tablet} {
-        table {
-            font-size: $font-size-13;
+    outline: 1px solid $red;
+    font-size: 14px;
+    & table.left,
+    & table.right {
+        width: 100%;
+        border-collapse: initial;
+        & thead {
+            display: table-header-group;
+            color: $white;
+            font-size: 15px;
+            background: $red;
+            outline: 1px solid $red;
+            & th {
+                padding: 10px 0;
+            }
+        }
+        & tbody {
+            & tr {
+                & td {
+                    width: 150px;
+                    padding: 10px 0;
+                    text-align: center;
+                    background: #f8f8f8;
+                    border: 1px solid $white;
+                    &.title {
+                        background: #f8e6e8;
+                    }
+                }
+            }
+            & :hover {
+                font-weight: $font-weight-2;
+            }
         }
     }
-    & thead {
-        display: none;
-        & th {
-            padding: 5px 0;
+    & table.right {
+        & thead {
+            display: none;
         }
     }
-    & tr {
-        border: 1px solid $red;
+}
+
+@media #{$tablet} {
+    .table {
+        font-size: 16px;
+        & table.left,
+        & table.right {
+            width: 50%;
+            float: left;
+            & tbody {
+                & tr {
+                    & td {
+                        width: 170px;
+                    }
+                }
+            }
+        }
+        & table.right {
+            & thead {
+                display: table-header-group;
+            }
+        }
+    }
+    & :after {
+        clear: both;
+        content: "";
         display: block;
-        margin-bottom: 10px;
-        & td {
-            padding: 5px 0;
-            display: block;
-            text-align: right;
-            font-weight: $font-weight-2;
-            padding: 5px 10px;
-            &.title {
-                font-weight: $font-weight-2;
-                background: #f8e6e8;
-                text-align: center;
-                color: $black;
-            }
-            &::before {
-                content: attr(data-label);
-                float: left;
-                font-weight: $font-weight-2;
-                color: $black;
-                text-transform: uppercase;
-            }
-        }
     }
 }
 
 @media #{$desktop} {
     .table {
-        padding: 200px 0;
-        & table {
-            border: 1px solid $red;
-            font-size: 16px;
-            & thead {
-                display: table-header-group;
-                color: $white;
-                font-size: 18px;
-                & th {
-                    text-align: left;
-                    background: $red;
-                }
-            }
-            & tr {
-                display: table-row;
-                border: none;
-                & td {
-                    display: table-cell;
-                    text-align: left;
-                    padding-right: 0;
-                    padding-left: 0;
-                    color: #404040;
-                    font-weight: none;
-                    &.title {
-                        background: none;
-                        text-align: left;
-                        text-indent: 10px;
-                        color: #404040;
-                        font-weight: none;
-                    }
-                    &::before {
-                        display: none;
-                    }
-                    &:hover {
-                        color: $black;
-                    }
-                }
-                &:nth-child(2n+1) {
-                    background: #f8e6e8;
-                }
-            }
-        }
+        width: 980px;
     }
 }

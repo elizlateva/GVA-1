@@ -11,14 +11,16 @@ $(document).ready(function() {
     });
     $("button.choose").click(function() {
         if ($(this).text() == "Choissez") {
-            $(this).text("Choisir")
-            $(".choose-car").addClass('chosen');
+            $(this).text("Choisir");
         } else {
             $(this).text("Choissez");
-            $(".choose-car").removeClass('chosen');
-
         };
     });
+    $("button.choose").click(function() {
+        $(".choose-car").css({ "background-color": "gray", "color": "white" });
+    });
+
+
     $('.accordion-section-title').click(function(e) {
         if ($(e.target).is('.active')) {
             $('.accordion .accordion-section-title').removeClass('active');
