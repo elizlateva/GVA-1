@@ -305,7 +305,7 @@ nav.menu ul a {
   background: url("/eli/css/images/polygon.png") no-repeat 80% 50%;
   color: #fff;
   font-size: 16px;
-  text-indent: 10px;
+  text-indent: 5px;
   border: none;
   width: 47px;
   height: 30px;
@@ -1478,6 +1478,7 @@ fieldset.right {
 .accordion .accordion-section-title {
   cursor: pointer;
   display: inline-flex;
+  line-height: 16px;
   font-weight: bold;
   font-size: 13px;
   padding: 15px 0;
@@ -1519,7 +1520,7 @@ fieldset.right {
     padding: 0 15px;
   }
   .accordion h3 {
-    font-size: 23px;
+    font-size: font-size-21;
   }
   .accordion:last-child {
     float: right;
