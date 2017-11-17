@@ -59,7 +59,7 @@
 <section class="content-section">
     <div class="main-content ">
         <div class="main-content-inner ">
-            <h1>GVA Park VS autres</h1>
+            <h1>Nos Prix</h1>
             <div class="table">
                 <table class="left">
                     <thead>

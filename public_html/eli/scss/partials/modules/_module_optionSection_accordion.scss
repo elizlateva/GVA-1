@@ -14,7 +14,7 @@
     }
     & .accordion-section-title {
         cursor: pointer;
-        display: block;
+        display: inline-flex;
         font-weight: $font-weight-2;
         font-size: $font-size-13;
         padding: 15px 0;
@@ -31,7 +31,8 @@
         font-size: $font-size-13;
         word-break: break-all;
         color: $dark;
-        width: 100%;
+        width: 85%;
+        margin: 0 auto;
         line-height: 16px;
     }
     & .active {

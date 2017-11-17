@@ -26,7 +26,7 @@
             <nav class="menu">
                 <ul class="active">
                     <li>
-                        <a href="# ">Accueil ELI </a>
+                        <a href="# ">Accueil </a>
                     </li>
                     <li>
                         <a href="# ">Notre service</a>
