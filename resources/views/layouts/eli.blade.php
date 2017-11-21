@@ -58,94 +58,88 @@
         
     <section class="reservation-section">
         <div class="main ">
-            <div class="main-inner ">
-                <div class="reservation-form ">
-                    <div class="reservation-form-center">
-                        <form>
-                            <div class="input-inline">
-                                <label>Date de départ</label>
-                                <input type="date " name="calendar ">
-                            </div><!-- /.input-inline -->
-                                    <div class="input-inline">
-                                    <label class="label-center">Heure de rendez-vous</label>
-                                        <div class="select-center">
-                                            <div class="select-wrapper ">
-                                             <select> 
-                                             <option value="HH " selected=" ">HH</option>
-                                             <option value="00 ">00</option>
-                                             <option value="01 ">01</option>
-                                             <option value="02 ">02</option>
-                                             <option value="03 ">03</option>
-                                             <option value="04 ">04</option>
-                                             <option value="05 ">05</option>
-                                             <option value="06 ">06</option>
-                                             </select>
-                                            </div>
-                                            <div class="select-wrapper ">
-                                             <select> 
-                                             <option value="MM " selected=" ">MM</option>
-                                             <option value="00 ">00</option>
-                                             <option value="30 ">10</option>
-                                             <option value="0100 ">20</option>
-                                             <option value="0130 ">30</option>
-                                             <option value="0200 ">40</option>
-                                             <option value="0230 ">50</option>
-                                             </select>
-                                            </div>
-                                        </div>
-                                    </div><!-- /.input-inline -->
-                                    <div class="input-inline">
-                                         <label>Date de retour</label>
-                                         <input type="date " name="calendar ">
-                                    </div><!-- /.input-inline -->
-                                    <div class="input-inline">
-                                         <label class="label-center">Heure de retour</label>
-                                        <div class="select-center">
-                                            <div class="select-wrapper ">
-                                             <select> 
-                                             <option value="HH " selected=" ">HH</option>
-                                             <option value="00 ">00</option>
-                                             <option value="01 ">01</option>
-                                             <option value="02 ">02</option>
-                                             <option value="03 ">03</option>
-                                             <option value="04 ">04</option>
-                                             <option value="05 ">05</option>
-                                             <option value="06 ">06</option>
-                                            </select>
-                                            </div>
-                                            <div class="select-wrapper ">
-                                            <select> 
-                                            <option value="MM " selected=" ">MM</option>
-                                            <option value="00 ">00</option>
-                                            <option value="30 ">10</option>
-                                            <option value="0100 ">20</option>
-                                            <option value="0130 ">30</option>
-                                            <option value="0200 ">40</option>
-                                            <option value="0230 ">50</option>
-                                            </select>
-                                           </div>
-                                        </div>
-                                    </div><!-- /.input-inline -->
-                        </form><!--/form-->
-                    </div><!--/.reservation-form-center-->
+        <form>
+            <div class="input-inline">
+                <label>Date de départ</label>
+                <input type="date " name="calendar ">
+            </div><!-- /.input-inline -->
+            <div class="input-inline">
+            <label class="label-center">Heure de rendez-vous</label>
+            <div class="select-center">
+                <div class="select-wrapper ">
+                    <select> 
+                        <option value="HH " selected=" ">HH</option>
+                        <option value="00 ">00</option>
+                        <option value="01 ">01</option>
+                        <option value="02 ">02</option>
+                        <option value="03 ">03</option>
+                        <option value="04 ">04</option>
+                        <option value="05 ">05</option>
+                        <option value="06 ">06</option>
+                    </select>
+                </div>
+                <div class="select-wrapper ">
+                    <select> 
+                        <option value="MM " selected=" ">MM</option>
+                        <option value="00 ">00</option>
+                        <option value="30 ">10</option>
+                        <option value="0100 ">20</option>
+                        <option value="0130 ">30</option>
+                        <option value="0200 ">40</option>
+                        <option value="0230 ">50</option>
+                    </select>
+                </div>
+            </div>
+            </div><!-- /.input-inline -->
+            <div class="input-inline">
+                <label>Date de retour</label>
+                <input type="date " name="calendar ">
+            </div><!-- /.input-inline -->
+            <div class="input-inline">
+                <label class="label-center">Heure de retour</label>
+                <div class="select-center">
+                    <div class="select-wrapper ">
+                        <select> 
+                            <option value="HH " selected=" ">HH</option>
+                            <option value="00 ">00</option>
+                            <option value="01 ">01</option>
+                            <option value="02 ">02</option>
+                            <option value="03 ">03</option>
+                            <option value="04 ">04</option>
+                            <option value="05 ">05</option>
+                             <option value="06 ">06</option>
+                        </select>
+                    </div>
+                    <div class="select-wrapper ">
+                        <select> 
+                            <option value="MM " selected=" ">MM</option>
+                            <option value="00 ">00</option>
+                            <option value="30 ">10</option>
+                            <option value="0100 ">20</option>
+                            <option value="0130 ">30</option>
+                            <option value="0200 ">40</option>
+                            <option value="0230 ">50</option>
+                        </select>
+                    </div>
+                </div>
+                </div><!-- /.input-inline -->
                 <div class="reservation-button ">
-                            <button type="button ">Réservation</button>
-                        </div><!--/.reservation-button-->
-                    </div><!--/.reservation-form-->
-            </div><!--/.main-inner-->
-        </div> <!--/.main-->
+                    <button type="button ">Réservation</button>
+                </div><!--/.reservation-button-->
+        </form><!--/form-->
+    </div> <!--/.main-->
         <div class="reservation-section-footer ">
-            <div class="reservation-section-footer-center ">
-                    <img src="/eli/css/images/car-icon.png">
-                    <p class="reservation-footer-text">Park &amp; Fly</p>
-                    <img src="/eli/css/images/fly-icon.png">
-                </div><!--/.reservation-section-footer-center-->
-            </div><!--/.reservation-section-footer-->
-        </section>
+           <div class="reservation-section-footer-center ">
+                <img src="/eli/css/images/car-icon.png">
+                <p class="reservation-footer-text">Park &amp; Fly</p>
+                <img src="/eli/css/images/fly-icon.png">
+            </div><!--/.reservation-section-footer-center-->
+        </div><!--/.reservation-section-footer-->
+    </section>
 
         @yield('content')
 
-    <footer class="footer">
+        <footer class="footer">
         <div class="footer-inner ">
             <div class="contact ">
                 <p>022 510 14 40</p>
@@ -173,7 +167,7 @@
                 <a href="#">Follow us</a>
             </div> <!--/.social-->
         </div><!--/.footer-inner-->
-    </footer><!--footer-->
+    </footer><!--footer-->  
 
     <script src="/eli/vendors/app.js"></script>
 </body>

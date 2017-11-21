@@ -12,39 +12,43 @@
         color: $red;
         text-align: center;
     }
-    & .accordion-section-title {
-        cursor: pointer;
-        display: inline-flex;
-        line-height: 16px;
-        font-weight: $font-weight-2;
-        font-size: $font-size-13;
-        padding: 15px 0;
-        word-break: break-all;
-        &::before {
-            content: url("/eli/css/images/arrow-down.png");
-            display: inline;
-            vertical-align: -webkit-baseline-middle;
-            margin-right: 10px;
-        }
-    }
-    & .accordion-section-content {
-        display: none;
-        font-size: $font-size-13;
-        word-break: break-all;
-        color: $dark;
-        width: 85%;
-        margin: 0 auto;
-        line-height: 16px;
-    }
-    & .active {
-        color: $red;
-    }
-    & .accordion-section-title.active::before {
-        content: url("/eli/css/images/arrow-up.png");
+}
+
+.accordion-section-title {
+    cursor: pointer;
+    display: inline-flex;
+    line-height: 16px;
+    font-weight: $font-weight-2;
+    font-size: $font-size-13;
+    padding: 15px 0;
+    word-break: break-all;
+    &::before {
+        content: url("/eli/css/images/arrow-down.png");
         display: inline;
         vertical-align: -webkit-baseline-middle;
         margin-right: 10px;
     }
+}
+
+.accordion-section-content {
+    display: none;
+    font-size: $font-size-13;
+    word-break: break-all;
+    color: $dark;
+    width: 85%;
+    margin: 0 auto;
+    line-height: 16px;
+}
+
+.active {
+    color: $red;
+}
+
+.accordion-section-title.active::before {
+    content: url("/eli/css/images/arrow-up.png");
+    display: inline;
+    vertical-align: -webkit-baseline-middle;
+    margin-right: 10px;
 }
 
 @media #{$desktop} {
@@ -62,6 +66,10 @@
             clear: both;
             display: block;
             content: "";
+        }
+        & .accordion-section-title {
+            font-size: 15px;
+            ;
         }
     }
 }

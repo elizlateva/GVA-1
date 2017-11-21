@@ -20,7 +20,7 @@
 
 @media #{$tablet} {
     .content {
-        padding: 100px 0;
+        padding: 20% 0;
         & .service-inner {
             width: 50%;
             display: inline-block;
@@ -46,7 +46,7 @@
 
 @media #{$desktop} {
     .content {
-        padding: 200px 0;
+        padding: 200px 0 0;
         & .service-inner {
             width: 25%;
             padding: 0;

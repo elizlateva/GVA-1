@@ -4,8 +4,9 @@
 
 .header {
     background: rgba(0, 0, 0, 0.55);
-    position: fixed;
+    // position: fixed;
     top: 0;
+    position: absolute;
     right: 0;
     left: 0;
     padding: 20px 0;

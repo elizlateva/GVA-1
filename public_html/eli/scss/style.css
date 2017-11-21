@@ -210,8 +210,8 @@ h3 {
 \* ------------------------------------------------------------ */
 .header {
   background: rgba(0, 0, 0, 0.55);
-  position: fixed;
   top: 0;
+  position: absolute;
   right: 0;
   left: 0;
   padding: 20px 0;
@@ -228,7 +228,7 @@ h3 {
   display: inline-block;
 }
 
-@media only screen and (min-width: 1024px) {
+@media only screen and (min-width: 1000px) {
   .header .header-inner {
     width: 980px;
     margin: 0 auto;
@@ -239,7 +239,6 @@ h3 {
 \* ------------------------------------------------------------ */
 nav.menu {
   position: relative;
-  background: #333;
 }
 
 nav.menu .toggle-nav {
@@ -261,12 +260,16 @@ nav.menu ul li {
   font-size: 15px;
 }
 
-nav.menu ul a {
-  color: #fff;
-  padding: 10px 0;
+nav.menu ul li:hover {
+  background-color: #bf1e2d;
 }
 
-@media only screen and (min-width: 1024px) {
+nav.menu ul a {
+  color: #fff;
+  padding: 10px 10px;
+}
+
+@media only screen and (min-width: 1000px) {
   nav.menu .toggle-nav {
     display: none;
   }
@@ -278,13 +281,14 @@ nav.menu ul a {
   }
   nav.menu ul li {
     display: inline-block;
-    padding: 0 17px;
+    padding: 10px 17px;
     font-size: 17px;
+  }
+  nav.menu ul li:hover {
     background: none;
   }
   nav.menu ul li a {
     color: #fff;
-    padding: 10px 10px;
   }
   nav.menu ul li a:hover {
     border-bottom: 1px solid #fff;
@@ -299,19 +303,25 @@ nav.menu ul a {
   border-radius: 4px;
   width: 47px;
   padding: 2px 0;
+  margin-left: 10px;
+  margin-top: 10px;
 }
 
 .select-lang select {
   background: url("/eli/css/images/polygon.png") no-repeat 80% 50%;
   color: #fff;
   font-size: 16px;
-  text-indent: 5px;
+  text-indent: 7px;
   border: none;
   width: 47px;
   height: 30px;
 }
 
-@media only screen and (min-width: 1024px) {
+.select-lang select option {
+  color: #bf1e2d;
+}
+
+@media only screen and (min-width: 1000px) {
   .select-lang {
     display: block;
     position: absolute;
@@ -324,47 +334,35 @@ nav.menu ul a {
 \* ------------------------------------------------------------ */
 .reservation-section {
   background: #bf1e2d;
-}
-
-.reservation-section .main {
-  background: url("/eli/css/images/screen-1.jpg") no-repeat center;
-  background-size: cover;
-  width: 100%;
-  height: 850px;
-  font-size: 15px;
   position: relative;
 }
 
-.reservation-section .main .main-inner {
-  width: 90%;
-  margin: 0 auto;
+.reservation-section .main {
+  background-image: url("/eli/css/images/screen-1.jpg");
+  background-position: center center;
+  background-attachment: fixed;
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 100%;
+  min-height: 650px;
+  height: 82%;
+  font-size: 15px;
+  position: relative;
+  overflow: hidden;
 }
 
-@media only screen and (min-width: 1024px) {
-  .reservation-section .main .main-inner {
-    width: 980px;
-  }
-}
-
-.reservation-section .main .reservation-form {
+form {
   width: 90%;
   background: rgba(0, 0, 0, 0.55);
   position: absolute;
-  top: 24%;
-  right: 0;
-  left: 0;
-  bottom: 21%;
-  margin: auto;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
-@media only screen and (min-width: 1024px) {
-  .reservation-section .main .reservation-form {
-    height: 300px;
+@media only screen and (min-width: 768px) {
+  form {
     width: 600px;
-  }
-  .reservation-section .main .reservation-form .reservation-form-center {
-    width: 540px;
-    margin: 10px auto;
   }
 }
 
@@ -418,14 +416,14 @@ nav.menu ul a {
   }
 }
 
-@media only screen and (min-width: 1024px) {
+@media only screen and (min-width: 1000px) {
   .buttons-group .buttons-inner input[type="button"] {
     width: 31%;
     font-size: 24px;
   }
 }
 
-@media only screen and (min-width: 1024px) {
+@media only screen and (min-width: 1000px) {
   .buttons-group {
     width: 980px;
   }
@@ -452,7 +450,7 @@ nav.menu ul a {
   color: #bf1e2d;
 }
 
-@media only screen and (min-width: 1024px) {
+@media only screen and (min-width: 1000px) {
   .full-form {
     width: 980px;
     margin: 10px auto;
@@ -464,7 +462,7 @@ nav.menu ul a {
 
 /* ------------------------------------------------------------ *    User-address-form
 \* ------------------------------------------------------------ */
-@media only screen and (min-width: 1024px) {
+@media only screen and (min-width: 1000px) {
   .user-address-form {
     width: 60%;
     float: left;
@@ -518,7 +516,7 @@ fieldset.right {
   width: 90%;
 }
 
-@media only screen and (min-width: 1024px) {
+@media only screen and (min-width: 1000px) {
   .car-selection {
     float: left;
     width: 40%;
@@ -607,13 +605,19 @@ fieldset.right {
 .input-inline label {
   color: #fff;
   display: block;
-  padding: 20px 0 10px;
+  padding: 5px 0 5px;
   font-weight: bold;
+}
+
+@media only screen and (min-width: 768px) {
+  .input-inline label {
+    padding: 30px 0 10px;
+  }
 }
 
 .input-inline input {
   width: 267px;
-  height: 40px;
+  height: 35px;
   border-radius: 4px;
   border: none;
   text-indent: 17px;
@@ -621,30 +625,30 @@ fieldset.right {
   font-size: 14px;
 }
 
-.input-inline .select-center {
+.select-center {
   width: 267px;
   margin: 0 auto;
 }
 
-.input-inline .select-center .select-wrapper {
+.select-center .select-wrapper {
   display: inline;
   position: relative;
 }
 
-.input-inline .select-center .select-wrapper:after {
+.select-center .select-wrapper:after {
   content: "";
   display: block;
   position: absolute;
   border-left: 1px solid #a1a1a1;
   width: 2px;
-  height: 39px;
+  height: 35px;
   right: 45px;
-  top: -11px;
+  top: -7px;
 }
 
-.input-inline .select-center .select-wrapper select {
+.select-center .select-wrapper select {
   width: 115px;
-  height: 40px;
+  height: 35px;
   border-radius: 4px;
   border: none;
   margin-left: 4%;
@@ -655,9 +659,11 @@ fieldset.right {
   background-color: #fff;
 }
 
-@media only screen and (min-width: 1024px) {
+@media only screen and (min-width: 768px) {
   .input-inline {
     display: inline-block;
+    margin-left: 30px;
+    margin-right: -20px;
   }
   .input-inline .label-center {
     margin-left: 5%;
@@ -680,7 +686,13 @@ fieldset.right {
   color: #fff;
   text-transform: uppercase;
   font-size: 14px;
-  margin: 30px 0;
+  margin: 10px 0;
+}
+
+@media only screen and (min-width: 1000px) {
+  .reservation-button button {
+    margin: 30px 0;
+  }
 }
 
 /* ------------------------------------------------------------ *    Reservation-section-footer
@@ -722,7 +734,7 @@ fieldset.right {
   margin: 0 10px;
 }
 
-@media only screen and (min-width: 768px) {
+@media only screen and (min-width: 1000px) {
   .reservation-section-footer .reservation-section-footer-center {
     width: 450px;
   }
@@ -746,7 +758,7 @@ fieldset.right {
   margin: 0 auto;
 }
 
-@media only screen and (min-width: 1024px) {
+@media only screen and (min-width: 1000px) {
   .content-section .main-content .main-content-inner {
     width: 980px;
   }
@@ -789,9 +801,9 @@ fieldset.right {
   }
 }
 
-@media only screen and (min-width: 1024px) {
+@media only screen and (min-width: 1000px) {
   .text {
-    padding: 200px 0;
+    padding-top: 15%;
   }
 }
 
@@ -815,7 +827,7 @@ fieldset.right {
   }
 }
 
-@media only screen and (min-width: 1024px) {
+@media only screen and (min-width: 1000px) {
   .reservation-wrapper {
     padding: 34px 0;
   }
@@ -837,7 +849,7 @@ fieldset.right {
   }
 }
 
-@media only screen and (min-width: 1024px) {
+@media only screen and (min-width: 1000px) {
   .parking-selection {
     width: 780px;
     margin: 0 auto;
@@ -894,7 +906,7 @@ fieldset.right {
   }
 }
 
-@media only screen and (min-width: 1024px) {
+@media only screen and (min-width: 1000px) {
   .self-parking {
     width: 360px;
     padding: 60px 29px;
@@ -952,7 +964,7 @@ fieldset.right {
   }
 }
 
-@media only screen and (min-width: 1024px) {
+@media only screen and (min-width: 1000px) {
   .private-parking {
     width: 360px;
     padding: 60px 23px;
@@ -992,7 +1004,7 @@ fieldset.right {
   visibility: visible;
 }
 
-@media only screen and (min-width: 1024px) {
+@media only screen and (min-width: 1000px) {
   .tooltip img {
     top: 10px;
   }
@@ -1114,7 +1126,7 @@ fieldset.right {
   }
 }
 
-@media only screen and (min-width: 1024px) {
+@media only screen and (min-width: 1000px) {
   .reservation-form-button {
     width: 880px;
   }
@@ -1135,7 +1147,7 @@ fieldset.right {
   padding: 20px 0;
 }
 
-@media only screen and (min-width: 1024px) {
+@media only screen and (min-width: 1000px) {
   .footer-reservation-form .footer-inner {
     width: 980px;
   }
@@ -1146,7 +1158,7 @@ fieldset.right {
   margin: 0 auto;
 }
 
-@media only screen and (min-width: 1024px) {
+@media only screen and (min-width: 1000px) {
   .footer-reservation-form .footer-inner .reservation-form-payments {
     float: right;
   }
@@ -1167,7 +1179,7 @@ fieldset.right {
   height: 36px;
 }
 
-.footer-reservation-form .cr-text {
+.cr-text {
   color: #a1a1a1;
   font-size: 13px;
   text-align: center;
@@ -1179,6 +1191,7 @@ fieldset.right {
 \* ------------------------------------------------------------ */
 .service-section {
   background-color: #bf1e2d;
+  margin-top: -1px;
 }
 
 .service-section .upper-main-content {
@@ -1192,24 +1205,24 @@ fieldset.right {
   margin: 0 auto;
 }
 
-@media only screen and (min-width: 1024px) {
+@media only screen and (min-width: 1000px) {
   .service-section .upper-main-content .main-content-inner {
     width: 980px;
   }
 }
 
-.service-section .main-content .main-content-inner {
+.main-content .main-content-inner {
   width: 90%;
   margin: 0 auto;
 }
 
-@media only screen and (min-width: 1024px) {
-  .service-section .main-content .main-content-inner {
+@media only screen and (min-width: 1000px) {
+  .main-content .main-content-inner {
     width: 980px;
   }
 }
 
-.service-section h1 {
+h1 {
   font-size: 20px;
   font-weight: bold;
   font-family: "Raleway", sans-serif;
@@ -1219,7 +1232,7 @@ fieldset.right {
 }
 
 @media only screen and (min-width: 768px) {
-  .service-section h1 {
+  h1 {
     font-size: 30px;
   }
 }
@@ -1246,7 +1259,7 @@ fieldset.right {
 
 @media only screen and (min-width: 768px) {
   .content {
-    padding: 100px 0;
+    padding: 20% 0;
   }
   .content .service-inner {
     width: 50%;
@@ -1270,9 +1283,9 @@ fieldset.right {
   }
 }
 
-@media only screen and (min-width: 1024px) {
+@media only screen and (min-width: 1000px) {
   .content {
-    padding: 200px 0;
+    padding: 200px 0 0;
   }
   .content .service-inner {
     width: 25%;
@@ -1301,7 +1314,7 @@ fieldset.right {
   margin: 0 auto;
 }
 
-@media only screen and (min-width: 1024px) {
+@media only screen and (min-width: 1000px) {
   .content-section .main-content .main-content-inner {
     width: 980px;
   }
@@ -1399,10 +1412,9 @@ fieldset.right {
   }
 }
 
-@media only screen and (min-width: 1024px) {
+@media only screen and (min-width: 1000px) {
   .table {
     width: 980px;
-    margin: 100px 0 0;
   }
 }
 
@@ -1425,7 +1437,7 @@ fieldset.right {
   margin: 30px 0 0;
 }
 
-@media only screen and (min-width: 1024px) {
+@media only screen and (min-width: 1000px) {
   .table-reservation-button .table-button {
     font-size: 20px;
   }
@@ -1447,16 +1459,20 @@ fieldset.right {
   margin: 0 auto;
 }
 
-@media only screen and (min-width: 1024px) {
+@media only screen and (min-width: 1000px) {
   .option-section {
     border-top: none;
   }
   .option-section .main-content {
-    padding: 200px 0;
+    padding-top: 20%;
   }
   .option-section .main-content .main-content-inner {
     width: 980px;
-    margin: 0 auto;
+  }
+  .option-section .main-content:after {
+    display: block;
+    clear: both;
+    content: "";
   }
 }
 
@@ -1475,7 +1491,7 @@ fieldset.right {
   text-align: center;
 }
 
-.accordion .accordion-section-title {
+.accordion-section-title {
   cursor: pointer;
   display: inline-flex;
   line-height: 16px;
@@ -1485,14 +1501,14 @@ fieldset.right {
   word-break: break-all;
 }
 
-.accordion .accordion-section-title::before {
+.accordion-section-title::before {
   content: url("/eli/css/images/arrow-down.png");
   display: inline;
   vertical-align: -webkit-baseline-middle;
   margin-right: 10px;
 }
 
-.accordion .accordion-section-content {
+.accordion-section-content {
   display: none;
   font-size: 13px;
   word-break: break-all;
@@ -1502,18 +1518,18 @@ fieldset.right {
   line-height: 16px;
 }
 
-.accordion .active {
+.active {
   color: #bf1e2d;
 }
 
-.accordion .accordion-section-title.active::before {
+.accordion-section-title.active::before {
   content: url("/eli/css/images/arrow-up.png");
   display: inline;
   vertical-align: -webkit-baseline-middle;
   margin-right: 10px;
 }
 
-@media only screen and (min-width: 1024px) {
+@media only screen and (min-width: 1000px) {
   .accordion {
     width: 33%;
     float: left;
@@ -1530,6 +1546,9 @@ fieldset.right {
     display: block;
     content: "";
   }
+  .accordion .accordion-section-title {
+    font-size: 15px;
+  }
 }
 
 /* ------------------------------------------------------------ *    Footer
@@ -1544,7 +1563,7 @@ fieldset.right {
   padding: 20px 0;
 }
 
-@media only screen and (min-width: 1024px) {
+@media only screen and (min-width: 1000px) {
   .footer .footer-inner {
     width: 980px;
   }
@@ -1575,7 +1594,7 @@ fieldset.right {
   padding-right: 40px;
 }
 
-@media only screen and (min-width: 1024px) {
+@media only screen and (min-width: 1000px) {
   .contact {
     display: inline-block;
   }
@@ -1588,7 +1607,7 @@ fieldset.right {
   margin: 0 auto;
 }
 
-@media only screen and (min-width: 1024px) {
+@media only screen and (min-width: 1000px) {
   .clients {
     margin-right: 20px;
     display: inline-block;
@@ -1623,7 +1642,7 @@ fieldset.right {
   margin-left: 2px;
 }
 
-@media only screen and (min-width: 1024px) {
+@media only screen and (min-width: 1000px) {
   .payments {
     display: inline-block;
     vertical-align: middle;
@@ -1640,7 +1659,7 @@ fieldset.right {
   text-transform: uppercase;
 }
 
-@media only screen and (min-width: 1024px) {
+@media only screen and (min-width: 1000px) {
   .cr-text {
     text-align: left;
     display: inline-block;
@@ -1667,7 +1686,7 @@ fieldset.right {
   padding-left: 15px;
 }
 
-@media only screen and (min-width: 1024px) {
+@media only screen and (min-width: 1000px) {
   .social {
     padding-top: 23px;
     float: right;

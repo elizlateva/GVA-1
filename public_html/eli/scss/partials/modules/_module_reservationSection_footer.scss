@@ -35,13 +35,11 @@
     }
 }
 
-@media #{$tablet} {
-    .reservation-section-footer {
-        & .reservation-section-footer-center {
-            width: 450px;
-            & .reservation-footer-text {
-                font-size: 48px;
-            }
+@media #{$desktop} {
+    .reservation-section-footer .reservation-section-footer-center {
+        width: 450px;
+        & .reservation-footer-text {
+            font-size: 48px;
         }
     }
 }

@@ -31,19 +31,39 @@ $(document).ready(function() {
             // Open up the hidden content panel
             $(this).next().slideDown(300).addClass('open');
         }
+        $.scrollify.update();
     });
 
-    $.scrollify({
-        section: "section",
-        sectionName: false,
-        interstitialSection: "header,footer",
-        before: function(i, sections) {
-            if (i < 2) {
-                $("header").css({ "background": "rgba(0,0,0,0.55)" });
-            } else {
-                $("header").css({ "background": "#333" });
-                $.scrollify.setOptions({ offset: -141 })
-            }
-        }
-    });
+    if (!/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
+        $.scrollify({
+            section: "section",
+            sectionName: false,
+            interstitialSection: ".header, .footer"
+        });
+
+    }
+
+
+
+    // $.scrollify({
+    //     section: "section",
+    //     sectionName: false,
+    //     interstitialSection: "header",
+    //     before: function(i, sections) {
+    //         var offset = 0;
+    //         if (i < 6) {
+    //             offset = -141;
+    //         } else {
+    //             offset = -260;
+    //         }
+    //         if (i < 2) {
+    //             $("header").css({ "background": "rgba(0,0,0,0.55)" });
+    //         } else {
+    //             $("header").css({ "background": "#333" });
+    //         }
+    //         console.log(offset);
+    //         console.log(i);
+    //         $.scrollify.setOptions({ offset: offset })
+    //     }
+    // });
 });

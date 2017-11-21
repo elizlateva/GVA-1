@@ -4,6 +4,7 @@
 
 .service-section {
     background-color: $red;
+    margin-top: -1px;
     & .upper-main-content {
         background: url("/eli/css/images/background.png") repeat;
         padding-top: 30px;
@@ -18,26 +19,24 @@
             }
         }
     }
-    & .main-content .main-content-inner {
-        width: 90%;
-        margin: 0 auto;
-    }
+}
+
+.main-content .main-content-inner {
+    width: 90%;
+    margin: 0 auto;
     @media #{$desktop} {
-        .main-content .main-content-inner {
-            width: 980px;
-        }
+        width: 980px;
     }
-    & h1 {
-        font-size: 20px;
-        font-weight: $font-weight-2;
-        font-family: $font-family-1;
-        color: $red;
-        text-align: center;
-        padding-bottom: 20px;
-    }
+}
+
+h1 {
+    font-size: 20px;
+    font-weight: $font-weight-2;
+    font-family: $font-family-1;
+    color: $red;
+    text-align: center;
+    padding-bottom: 20px;
     @media #{$tablet} {
-        h1 {
-            font-size: $font-size-30;
-        }
+        font-size: $font-size-30;
     }
 }

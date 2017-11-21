@@ -18,10 +18,14 @@
     .option-section {
         border-top: none;
         & .main-content {
-            padding: 200px 0;
+            padding-top: 20%;
             & .main-content-inner {
                 width: 980px;
-                margin: 0 auto;
+            }
+            &:after {
+                display: block;
+                clear: both;
+                content: "";
             }
         }
     }
