@@ -9,9 +9,13 @@
     position: absolute;
     right: 0;
     left: 0;
-    padding: 20px 0;
+    padding: 10px 0;
     z-index: 111;
     width: 100%;
+    & .shell {
+        width: 40%;
+        float: right;
+    }
     & .header-inner {
         width: 90%;
         margin: 0 auto;

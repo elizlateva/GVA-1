@@ -1,7 +1,5 @@
 @extends('layouts.eli')
 @section('content')
-
-<!--/.reservation-section-->
 <section class="content-section ">
     <div class="main-content ">
         <div class="main-content-inner ">
@@ -15,13 +13,13 @@
         </div><!--/.main-content-inner-->     
     </div> <!--/.main-content-->   
 </section><!--/.content-section-->
-<section class="service-section ">
+<section class="service-section">
     <div class="upper-main-content ">
         <div class="main-content-inner ">
             <h1>Pourquoi choisir GVA Park</h1>
         </div><!--/.main-content-inner-->
     </div><!--/.upper-main-content-->
-    <div class="main-content ">
+    <div class="main-content">
         <div class="main-content-inner ">
             <div class="content ">
                 <div class="service-inner">
@@ -55,7 +53,7 @@
             </div> <!--/.content-->
         </div><!--/.main-content-inner-->
     </div> <!--/.main-content-->
-    </section><!--/.service-section-->
+</section><!--/.service-section-->
 <section class="content-section">
     <div class="main-content ">
         <div class="main-content-inner ">

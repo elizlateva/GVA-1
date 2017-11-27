@@ -14,13 +14,10 @@
         background: url("/eli/css/images/polygon.png") no-repeat 80% 50%;
         color: $white;
         font-size: 16px;
-        text-indent: 7px;
+        text-indent: 3px;
         border: none;
         width: 47px;
-        height: 30px;
-        & option {
-            color: $red;
-        }
+        padding: 6px;
     }
 }
 

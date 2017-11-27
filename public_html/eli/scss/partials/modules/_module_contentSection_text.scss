@@ -9,9 +9,9 @@
     line-height: 30px;
     word-wrap: break-word;
     word-break: break-all;
-    & p {
-        padding: 10px 0;
-    }
+    // & p {
+    //     padding: 10px 0;
+    // }
 }
 
 @media #{$tablet} {

@@ -18,15 +18,15 @@
     .option-section {
         border-top: none;
         & .main-content {
-            padding-top: 20%;
-            & .main-content-inner {
-                width: 980px;
-            }
-            &:after {
-                display: block;
-                clear: both;
-                content: "";
-            }
+            padding-top: 200px;
+        }
+        & .main-content-inner {
+            width: 980px;
+        }
+        &:after {
+            display: block;
+            clear: both;
+            content: "";
         }
     }
 }

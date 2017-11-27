@@ -214,9 +214,14 @@ h3 {
   position: absolute;
   right: 0;
   left: 0;
-  padding: 20px 0;
+  padding: 10px 0;
   z-index: 111;
   width: 100%;
+}
+
+.header .shell {
+  width: 40%;
+  float: right;
 }
 
 .header .header-inner {
@@ -311,14 +316,10 @@ nav.menu ul a {
   background: url("/eli/css/images/polygon.png") no-repeat 80% 50%;
   color: #fff;
   font-size: 16px;
-  text-indent: 7px;
+  text-indent: 3px;
   border: none;
   width: 47px;
-  height: 30px;
-}
-
-.select-lang select option {
-  color: #bf1e2d;
+  padding: 6px;
 }
 
 @media only screen and (min-width: 1000px) {
@@ -626,7 +627,7 @@ fieldset.right {
 }
 
 .select-center {
-  width: 267px;
+  width: 268px;
   margin: 0 auto;
 }
 
@@ -647,15 +648,15 @@ fieldset.right {
 }
 
 .select-center .select-wrapper select {
-  width: 115px;
+  width: 130px;
   height: 35px;
   border-radius: 4px;
   border: none;
-  margin-left: 4%;
+  margin: 0 1px;
   text-indent: 10px;
   color: #a1a1a1;
   font-size: 14px;
-  background: url("/eli/css/images/reservation-arrow.png") no-repeat 83% 50%;
+  background: url("/eli/css/images/reservation-arrow.png") no-repeat 85% 50%;
   background-color: #fff;
 }
 
@@ -663,10 +664,7 @@ fieldset.right {
   .input-inline {
     display: inline-block;
     margin-left: 30px;
-    margin-right: -20px;
-  }
-  .input-inline .label-center {
-    margin-left: 5%;
+    margin-right: -25px;
   }
 }
 
@@ -734,12 +732,66 @@ fieldset.right {
   margin: 0 10px;
 }
 
+.scroll-down {
+  display: none;
+  margin: 0 auto;
+  width: 75px;
+}
+
+.scroll-down .scroll {
+  color: #fff;
+  position: relative;
+  display: inline-block;
+  height: 50px;
+}
+
+.scroll-down .scroll:after {
+  border-right: 2px solid #FFF;
+  border-bottom: 2px solid #FFF;
+  -ms-transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
+  transform: rotate(45deg);
+  content: '';
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  margin: auto;
+  top: 15px;
+  right: 0;
+  left: 0;
+  -webkit-animation: 3s arrow infinite ease;
+  animation: 3s arrow infinite ease;
+}
+
+@-webkit-keyframes arrow {
+  0%,
+  100% {
+    top: 10px;
+  }
+  50% {
+    top: 30px;
+  }
+}
+
+@keyframes arrow {
+  0%,
+  100% {
+    top: 10px;
+  }
+  50% {
+    top: 30px;
+  }
+}
+
 @media only screen and (min-width: 1000px) {
   .reservation-section-footer .reservation-section-footer-center {
     width: 450px;
   }
   .reservation-section-footer .reservation-section-footer-center .reservation-footer-text {
-    font-size: 48px;
+    font-size: 44px;
+  }
+  .reservation-section-footer .scroll-down {
+    display: block;
   }
 }
 
@@ -789,10 +841,6 @@ fieldset.right {
   line-height: 30px;
   word-wrap: break-word;
   word-break: break-all;
-}
-
-.text p {
-  padding: 10px 0;
 }
 
 @media only screen and (min-width: 768px) {
@@ -1259,7 +1307,7 @@ h1 {
 
 @media only screen and (min-width: 768px) {
   .content {
-    padding: 20% 0;
+    padding-top: 200px;
   }
   .content .service-inner {
     width: 50%;
@@ -1284,9 +1332,6 @@ h1 {
 }
 
 @media only screen and (min-width: 1000px) {
-  .content {
-    padding: 200px 0 0;
-  }
   .content .service-inner {
     width: 25%;
     padding: 0;
@@ -1464,12 +1509,12 @@ h1 {
     border-top: none;
   }
   .option-section .main-content {
-    padding-top: 20%;
+    padding-top: 200px;
   }
-  .option-section .main-content .main-content-inner {
+  .option-section .main-content-inner {
     width: 980px;
   }
-  .option-section .main-content:after {
+  .option-section:after {
     display: block;
     clear: both;
     content: "";

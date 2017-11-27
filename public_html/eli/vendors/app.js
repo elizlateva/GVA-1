@@ -35,14 +35,23 @@ $(document).ready(function() {
     });
 
     if (!/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
-        $.scrollify({
-            section: "section",
-            sectionName: false,
-            interstitialSection: ".header, .footer"
-        });
+        var mobile;
+        if (window.width < 1000) {
+            mobile = 1;
+        }
+        if (!mobile) {
+            $.scrollify({
+                section: "section",
+                sectionName: false,
+                interstitialSection: ".footer",
 
+            });
+        }
     }
 
+    $('.scroll-down').click(function() {
+        $.scrollify.next();
+    });
 
 
     // $.scrollify({

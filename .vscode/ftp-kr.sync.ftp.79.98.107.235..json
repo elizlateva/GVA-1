@@ -16,7 +16,7 @@
         {
             "type": "-",
             "name": ".bash_history",
-            "size": 299
+            "size": 315
         },
         {
             "type": "-",
@@ -99,6 +99,12 @@
         },
         {
             "type": "d",
+            "name": "Create-Select-Like-Bootstrap-Dropdown-With-jQuery-Dropselect",
+            "size": 4096,
+            "files": []
+        },
+        {
+            "type": "d",
             "name": "Maildir",
             "size": 4096,
             "files": []
@@ -135,12 +141,12 @@
         {
             "type": "-",
             "name": "composer.json",
-            "size": 1393
+            "size": 1477
         },
         {
             "type": "-",
             "name": "composer.lock",
-            "size": 107000
+            "size": 108790
         },
         {
             "type": "d",
@@ -223,32 +229,7 @@
             "type": "d",
             "name": "public_html",
             "size": 4096,
-            "files": [
-                {
-                    "type": "d",
-                    "name": "eli",
-                    "size": 0,
-                    "files": [
-                        {
-                            "type": "d",
-                            "name": "scss",
-                            "size": 0,
-                            "files": [
-                                {
-                                    "type": "-",
-                                    "name": "style.css.map",
-                                    "size": 31426
-                                },
-                                {
-                                    "type": "-",
-                                    "name": "style.css",
-                                    "size": 31315
-                                }
-                            ]
-                        }
-                    ]
-                }
-            ]
+            "files": []
         },
         {
             "type": "-",
@@ -259,27 +240,7 @@
             "type": "d",
             "name": "resources",
             "size": 4096,
-            "files": [
-                {
-                    "type": "d",
-                    "name": "views",
-                    "size": 0,
-                    "files": [
-                        {
-                            "type": "d",
-                            "name": "layouts",
-                            "size": 0,
-                            "files": [
-                                {
-                                    "type": "-",
-                                    "name": "eli.blade.php",
-                                    "size": 9352
-                                }
-                            ]
-                        }
-                    ]
-                }
-            ]
+            "files": []
         },
         {
             "type": "d",
