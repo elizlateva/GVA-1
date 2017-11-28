@@ -13,7 +13,6 @@
     z-index: 111;
     width: 100%;
     & .shell {
-        width: 40%;
         float: right;
     }
     & .header-inner {
@@ -26,8 +25,10 @@
 }
 
 @media #{$desktop} {
-    .header .header-inner {
-        width: 980px;
-        margin: 0 auto;
+    .header {
+        & .header-inner {
+            width: 980px;
+            margin: 0 auto;
+        }
     }
 }

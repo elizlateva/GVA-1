@@ -58,6 +58,8 @@
             @else
             <a class="button-login" onClick="showClientLoginModal()"  id="initClientAuthModal">@lang('messages.only_login')</a>
             @endif
+            <a href="#" class="user">Username</a>
+            <a href="#" class="exit"></a>
             <!-- butoni novi -->
         </div>
         <div class="header-inner">
