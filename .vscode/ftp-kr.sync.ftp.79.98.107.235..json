@@ -16,7 +16,7 @@
         {
             "type": "-",
             "name": ".bash_history",
-            "size": 315
+            "size": 344
         },
         {
             "type": "-",
@@ -229,7 +229,68 @@
             "type": "d",
             "name": "public_html",
             "size": 4096,
-            "files": []
+            "files": [
+                {
+                    "type": "d",
+                    "name": "eli",
+                    "size": 0,
+                    "files": [
+                        {
+                            "type": "d",
+                            "name": "vendors",
+                            "size": 0,
+                            "files": [
+                                {
+                                    "type": "-",
+                                    "name": "app.js",
+                                    "size": 2291
+                                }
+                            ]
+                        },
+                        {
+                            "type": "d",
+                            "name": "scss",
+                            "size": 0,
+                            "files": [
+                                {
+                                    "type": "-",
+                                    "name": "style.css",
+                                    "size": 35440
+                                },
+                                {
+                                    "type": "-",
+                                    "name": "style.css.map",
+                                    "size": 35366
+                                },
+                                {
+                                    "type": "d",
+                                    "name": "partials",
+                                    "size": 0,
+                                    "files": [
+                                        {
+                                            "type": "-",
+                                            "name": "_header.scss",
+                                            "size": 662
+                                        },
+                                        {
+                                            "type": "d",
+                                            "name": "modules",
+                                            "size": 0,
+                                            "files": [
+                                                {
+                                                    "type": "-",
+                                                    "name": "_module_reservationSection_footer.scss",
+                                                    "size": 2430
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
         },
         {
             "type": "-",
@@ -240,7 +301,27 @@
             "type": "d",
             "name": "resources",
             "size": 4096,
-            "files": []
+            "files": [
+                {
+                    "type": "d",
+                    "name": "views",
+                    "size": 0,
+                    "files": [
+                        {
+                            "type": "d",
+                            "name": "layouts",
+                            "size": 0,
+                            "files": [
+                                {
+                                    "type": "-",
+                                    "name": "eli.blade.php",
+                                    "size": 16148
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
         },
         {
             "type": "d",

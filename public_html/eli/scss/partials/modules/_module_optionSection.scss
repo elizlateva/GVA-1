@@ -17,9 +17,9 @@
 @media #{$desktop} {
     .option-section {
         border-top: none;
-        & .main-content {
-            padding-top: 200px;
-        }
+        // & .main-content {
+        //     padding-top: 200px;
+        // }
         & .main-content-inner {
             width: 980px;
         }

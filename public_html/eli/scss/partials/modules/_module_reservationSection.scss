@@ -18,16 +18,15 @@
         position: relative;
         overflow: hidden;
     }
-}
-
-form {
-    width: 90%;
-    background: rgba(0, 0, 0, 0.55);
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    @media #{$tablet} {
-        width: 600px;
+    & .reservation-section-form {
+        width: 90%;
+        background: rgba(0, 0, 0, 0.55);
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        @media #{$tablet} {
+            width: 600px;
+        }
     }
 }

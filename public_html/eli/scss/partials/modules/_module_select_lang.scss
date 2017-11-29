@@ -18,6 +18,9 @@
         border: none;
         width: 47px;
         padding: 6px;
+        & option {
+            color: $black;
+        }
     }
 }
 

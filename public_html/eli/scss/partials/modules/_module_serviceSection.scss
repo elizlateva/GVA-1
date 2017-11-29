@@ -5,6 +5,7 @@
 .service-section {
     background-color: $red;
     margin-top: -1px;
+    overflow: auto;
     & .upper-main-content {
         background: url("/eli/css/images/background.png") repeat;
         padding-top: 30px;

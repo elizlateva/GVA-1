@@ -35,44 +35,34 @@ $(document).ready(function() {
     });
 
     if (!/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
-        var mobile;
-        if (window.width < 1000) {
-            mobile = 1;
-        }
-        if (!mobile) {
-            $.scrollify({
-                section: "section",
-                sectionName: false,
-                interstitialSection: ".footer",
+        $.scrollify({
+            section: "section",
+            sectionName: false,
+            interstitialSection: ".header, .footer",
+            standardScrollElements: ".footer, .option-section",
+            before: function(i, sections) {
+                var offset = 0;
+                if (i < 6) {
+                    offset = -121;
+                } else {
+                    offset = -960;
+                }
+                if (i < 2) {
+                    $(".header").css({ "background": "rgba(0,0,0,0.55)" });
+                } else {
+                    $(".header").css({ "background": "#333" });
+                }
+                console.log(offset);
+                console.log(i);
+                $.scrollify.setOptions({ offset: offset })
+            }
 
-            });
-        }
+        });
     }
 
-    $('.scroll-down').click(function() {
+    $('.scroll').click(function() {
         $.scrollify.next();
+        // $.scrollify.move(".content-section");
     });
 
-
-    // $.scrollify({
-    //     section: "section",
-    //     sectionName: false,
-    //     interstitialSection: "header",
-    //     before: function(i, sections) {
-    //         var offset = 0;
-    //         if (i < 6) {
-    //             offset = -141;
-    //         } else {
-    //             offset = -260;
-    //         }
-    //         if (i < 2) {
-    //             $("header").css({ "background": "rgba(0,0,0,0.55)" });
-    //         } else {
-    //             $("header").css({ "background": "#333" });
-    //         }
-    //         console.log(offset);
-    //         console.log(i);
-    //         $.scrollify.setOptions({ offset: offset })
-    //     }
-    // });
 });

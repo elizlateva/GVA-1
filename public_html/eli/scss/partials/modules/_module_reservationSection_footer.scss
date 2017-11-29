@@ -40,6 +40,7 @@
     margin: 0 auto;
     width: 75px;
     & .scroll {
+        font-size: 0;
         color: $white;
         position: relative;
         display: inline-block;
@@ -54,12 +55,11 @@
             width: 20px;
             height: 20px;
             position: absolute;
-            margin: auto;
-            top: 15px;
+            top: -40px;
             right: 0;
-            left: 0;
-            -webkit-animation: 3s arrow infinite ease;
-            animation: 3s arrow infinite ease;
+            left: 30px;
+            // -webkit-animation: 5s arrow infinite ease;
+            // animation: 5s arrow infinite ease;
         }
     }
 }
@@ -67,20 +67,20 @@
 @-webkit-keyframes arrow {
     0%,
     100% {
-        top: 10px;
+        top: 5px;
     }
     50% {
-        top: 30px;
+        top: 15px;
     }
 }
 
 @keyframes arrow {
     0%,
     100% {
-        top: 10px;
+        top: 5px;
     }
     50% {
-        top: 30px;
+        top: 15px;
     }
 }
 
@@ -95,5 +95,17 @@
         & .scroll-down {
             display: block;
         }
+    }
+}
+
+@media only screen and (max-width: 1920px) {
+    .scroll-down .scroll:after {
+        top: 0;
+    }
+}
+
+@media only screen and (max-width: 1024px) {
+    .scroll-down .scroll:after {
+        top: -40px;
     }
 }

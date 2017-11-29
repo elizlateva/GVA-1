@@ -1,6 +1,5 @@
 ﻿<!DOCTYPE html>
 <html lang="fr">
-
 <head>
     <!-- eli -->
     <link rel="stylesheet" href="/eli/scss/style.css">
@@ -42,61 +41,53 @@
     <!-- DATATRANS LIGHTBOX MODE -->
     <script src="https://pay.sandbox.datatrans.com/upp/payment/js/datatrans-1.0.2.js"></script>
     <!-- DATATRANS LIGHTBOX MODE -->
+    <script src="/eli/vendors/app.js"></script>
 </head>
 
 <body>
-<!-- Google Tag Manager (noscript) -->
-<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-P9MRJXX" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-<!-- End Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-P9MRJXX" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <header class="header">
         <div class="shell">
-                     <!-- butoni novi -->
             <a href="{{ route('reservation.cart.get') }}" class="shop-car"></a>
             @if (session('success_auth_client') == 1)
-            <a href="{{ route('reservation.show.client.profile', [session('clientData')['id']])}}" class="button-login name-acc"><span></span>{{ session('clientData')['first_name'] }} {{ session('clientData')['last_name'] }}</a>
-            <a href="{{ route('reservation.client.logout') }}" class="button-login">@lang('messages.only_logout')</a>
+            <a href="{{ route('reservation.show.client.profile', [session('clientData')['id']])}}" class="user"></a>
+            <a href="{{ route('reservation.client.logout') }}" class="exit"></a>
             @else
             <a class="button-login" onClick="showClientLoginModal()"  id="initClientAuthModal">@lang('messages.only_login')</a>
             @endif
-            <a href="#" class="user">Username</a>
-            <a href="#" class="exit"></a>
-            <!-- butoni novi -->
         </div>
         <div class="header-inner">
-
-            <a href="#" class="logo" alt="">
+            <a href="{{ route('home') }}" class="logo" alt="">
                 <img src="/eli/css/images/logo.png">
             </a>
-            
             <nav class="menu">
                 <ul class="active">
-                    
                     <li>
-                        <a href="# ">Accueil </a>
+                        <a href="{{ route('home') }}">@lang('messages.menu_home')</a>
                     </li>
                     <li>
-                        <a href="# ">Notre service</a>
+                        <a href="{{ route('parking-service') }}">@lang('messages.menu_our_service')</a>
                     </li>
                     <li>
-                        <a href="# ">Réservation  </a>
+                        <a href="{{ route('reservation.get') }}">@lang('messages.menu_reservation')</a>
                     </li>
                     <li>
-                        <a href="# "> Avis clients </a>
+                        <a href="{{ route('avis-clients') }}">@lang('messages.menu_avis_clients')</a>
                     </li>
                     <li>
-                        <a href="# "> Accès </a>
+                        <a href="{{ route('video') }}">@lang('messages.menu_videos')</a>
                     </li>
                     <li>
-                        <a href="# ">Contact</a>
+                        <a href="{{ route('contact') }}">@lang('messages.menu_contact')</a>
                     </li>
                 </ul>
                 <div class="select-lang ">
-                <select onChange="window.location.href=this.value">
-                    <option value="/link/to/somewhere" selected=" ">fr</option>
-                    <option value="/link/to/somewhere">en</option>
-                    <option value="/link/to/somewhere">de</option>
-                </select>
-            </div> <!--/.select-lang-->
+                    <select onChange="window.location.href=this.value">
+                        @foreach (config('app.locales') as $lang => $language)
+                            <option value="{{ route('lang.switch', [$lang]) }}" {{ app()->getLocale() == $lang ? 'selected' : '' }}>{{ $language }}</option>
+                        @endforeach
+                    </select>
+                </div> <!--/.select-lang-->
                 <a class="toggle-nav"><i class=" fa fa-bars fa-2x " aria-hidden="true "></i></a>
             </nav><!--/.menu-->
         </div><!--/.header-inner-->
@@ -104,73 +95,52 @@
   
     <section class="reservation-section">
         <div class="main ">
-            <form>
+            <!-- ERRORS -->
+            @if (count($errors) > 0)
+            <div class="alert alert-danger">
+                <ul>
+                    @foreach ($errors->all() as $error)
+                        <li>{{ $error }}</li>
+                    @endforeach
+                </ul>
+            </div>
+            @endif
+            {!! Form::open(['action' => 'ReservationController@postReservationCart', 'method' => 'POST', 'class'=>'reservation-section-form']) !!}
+                {!! Form::hidden('request_homepage', true) !!}
                 <div class="input-inline">
-                    <label>Date de départ</label>
-                    <input type="date " name="calendar ">
+                    <label>@lang('messages.reservation_date_arrival')</label>
+                    <!-- <input type="date " name="calendar "> -->
+                    {!! Form::input('text', 'date_of_arrival', session('selectedDates') ? session('selectedDates')['date_of_arrival'] : \Carbon\Carbon::now()->format('Y/m/j'), ['class' => 'form-control', 'id'=>'datepicker-depart']) !!}
                 </div><!-- /.input-inline -->
                 <div class="input-inline">
-                    <label class="label-center">Heure de rendez-vous</label>
+                    <label class="label-center">@lang('messages.reservation_hour_arrival')</label>
                     <div class="select-center">
-                        <div class="select-wrapper ">
-                            <select> 
-                              <option value="HH " selected=" ">HH</option>
-                              <option value="00 ">00</option>
-                              <option value="01 ">01</option>
-                              <option value="02 ">02</option>
-                              <option value="03 ">03</option>
-                              <option value="04 ">04</option>
-                              <option value="05 ">05</option>
-                              <option value="06 ">06</option>
-                            </select>
+                        <div class="select-wrapper">
+                            {!! Form::select('hour_of_arrival', Config::get('select_hours'), session('selectedDates') ? session('selectedDates')['hour_of_arrival'] : '', ['class' => '']) !!}
                         </div>
                         <div class="select-wrapper ">
-                            <select> 
-                               <option value="MM " selected=" ">MM</option>
-                               <option value="00 ">00</option>
-                               <option value="30 ">10</option>
-                               <option value="0100 ">20</option>
-                               <option value="0130 ">30</option>
-                               <option value="0200 ">40</option>
-                               <option value="0230 ">50</option>
-                            </select>
+                            {!! Form::select('minute_of_arrival', Config::get('select_minutes'), session('selectedDates') ? session('selectedDates')['minute_of_arrival'] : '', ['class' => '']) !!}
                         </div>
                     </div>
                 </div><!-- /.input-inline -->
                 <div class="input-inline">
-                    <label>Date de retour</label>
-                    <input type="date " name="calendar ">
+                    <label>@lang('messages.reservation_date_departure')</label>
+                    {!! Form::input('text', 'date_of_departure', session('selectedDates') ? session('selectedDates')['date_of_departure'] : \Carbon\Carbon::tomorrow()->format('Y/m/j'), ['class' => 'form-control', 'id'=>'datepicker-retour']) !!}
                 </div><!-- /.input-inline -->
                 <div class="input-inline">
-                    <label class="label-center">Heure de retour</label>
+                    <label class="label-center">@lang('messages.reservation_hour_departure')</label>
                 <div class="select-center">
                 <div class="select-wrapper ">
-                    <select> 
-                        <option value="HH " selected=" ">HH</option>
-                        <option value="00 ">00</option>
-                        <option value="01 ">01</option>
-                        <option value="02 ">02</option>
-                        <option value="03 ">03</option>
-                        <option value="04 ">04</option>
-                        <option value="05 ">05</option>
-                        <option value="06 ">06</option>
-                    </select>
+                    {!! Form::select('hour_of_departure', Config::get('select_hours'), session('selectedDates') ? session('selectedDates')['hour_of_departure'] : '', ['class' => '']) !!}
                 </div>
                 <div class="select-wrapper ">
-                    <select> 
-                        <option value="MM " selected=" ">MM</option>
-                        <option value="00 ">00</option>
-                        <option value="30 ">10</option>
-                        <option value="0100 ">20</option>
-                        <option value="0130 ">30</option>
-                        <option value="0200 ">40</option>
-                        <option value="0230 ">50</option>
-                    </select>
+                    <!-- class = form-control selectpicker -->
+                    {!! Form::select('minute_of_departure', Config::get('select_minutes'), session('selectedDates') ? session('selectedDates')['minute_of_departure'] : '', ['class' => '']) !!} 
                 </div>
                 </div>
                 </div><!-- /.input-inline -->
             <div class="reservation-button ">
-                <button type="button ">Réservation</button>
+                <button type="submit">@lang('messages.reservation_main_button')</button>
             </div><!--/.reservation-button-->
         </form><!--/form-->
 
@@ -178,11 +148,11 @@
         <div class="reservation-section-footer ">
            <div class="reservation-section-footer-center ">
                 <img src="/eli/css/images/car-icon.png">
-                <p class="reservation-footer-text">Park &amp; Fly</p>
+                <p class="reservation-footer-text">@lang('messages.homepage_first_title')</p>
                 <img src="/eli/css/images/fly-icon.png">
             </div><!--/.reservation-section-footer-center-->
             <div class="scroll-down">
-                <a href="#" class="scroll">Faire Défiler</a>
+                <button type="button" class="scroll">Faire Défiler</button>
             </div><!--/.scroll-down-->
         </div><!--/.reservation-section-footer-->
     </section>
@@ -196,7 +166,9 @@
             </div> <!--/.contact-->
             <div class="footer-image-center">
                 <div class="clients ">
-                    <img src="/eli/css/images/widget.png ">
+                    <div class="text-center">
+                        <meta class="netreviewsWidget" id="netreviewsWidgetNum10350" data-jsurl="//cl.avis-verifies.com/fr/cache/1/b/a/1ba5dcf9-461f-17c4-d903-78e3a32c285a/widget4/widget03-10350_script.js"/><script src="//cl.avis-verifies.com/fr/widget4/widget03.min.js"></script>
+                    </div>
                 </div><!--/.clients-->
                 <div class="payments ">
                     <ul>
@@ -211,10 +183,10 @@
                 </div><!--/.payments-->
             </div><!--/.footer-image-center-->
             <div class="cr-text ">
-                <p>© Copyright 2017 GVA park.Ch. Tous Droits Sont réservé création du site internet – BGCS</p>
+                <p>@lang('messages.homepage_copyright')</p>
             </div><!--/.cr-text-->
             <div class="social ">
-                <a href="#">Follow us</a>
+                <a target="_blank" href="https://www.facebook.com/gvapark">@lang('messages.homepage_follow_us')</a>
             </div> <!--/.social-->
         </div><!--/.footer-inner-->
     </footer><!--footer-->
@@ -238,10 +210,23 @@
     </div>
     <!-- MODAL -->
     <script type="text/javascript">
-    $('#initClientAuthModal').click(function(){
+    var windowWidth = self.innerWidth;
+    
+    if (windowWidth < 480) {
+      var width = 300;
+      var height = 300;
+    } else if (windowWidth > 481) {
+      var width = 450;
+      var height = 300;
+    } else if (windowWidth > 768) {
+      var width = 650;
+      var height = 300;
+    }
+
+    $('#initClientAuthModal').click( function() {
         $( "#dialog" ).dialog({
-            height: 400,
-            width: 650,
+            height: height,
+            width: width,
         });
     });
     $('#datepicker-reservation-1').datepicker({
@@ -330,7 +315,5 @@
       }
     }
     </script>
-    <script src="/eli/vendors/app.js"></script>
 </body>
-
 </html>

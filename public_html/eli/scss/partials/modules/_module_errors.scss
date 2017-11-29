@@ -1,0 +1,19 @@
+/* ------------------------------------------------------------ *\
+    Errors
+\* ------------------------------------------------------------ */
+
+.alert.alert-danger {
+    position: absolute;
+    top: 16%;
+    color: $red;
+    font-family: "Open Sans", sans-serif;
+    font-size: 13px;
+    left: 0;
+    right: 0;
+    margin: auto;
+    width: 210px;
+    z-index: 1;
+    & li {
+        padding: 5px 0;
+    }
+}

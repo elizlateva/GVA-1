@@ -210,8 +210,8 @@ h3 {
 \* ------------------------------------------------------------ */
 .header {
   background: rgba(0, 0, 0, 0.55);
+  position: fixed;
   top: 0;
-  position: absolute;
   right: 0;
   left: 0;
   padding: 10px 0;
@@ -221,6 +221,7 @@ h3 {
 
 .header .shell {
   float: right;
+  margin-right: 20px;
 }
 
 .header .header-inner {
@@ -262,16 +263,15 @@ h3 {
 }
 
 .shell .user {
-  background: url("/eli/css/images/user.png") no-repeat;
+  background: url("/eli/css/images/user.png") no-repeat 3px 3px;
   width: 32px;
   height: 32px;
   display: inline-block;
   vertical-align: middle;
-  font-size: 0;
 }
 
 .shell a.exit {
-  background: url("/eli/css/images/exit.png") no-repeat;
+  background: url("/eli/css/images/exit.png") no-repeat 3px 3px;
   width: 32px;
   height: 32px;
   display: inline-block;
@@ -280,51 +280,64 @@ h3 {
 
 /* ------------------------------------------------------------ *   Modal
 \* ------------------------------------------------------------ */
-.answer {
-  margin: 10px 0;
+.ui-dialog .ui-dialog-titlebar {
+  background: none;
+  color: transparent;
+  border: none;
+  z-index: 112;
 }
 
-.form-group label {
+form {
+  background: none;
+  color: #000;
+  font-size: 13px;
+  font-family: "Open Sans", sans-serif;
+  font-weight: 400;
+}
+
+form .form-group label {
   display: inline-block;
   max-width: 100%;
-  margin-bottom: 20px;
-  font-weight: bold;
-  text-indent: 20px;
-  margin-top: 20px;
+  margin: 10px 0;
+  text-indent: 2%;
 }
 
-.form-group .form-control {
+form .form-group .form-control {
   display: block;
-  width: 570px;
-  height: 25px;
-  padding: 6px 0;
+  width: 95%;
+  padding: 5px;
   margin: 0 auto;
-  font-size: 14px;
+  font-size: 13px;
   line-height: 1.42857143;
   color: #555555;
   background-color: #fff;
-  background-image: none;
   border: 1px solid #ccc;
   border-radius: 4px;
   -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
   box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
-  -webkit-transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
-  -o-transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
-  transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
 }
 
 .btn.btn-link {
-  display: inline-block;
-  max-width: 100%;
-  margin-bottom: 20px;
   font-weight: bold;
   text-indent: 20px;
+  float: left;
   margin-top: 20px;
-  margin-right: 330px;
 }
 
 input.button {
-  width: 100px;
+  background: #bf1e2d;
+  color: #fff;
+  border: 1px solid #fff;
+  padding: 10px 13px;
+  float: right;
+  margin: 10px 10px 0 0;
+}
+
+.answer {
+  margin: 0 10px 10px;
+  font-size: 13px;
+  font-family: "Open Sans", sans-serif;
+  font-weight: 600;
 }
 
 /* ------------------------------------------------------------ *	Navigations
@@ -409,6 +422,10 @@ nav.menu ul a {
   padding: 6px;
 }
 
+.select-lang select option {
+  color: #000;
+}
+
 @media only screen and (min-width: 1000px) {
   .select-lang {
     display: block;
@@ -439,7 +456,7 @@ nav.menu ul a {
   overflow: hidden;
 }
 
-form {
+.reservation-section .reservation-section-form {
   width: 90%;
   background: rgba(0, 0, 0, 0.55);
   position: absolute;
@@ -449,7 +466,7 @@ form {
 }
 
 @media only screen and (min-width: 768px) {
-  form {
+  .reservation-section .reservation-section-form {
     width: 600px;
   }
 }
@@ -826,6 +843,7 @@ fieldset.right {
 }
 
 .scroll-down .scroll {
+  font-size: 0;
   color: #fff;
   position: relative;
   display: inline-block;
@@ -842,31 +860,28 @@ fieldset.right {
   width: 20px;
   height: 20px;
   position: absolute;
-  margin: auto;
-  top: 15px;
+  top: -40px;
   right: 0;
-  left: 0;
-  -webkit-animation: 3s arrow infinite ease;
-  animation: 3s arrow infinite ease;
+  left: 30px;
 }
 
 @-webkit-keyframes arrow {
   0%,
   100% {
-    top: 10px;
+    top: 5px;
   }
   50% {
-    top: 30px;
+    top: 15px;
   }
 }
 
 @keyframes arrow {
   0%,
   100% {
-    top: 10px;
+    top: 5px;
   }
   50% {
-    top: 30px;
+    top: 15px;
   }
 }
 
@@ -879,6 +894,18 @@ fieldset.right {
   }
   .reservation-section-footer .scroll-down {
     display: block;
+  }
+}
+
+@media only screen and (max-width: 1920px) {
+  .scroll-down .scroll:after {
+    top: 0;
+  }
+}
+
+@media only screen and (max-width: 1024px) {
+  .scroll-down .scroll:after {
+    top: -40px;
   }
 }
 
@@ -1327,6 +1354,7 @@ fieldset.right {
 .service-section {
   background-color: #bf1e2d;
   margin-top: -1px;
+  overflow: auto;
 }
 
 .service-section .upper-main-content {
@@ -1393,10 +1421,8 @@ h1 {
 }
 
 @media only screen and (min-width: 768px) {
-  .content {
-    padding-top: 200px;
-  }
   .content .service-inner {
+    margin-top: 200px;
     width: 50%;
     display: inline-block;
   }
@@ -1595,9 +1621,6 @@ h1 {
   .option-section {
     border-top: none;
   }
-  .option-section .main-content {
-    padding-top: 200px;
-  }
   .option-section .main-content-inner {
     width: 980px;
   }
@@ -1666,6 +1689,7 @@ h1 {
     width: 33%;
     float: left;
     padding: 0 15px;
+    margin-top: 200px;
   }
   .accordion h3 {
     font-size: font-size-21;
@@ -1700,7 +1724,7 @@ h1 {
     width: 980px;
   }
   .footer .footer-inner .footer-image-center {
-    width: 527px;
+    width: 500px;
     float: right;
   }
 }
@@ -1735,14 +1759,15 @@ h1 {
 /* ------------------------------------------------------------ *  Footer-clients
 \* ------------------------------------------------------------ */
 .clients {
-  width: 251px;
+  width: 200px;
   margin: 0 auto;
 }
 
 @media only screen and (min-width: 1000px) {
   .clients {
-    margin-right: 20px;
+    margin: 0 20px;
     display: inline-block;
+    vertical-align: middle;
   }
 }
 
@@ -1823,6 +1848,25 @@ h1 {
     padding-top: 23px;
     float: right;
   }
+}
+
+/* ------------------------------------------------------------ *    Errors
+\* ------------------------------------------------------------ */
+.alert.alert-danger {
+  position: absolute;
+  top: 16%;
+  color: #bf1e2d;
+  font-family: "Open Sans", sans-serif;
+  font-size: 13px;
+  left: 0;
+  right: 0;
+  margin: auto;
+  width: 210px;
+  z-index: 1;
+}
+
+.alert.alert-danger li {
+  padding: 5px 0;
 }
  
 

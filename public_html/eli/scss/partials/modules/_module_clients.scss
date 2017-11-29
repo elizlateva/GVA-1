@@ -3,13 +3,14 @@
 \* ------------------------------------------------------------ */
 
 .clients {
-    width: 251px;
+    width: 200px;
     margin: 0 auto;
 }
 
 @media #{$desktop} {
     .clients {
-        margin-right: 20px;
+        margin: 0 20px;
         display: inline-block;
+        vertical-align: middle;
     }
 }
