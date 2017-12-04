@@ -21,7 +21,7 @@
     font-weight: $font-weight-2;
     font-size: $font-size-13;
     padding: 15px 0;
-    word-break: break-all;
+    word-break: break-word;
     &::before {
         content: url("/eli/css/images/arrow-down.png");
         display: inline;
@@ -33,7 +33,7 @@
 .accordion-section-content {
     display: none;
     font-size: $font-size-13;
-    word-break: break-all;
+    word-break: break-word;
     color: $dark;
     width: 85%;
     margin: 0 auto;

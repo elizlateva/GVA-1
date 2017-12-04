@@ -3,6 +3,8 @@
 \* ------------------------------------------------------------ */
 
 .content {
+    width: 90%;
+    margin: 0 auto;
     color: $white;
     font-size: $font-size-13;
     line-height: 26px;
@@ -15,24 +17,35 @@
             text-align: center;
             padding: 20px 0;
         }
+        & p {
+            word-break: break-word;
+            text-align: justify;
+        }
     }
 }
 
 @media #{$tablet} {
     .content {
         & .service-inner {
-            margin-top: 200px;
             width: 50%;
-            display: inline-block;
             h2 {
-                font-size: $font-size-26;
+                // font-size: $font-size-26;
+                font-size: 25px;
             }
             & p {
                 width: 85%;
                 margin: 0 auto;
             }
+            &:nth-child(odd) {
+                float: left;
+                overflow: hidden;
+                &:after {
+                    clear: both;
+                    display: block;
+                    content: "";
+                }
+            }
             &:nth-child(even) {
-                float: right;
                 overflow: hidden;
                 &:after {
                     clear: both;
@@ -46,7 +59,9 @@
 
 @media #{$desktop} {
     .content {
+        width: 980px;
         & .service-inner {
+            margin-top: 10%;
             width: 25%;
             padding: 0;
             float: left;

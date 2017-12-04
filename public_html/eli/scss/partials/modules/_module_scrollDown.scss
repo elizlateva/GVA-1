@@ -1,0 +1,72 @@
+/* ------------------------------------------------------------ *\
+   Scroll-down
+\* ------------------------------------------------------------ */
+
+.scroll-down {
+    display: none;
+    margin: 0 auto;
+    width: 90px;
+    font-size: 13px;
+    & .scroll {
+        position: relative;
+        &:after {
+            -ms-transform: rotate(45deg);
+            -webkit-transform: rotate(45deg);
+            transform: rotate(45deg);
+            content: '';
+            width: 20px;
+            height: 20px;
+            position: absolute;
+            top: 20px;
+            right: 0;
+            left: 36%;
+            // -webkit-animation: 5s arrow infinite ease;
+            // animation: 5s arrow infinite ease;
+        }
+        &.red {
+            color: $red;
+            font-weight: bold;
+            &:after {
+                border-right: 2px solid $red;
+                border-bottom: 2px solid $red;
+            }
+        }
+        &.white {
+            color: $white;
+            font-weight: bold;
+            &:after {
+                border-right: 2px solid $white;
+                border-bottom: 2px solid $white;
+            }
+        }
+        &.top {
+            margin-top: -8px;
+        }
+    }
+}
+
+@-webkit-keyframes arrow {
+    0%,
+    100% {
+        top: 5px;
+    }
+    50% {
+        top: 15px;
+    }
+}
+
+@keyframes arrow {
+    0%,
+    100% {
+        top: 5px;
+    }
+    50% {
+        top: 15px;
+    }
+}
+
+@media #{$desktop} {
+    .scroll-down {
+        display: block;
+    }
+}

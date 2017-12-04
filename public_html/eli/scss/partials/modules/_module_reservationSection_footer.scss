@@ -4,6 +4,8 @@
 
 .reservation-section-footer {
     position: relative;
+    background: $red;
+    max-height: 150px;
     &:before {
         content: "";
         width: 100%;
@@ -16,6 +18,7 @@
         padding: 20px 0;
         width: 330px;
         margin: 0 auto;
+        height: 100%;
         & .reservation-footer-text {
             display: inline;
             font-size: $font-size-26;
@@ -35,77 +38,14 @@
     }
 }
 
-.scroll-down {
-    display: none;
-    margin: 0 auto;
-    width: 75px;
-    & .scroll {
-        font-size: 0;
-        color: $white;
-        position: relative;
-        display: inline-block;
-        height: 50px;
-        &:after {
-            border-right: 2px solid #FFF;
-            border-bottom: 2px solid #FFF;
-            -ms-transform: rotate(45deg);
-            -webkit-transform: rotate(45deg);
-            transform: rotate(45deg);
-            content: '';
-            width: 20px;
-            height: 20px;
-            position: absolute;
-            top: -40px;
-            right: 0;
-            left: 30px;
-            // -webkit-animation: 5s arrow infinite ease;
-            // animation: 5s arrow infinite ease;
-        }
-    }
-}
-
-@-webkit-keyframes arrow {
-    0%,
-    100% {
-        top: 5px;
-    }
-    50% {
-        top: 15px;
-    }
-}
-
-@keyframes arrow {
-    0%,
-    100% {
-        top: 5px;
-    }
-    50% {
-        top: 15px;
-    }
-}
-
 @media #{$desktop} {
     .reservation-section-footer {
+        height: 100%;
         .reservation-section-footer-center {
             width: 450px;
             & .reservation-footer-text {
                 font-size: 44px;
             }
         }
-        & .scroll-down {
-            display: block;
-        }
-    }
-}
-
-@media only screen and (max-width: 1920px) {
-    .scroll-down .scroll:after {
-        top: 0;
-    }
-}
-
-@media only screen and (max-width: 1024px) {
-    .scroll-down .scroll:after {
-        top: -40px;
     }
 }

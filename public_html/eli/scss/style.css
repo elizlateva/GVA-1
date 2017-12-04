@@ -386,7 +386,7 @@ nav.menu ul a {
   }
   nav.menu ul li {
     display: inline-block;
-    padding: 10px 17px;
+    padding: 10px 8px;
     font-size: 17px;
   }
   nav.menu ul li:hover {
@@ -439,35 +439,47 @@ nav.menu ul a {
 \* ------------------------------------------------------------ */
 .reservation-section {
   background: #bf1e2d;
-  position: relative;
 }
 
 .reservation-section .main {
-  background-image: url("/eli/css/images/screen-1.jpg");
+  background-image: url(/eli/css/images/screen-1.jpg);
   background-position: center center;
-  background-attachment: fixed;
   background-size: cover;
   background-repeat: no-repeat;
   width: 100%;
-  min-height: 650px;
-  height: 82%;
+  max-height: 600px;
+  height: 100%;
   font-size: 15px;
-  position: relative;
   overflow: hidden;
+}
+
+@media only screen and (min-width: 768px) {
+  .reservation-section .main {
+    max-height: 80%;
+  }
+}
+
+@media only screen and (min-width: 1000px) {
+  .reservation-section .main {
+    max-height: 70%;
+  }
 }
 
 .reservation-section .reservation-section-form {
   width: 90%;
   background: rgba(0, 0, 0, 0.55);
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  margin: 50% auto;
 }
 
 @media only screen and (min-width: 768px) {
   .reservation-section .reservation-section-form {
     width: 600px;
+  }
+}
+
+@media only screen and (min-width: 1000px) {
+  .reservation-section .reservation-section-form {
+    margin: 15% auto;
   }
 }
 
@@ -748,7 +760,7 @@ fieldset.right {
   width: 2px;
   height: 35px;
   right: 45px;
-  top: -7px;
+  top: -9px;
 }
 
 .select-center .select-wrapper select {
@@ -801,6 +813,8 @@ fieldset.right {
 \* ------------------------------------------------------------ */
 .reservation-section-footer {
   position: relative;
+  background: #bf1e2d;
+  max-height: 150px;
 }
 
 .reservation-section-footer:before {
@@ -816,6 +830,7 @@ fieldset.right {
   padding: 20px 0;
   width: 330px;
   margin: 0 auto;
+  height: 100%;
 }
 
 .reservation-section-footer .reservation-section-footer-center .reservation-footer-text {
@@ -836,76 +851,15 @@ fieldset.right {
   margin: 0 10px;
 }
 
-.scroll-down {
-  display: none;
-  margin: 0 auto;
-  width: 75px;
-}
-
-.scroll-down .scroll {
-  font-size: 0;
-  color: #fff;
-  position: relative;
-  display: inline-block;
-  height: 50px;
-}
-
-.scroll-down .scroll:after {
-  border-right: 2px solid #FFF;
-  border-bottom: 2px solid #FFF;
-  -ms-transform: rotate(45deg);
-  -webkit-transform: rotate(45deg);
-  transform: rotate(45deg);
-  content: '';
-  width: 20px;
-  height: 20px;
-  position: absolute;
-  top: -40px;
-  right: 0;
-  left: 30px;
-}
-
-@-webkit-keyframes arrow {
-  0%,
-  100% {
-    top: 5px;
-  }
-  50% {
-    top: 15px;
-  }
-}
-
-@keyframes arrow {
-  0%,
-  100% {
-    top: 5px;
-  }
-  50% {
-    top: 15px;
-  }
-}
-
 @media only screen and (min-width: 1000px) {
+  .reservation-section-footer {
+    height: 100%;
+  }
   .reservation-section-footer .reservation-section-footer-center {
     width: 450px;
   }
   .reservation-section-footer .reservation-section-footer-center .reservation-footer-text {
     font-size: 44px;
-  }
-  .reservation-section-footer .scroll-down {
-    display: block;
-  }
-}
-
-@media only screen and (max-width: 1920px) {
-  .scroll-down .scroll:after {
-    top: 0;
-  }
-}
-
-@media only screen and (max-width: 1024px) {
-  .scroll-down .scroll:after {
-    top: -40px;
   }
 }
 
@@ -916,12 +870,13 @@ fieldset.right {
 }
 
 .content-section .main-content {
-  padding: 30px 0;
+  padding: 30px 0 5px;
 }
 
 .content-section .main-content .main-content-inner {
   width: 90%;
   margin: 0 auto;
+  overflow: auto;
 }
 
 @media only screen and (min-width: 1000px) {
@@ -953,8 +908,11 @@ fieldset.right {
   color: #000;
   font-size: 13px;
   line-height: 30px;
-  word-wrap: break-word;
-  word-break: break-all;
+}
+
+.text p {
+  word-break: break-word;
+  text-align: justify;
 }
 
 @media only screen and (min-width: 768px) {
@@ -1363,28 +1321,6 @@ fieldset.right {
   border-bottom: 4px dotted #bf1e2d;
 }
 
-.service-section .upper-main-content .main-content-inner {
-  width: 90%;
-  margin: 0 auto;
-}
-
-@media only screen and (min-width: 1000px) {
-  .service-section .upper-main-content .main-content-inner {
-    width: 980px;
-  }
-}
-
-.main-content .main-content-inner {
-  width: 90%;
-  margin: 0 auto;
-}
-
-@media only screen and (min-width: 1000px) {
-  .main-content .main-content-inner {
-    width: 980px;
-  }
-}
-
 h1 {
   font-size: 20px;
   font-weight: bold;
@@ -1403,6 +1339,8 @@ h1 {
 /* ------------------------------------------------------------ *    Service-section-content
 \* ------------------------------------------------------------ */
 .content {
+  width: 90%;
+  margin: 0 auto;
   color: #fff;
   font-size: 13px;
   line-height: 26px;
@@ -1420,21 +1358,32 @@ h1 {
   padding: 20px 0;
 }
 
+.content .service-inner p {
+  word-break: break-word;
+  text-align: justify;
+}
+
 @media only screen and (min-width: 768px) {
   .content .service-inner {
-    margin-top: 200px;
     width: 50%;
-    display: inline-block;
   }
   .content .service-inner h2 {
-    font-size: 26px;
+    font-size: 25px;
   }
   .content .service-inner p {
     width: 85%;
     margin: 0 auto;
   }
+  .content .service-inner:nth-child(odd) {
+    float: left;
+    overflow: hidden;
+  }
+  .content .service-inner:nth-child(odd):after {
+    clear: both;
+    display: block;
+    content: "";
+  }
   .content .service-inner:nth-child(even) {
-    float: right;
     overflow: hidden;
   }
   .content .service-inner:nth-child(even):after {
@@ -1445,7 +1394,11 @@ h1 {
 }
 
 @media only screen and (min-width: 1000px) {
+  .content {
+    width: 980px;
+  }
   .content .service-inner {
+    margin-top: 10%;
     width: 25%;
     padding: 0;
     float: left;
@@ -1464,12 +1417,13 @@ h1 {
 }
 
 .content-section .main-content {
-  padding: 30px 0;
+  padding: 30px 0 5px;
 }
 
 .content-section .main-content .main-content-inner {
   width: 90%;
   margin: 0 auto;
+  overflow: auto;
 }
 
 @media only screen and (min-width: 1000px) {
@@ -1500,7 +1454,7 @@ h1 {
   width: 100%;
   color: #000;
   text-transform: uppercase;
-  outline: 1px solid #bf1e2d;
+  border: 1px solid #bf1e2d;
   font-size: 14px;
 }
 
@@ -1592,7 +1546,7 @@ h1 {
   color: #fff;
   text-transform: uppercase;
   font-size: 16px;
-  margin: 30px 0 0;
+  margin: 10px 0 0;
 }
 
 @media only screen and (min-width: 1000px) {
@@ -1653,7 +1607,7 @@ h1 {
   font-weight: bold;
   font-size: 13px;
   padding: 15px 0;
-  word-break: break-all;
+  word-break: break-word;
 }
 
 .accordion-section-title::before {
@@ -1666,7 +1620,7 @@ h1 {
 .accordion-section-content {
   display: none;
   font-size: 13px;
-  word-break: break-all;
+  word-break: break-word;
   color: #333;
   width: 85%;
   margin: 0 auto;
@@ -1734,13 +1688,14 @@ h1 {
 .contact {
   width: 300px;
   margin: 0 auto;
-  display: none;
+  text-align: center;
 }
 
 .contact p {
   color: #fff;
   font-size: 30px;
   padding: 10px 0;
+  display: none;
 }
 
 .contact p:before {
@@ -1750,9 +1705,23 @@ h1 {
   padding-right: 40px;
 }
 
+.contact .conditionsInit {
+  font-size: 20px;
+  color: #fff;
+  text-align: center;
+  display: block;
+  margin: 10px 0;
+}
+
 @media only screen and (min-width: 1000px) {
   .contact {
+    float: left;
+  }
+  .contact p {
     display: inline-block;
+  }
+  .conditionsInit {
+    text-align: left;
   }
 }
 
@@ -1854,7 +1823,7 @@ h1 {
 \* ------------------------------------------------------------ */
 .alert.alert-danger {
   position: absolute;
-  top: 16%;
+  top: 15%;
   color: #bf1e2d;
   font-family: "Open Sans", sans-serif;
   font-size: 13px;
@@ -1867,6 +1836,82 @@ h1 {
 
 .alert.alert-danger li {
   padding: 5px 0;
+}
+
+/* ------------------------------------------------------------ *   Scroll-down
+\* ------------------------------------------------------------ */
+.scroll-down {
+  display: none;
+  margin: 0 auto;
+  width: 90px;
+  font-size: 13px;
+}
+
+.scroll-down .scroll {
+  position: relative;
+}
+
+.scroll-down .scroll:after {
+  -ms-transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
+  transform: rotate(45deg);
+  content: '';
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  top: 20px;
+  right: 0;
+  left: 36%;
+}
+
+.scroll-down .scroll.red {
+  color: #bf1e2d;
+  font-weight: bold;
+}
+
+.scroll-down .scroll.red:after {
+  border-right: 2px solid #bf1e2d;
+  border-bottom: 2px solid #bf1e2d;
+}
+
+.scroll-down .scroll.white {
+  color: #fff;
+  font-weight: bold;
+}
+
+.scroll-down .scroll.white:after {
+  border-right: 2px solid #fff;
+  border-bottom: 2px solid #fff;
+}
+
+.scroll-down .scroll.top {
+  margin-top: -8px;
+}
+
+@-webkit-keyframes arrow {
+  0%,
+  100% {
+    top: 5px;
+  }
+  50% {
+    top: 15px;
+  }
+}
+
+@keyframes arrow {
+  0%,
+  100% {
+    top: 5px;
+  }
+  50% {
+    top: 15px;
+  }
+}
+
+@media only screen and (min-width: 1000px) {
+  .scroll-down {
+    display: block;
+  }
 }
  
 

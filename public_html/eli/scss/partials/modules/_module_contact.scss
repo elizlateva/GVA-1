@@ -5,11 +5,12 @@
 .contact {
     width: 300px;
     margin: 0 auto;
-    display: none;
+    text-align: center;
     & p {
         color: $white;
         font-size: $font-size-30;
         padding: 10px 0;
+        display: none;
         &:before {
             content: url("/eli/css/images/phone.png");
             display: inline-block;
@@ -17,10 +18,23 @@
             padding-right: 40px;
         }
     }
+    & .conditionsInit {
+        font-size: 20px;
+        color: $white;
+        text-align: center;
+        display: block;
+        margin: 10px 0;
+    }
 }
 
 @media #{$desktop} {
     .contact {
-        display: inline-block;
+        float: left;
+        & p {
+            display: inline-block;
+        }
+    }
+    & .conditionsInit {
+        text-align: left;
     }
 }

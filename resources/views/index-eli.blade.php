@@ -16,7 +16,11 @@
                 </p>
             </div><!--/.text-->
         </div><!--/.main-content-inner-->     
+        <div class="scroll-down"> 
+                    <button type="button" class="scroll red">Faire Défiler</button>
+               </div><!--/.scroll-down-->
     </div> <!--/.main-content-->   
+    
 </section><!--/.content-section-->
 <section class="service-section">
     <div class="upper-main-content ">
@@ -24,7 +28,7 @@
             <h1>@lang('messages.index_page_first_title')</h1>
         </div><!--/.main-content-inner-->
     </div><!--/.upper-main-content-->
-    <div class="main-content">
+    <!-- <div class="main-content"> -->
         <div class="main-content-inner ">
             <div class="content ">
                 <div class="service-inner">
@@ -57,8 +61,12 @@
                 </div><!-- /.service-inner -->
             </div> <!--/.content-->
         </div><!--/.main-content-inner-->
-    </div> <!--/.main-content-->
+        <div class="scroll-down"> 
+                    <button type="button" class="scroll white">Faire Défiler</button>
+               </div><!--/.scroll-down-->
 </section><!--/.service-section-->
+    <!-- </div> /.main-content -->
+    
 <section class="content-section">
     <div class="main-content ">
         <div class="main-content-inner ">
@@ -73,7 +81,7 @@
                         </tr>
                     </thead>
                     <tbody>
-                        @foreach(array_slice($pricesArray, 0, 40 / 2) as $k => $prices)
+                        @foreach(array_slice($pricesArray, 0, 20 / 2) as $k => $prices)
                         <tr>
                             <td class="title" scope="row">{{ $k+1 }} Jour</td>
                             <td data-label="privilege parking">CHF {{ $prices['valet_price'] }}.-</td>
@@ -91,9 +99,9 @@
                         </tr>
                     </thead>
                     <tbody>
-                        @foreach(array_slice($pricesArray, 40 / 2) as $k => $prices)
+                        @foreach(array_slice($pricesArray, 20 / 2) as $k => $prices)
                         <tr>
-                            <td class="title" scope="row">{{ $k+21 }} Jour</td>
+                            <td class="title" scope="row">{{ $k+11 }} Jour</td>
                             <td data-label="privilege parking">CHF {{ $prices['valet_price'] }}.-</td>
                             <td data-label="self parking">CHF {{ $prices['navet_price'] }}.-</td>
                         </tr>
@@ -106,6 +114,9 @@
             </div><!--/.table-reservation-button-->  
         </div><!--/.main-content-inner-->
     </div><!--/.main-content-->
+    <div class="scroll-down"> 
+                    <button type="button" class="scroll red ">Faire Défiler</button>
+               </div><!--/.scroll-down-->
 </section><!--/.content-section-->
         
 <section class="option-section ">

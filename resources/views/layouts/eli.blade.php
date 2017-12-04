@@ -17,9 +17,7 @@
     <link rel="stylesheet" href="{!! asset('lib/jquery-ui/jquery-ui.css') !!}">
     <link rel="stylesheet" href="{!! asset('lib/bootstrap-select/css/bootstrap-select.min.css') !!}">
     <link rel="stylesheet" href="{!! asset('lib/aos-master/aos.css') !!} ">
-    @if( \Route::current()->getName() != 'home.eli' )
-    <link rel="stylesheet" href="{!! asset('css/style.css') !!}">
-    @endif
+
     <script type="text/javascript" src="{!! asset('js/jquery-2.2.4.min.js') !!}"></script>
     <script src="{!! asset('lib/bootstrap/js/bootstrap.min.js') !!}"></script>
     <script src="{!! asset('lib/bootstrap-select/js/bootstrap-select.min.js') !!}"></script>
@@ -39,7 +37,7 @@
     })(window,document,'script','dataLayer','GTM-P9MRJXX');</script>
     <!-- End Google Tag Manager -->
     <!-- DATATRANS LIGHTBOX MODE -->
-    <script src="https://pay.sandbox.datatrans.com/upp/payment/js/datatrans-1.0.2.js"></script>
+    <script src="https://pay.datatrans.com/upp/payment/js/datatrans-1.0.2.js"></script>
     <!-- DATATRANS LIGHTBOX MODE -->
     <script src="/eli/vendors/app.js"></script>
 </head>
@@ -144,26 +142,28 @@
             </div><!--/.reservation-button-->
         </form><!--/form-->
 
-     </div> <!--/.main-->
+        </div> <!--/.main-->
         <div class="reservation-section-footer ">
            <div class="reservation-section-footer-center ">
-                <img src="/eli/css/images/car-icon.png">
+               <img src="/eli/css/images/car-icon.png">
                 <p class="reservation-footer-text">@lang('messages.homepage_first_title')</p>
                 <img src="/eli/css/images/fly-icon.png">
+                <div class="scroll-down"> 
+                    <button type="button" class="scroll white top">Faire Défiler</button>
+               </div><!--/.scroll-down-->
             </div><!--/.reservation-section-footer-center-->
-            <div class="scroll-down">
-                <button type="button" class="scroll">Faire Défiler</button>
-            </div><!--/.scroll-down-->
         </div><!--/.reservation-section-footer-->
     </section>
 
         @yield('content')
-
+   
     <footer class="footer">
         <div class="footer-inner ">
             <div class="contact ">
                 <p>022 510 14 40</p>
+                <span class="conditionsInit">Conditiones Generales</span>
             </div> <!--/.contact-->
+            
             <div class="footer-image-center">
                 <div class="clients ">
                     <div class="text-center">
@@ -208,6 +208,65 @@
             {!! Form::submit(trans('messages.client_login_button'), array('class'=>'button')) !!}
         {!! Form::close() !!}
     </div>
+    <div id="dialogTerms" style="display:none" title="Conditiones Generales">
+        <div class="row">
+        <div class="col-sm-12">
+
+            <div class="answer">
+                <h4 style="font-family:'Open Sans';font-size:24px;color:#bf1e2d;text-align:center;">@lang('messages.tc_title_1')</h4>
+                <p>@lang('messages.tc_description_1')</p>
+            </div>
+
+            <div class="answer">
+                <h4 style="font-family:'Open Sans';font-size:24px;color:#bf1e2d;text-align:center;">@lang('messages.tc_title_2')</h4>
+                <p>@lang('messages.tc_description_2')</p>
+            </div>
+
+            <div class="answer">
+                <h4 style="font-family:'Open Sans';font-size:24px;color:#bf1e2d;text-align:center;">@lang('messages.tc_title_3')</h4>
+                <p>
+                @lang('messages.tc_description_3')
+                </p>
+            </div>
+
+            <div class="answer">
+                <h4 style="font-family:'Open Sans';font-size:24px;color:#bf1e2d;text-align:center;">@lang('messages.tc_title_4')</h4>
+                <p>
+                @lang('messages.tc_description_4')
+                </p>
+            </div>
+
+            <div class="answer">
+                <h4 style="font-family:'Open Sans';font-size:24px;color:#bf1e2d;text-align:center;">@lang('messages.tc_title_5')</h4>
+                <p>
+                @lang('messages.tc_description_5')
+                </p>
+            </div>
+
+            <div class="answer">
+                <h4 style="font-family:'Open Sans';font-size:24px;color:#bf1e2d;text-align:center;">@lang('messages.tc_title_6')</h4>
+                <p>
+                @lang('messages.tc_description_6')
+                </p>
+            </div>
+
+            <div class="answer">
+                <h4 style="font-family:'Open Sans';font-size:24px;color:#bf1e2d;text-align:center;">@lang('messages.tc_title_7')</h4>
+                <p>
+                @lang('messages.tc_description_7')
+                </p>
+            </div>
+
+            <div class="answer">
+                <h4 style="font-family:'Open Sans';font-size:24px;color:#bf1e2d;text-align:center;">@lang('messages.tc_title_8')</h4>
+                <p>
+                @lang('messages.tc_description_8')
+                </p>
+            </div>
+            
+        </div>
+        </div>
+    </div>
     <!-- MODAL -->
     <script type="text/javascript">
     var windowWidth = self.innerWidth;
@@ -229,6 +288,17 @@
             width: width,
         });
     });
+
+    $('.conditionsInit').click( function() {
+        $( "#dialogTerms" ).dialog({
+            height: height+300,
+            width: width,
+            position: { my: "center center", at: "center center", of: window },
+            open: function() { $.scrollify.update() }
+        });
+        
+    });
+
     $('#datepicker-reservation-1').datepicker({
       dateFormat: "yy/m/d",
       onSelect: function(dateText, inst) {
