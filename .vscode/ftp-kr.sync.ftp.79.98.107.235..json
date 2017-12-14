@@ -231,18 +231,6 @@
                     "files": [
                         {
                             "type": "d",
-                            "name": "vendors",
-                            "size": 0,
-                            "files": [
-                                {
-                                    "type": "-",
-                                    "name": "app.js",
-                                    "size": 4758
-                                }
-                            ]
-                        },
-                        {
-                            "type": "d",
                             "name": "scss",
                             "size": 0,
                             "files": [
@@ -255,30 +243,6 @@
                                     "type": "-",
                                     "name": "style.css.map",
                                     "size": 36302
-                                },
-                                {
-                                    "type": "d",
-                                    "name": "partials",
-                                    "size": 0,
-                                    "files": [
-                                        {
-                                            "type": "d",
-                                            "name": "modules",
-                                            "size": 0,
-                                            "files": [
-                                                {
-                                                    "type": "-",
-                                                    "name": "_module_contact.scss",
-                                                    "size": 869
-                                                }
-                                            ]
-                                        },
-                                        {
-                                            "type": "-",
-                                            "name": "_footer.scss",
-                                            "size": 485
-                                        }
-                                    ]
                                 }
                             ]
                         }
@@ -295,27 +259,7 @@
             "type": "d",
             "name": "resources",
             "size": 4096,
-            "files": [
-                {
-                    "type": "d",
-                    "name": "views",
-                    "size": 0,
-                    "files": [
-                        {
-                            "type": "d",
-                            "name": "layouts",
-                            "size": 0,
-                            "files": [
-                                {
-                                    "type": "-",
-                                    "name": "eli.blade.php",
-                                    "size": 18853
-                                }
-                            ]
-                        }
-                    ]
-                }
-            ]
+            "files": []
         },
         {
             "type": "d",

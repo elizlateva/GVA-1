@@ -149,7 +149,7 @@
                 <p class="reservation-footer-text">@lang('messages.homepage_first_title')</p>
                 <img src="/eli/css/images/fly-icon.png">
                 <div class="scroll-down"> 
-                    <button type="button" class="scroll white top">Faire Défiler</button>
+                    <button type="button" class="scroll white top">@lang('messages.homepage_scroll_down')</button>
                </div><!--/.scroll-down-->
             </div><!--/.reservation-section-footer-center-->
         </div><!--/.reservation-section-footer-->
@@ -161,7 +161,7 @@
         <div class="footer-inner ">
             <div class="contact ">
                 <p>022 510 14 40</p>
-                <span class="conditionsInit">Conditiones Generales</span>
+                <span style="cursor:pointer" class="conditionsInit">@lang('messages.tc_title_main_2')</span>
             </div> <!--/.contact-->
             
             <div class="footer-image-center">
