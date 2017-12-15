@@ -4,7 +4,6 @@
     "password": "Gva123",
     "remotePath": "/",
     "protocol": "ftp",
-    // "port": 0,
     "fileNameEncoding": "utf8",
     "ignoreWrongFileEncoding": false,
     "createSyncCache": true,
@@ -23,5 +22,6 @@
     "closure": {
         "create_source_map": "%js_output_file%.map",
         "output_wrapper": "%output%\n//# sourceMappingURL=%js_output_file_filename%.map"
-    }
+    },
+    "port": 0
 }

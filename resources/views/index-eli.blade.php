@@ -68,21 +68,38 @@
 </section><!--/.service-section-->
     <!-- </div> /.main-content -->
     <section class="parking-service-section">
-        <div class="main-content-inner ">
+        <div class="main-content-inner">
            
-           <p>Nos solutions de parking avec voiturier ou en self-service</p>
+           <h2>Nos solutions de parking avec voiturier ou en self-service</h2>
            
             <div class="parking-service">
-            </div>
+
+               <div class="normal-parking">
+                  <p><span>Self Parking</span> - Déposez votre véhicule à notre parking couvert et rendez-vous à l’aéroport avec notre navette gratuite</p>
+                </div>
+                <p>Avec l’option Self, vous déposez votre véhicule dans notre parking couvert et sécurisé à l’adresse suivante: rue de la Pré-de-la-Fontaine 19, 1242 Satigny. Une navette vous conduira à l’aéroport sans frais supplémentaires. Le trajet dure environ 10 minutes et la navette circule toutes les demi-heures</p>
+            </div><!--/.parking-service-->
+
             <div class="parking-service">
-            </div>
+
+                 <div class="vip-parking">
+                   <p><span>Privilège Parking</span> - Déposez votre véhicule devant nos locaux à l’aéroport et voyagez en toute sérénité</p>
+                </div>
+                <p>Avec l’option Privilège, vous déposez votre véhicule à notre agence à l’aéroport située au World Trade Center 1. Votre véhicule est alors pris en charge par un voiturier. A votre retour, votre véhicule vous attendra au même endroit. Un service rapide et pratique.</p>
+            </div><!--/.parking-service-->
+
+
+            <div class="parking-reservation-button">
+                <button class="parking-button" type="button">@lang('messages.homepage_table_reservation')</button>
+            </div><!--/.parking-reservation-button--> 
 
         </div><!--/.main-content-inner-->
 
 
         <div class="scroll-down"> 
-            <button type="button" class="scroll white">@lang('messages.homepage_scroll_down')</button>
+            <button type="button" class="scroll red">@lang('messages.homepage_scroll_down')</button>
         </div><!--/.scroll-down-->
+
     </section><!--/.parking-service-section-->   
   
 <section class="content-section">

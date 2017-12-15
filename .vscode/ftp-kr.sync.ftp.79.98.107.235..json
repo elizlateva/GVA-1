@@ -235,18 +235,101 @@
                             "size": 0,
                             "files": [
                                 {
+                                    "type": "d",
+                                    "name": "partials",
+                                    "size": 0,
+                                    "files": [
+                                        {
+                                            "type": "d",
+                                            "name": "modules",
+                                            "size": 0,
+                                            "files": [
+                                                {
+                                                    "type": "-",
+                                                    "name": "_module_parkingService.scss",
+                                                    "size": 3437
+                                                },
+                                                {
+                                                    "type": "-",
+                                                    "name": "_module_scrollDown.scss",
+                                                    "size": 1498
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                },
+                                {
                                     "type": "-",
                                     "name": "style.css",
-                                    "size": 36167
+                                    "size": 39304
                                 },
                                 {
                                     "type": "-",
                                     "name": "style.css.map",
-                                    "size": 36302
+                                    "size": 39210
                                 }
                             ]
+                        },
+                        {
+                            "type": "d",
+                            "name": "css",
+                            "size": 0,
+                            "files": [
+                                {
+                                    "type": "-",
+                                    "name": "style.css",
+                                    "size": 29412
+                                },
+                                {
+                                    "type": "d",
+                                    "name": "images",
+                                    "size": 0,
+                                    "files": [
+                                        {
+                                            "type": "-",
+                                            "name": "normal-parking.jpg",
+                                            "size": 4967
+                                        },
+                                        {
+                                            "type": "-",
+                                            "name": "vip-parking.jpg",
+                                            "size": 5586
+                                        },
+                                        {
+                                            "type": "-",
+                                            "name": "normal-parking.png",
+                                            "size": 3682
+                                        },
+                                        {
+                                            "type": "-",
+                                            "name": "vip-parking.png",
+                                            "size": 3029
+                                        },
+                                        {
+                                            "type": "-",
+                                            "name": ".DS_Store",
+                                            "size": 10244
+                                        }
+                                    ]
+                                },
+                                {
+                                    "type": "-",
+                                    "name": ".DS_Store",
+                                    "size": 6148
+                                }
+                            ]
+                        },
+                        {
+                            "type": "-",
+                            "name": ".DS_Store",
+                            "size": 6148
                         }
                     ]
+                },
+                {
+                    "type": "-",
+                    "name": ".DS_Store",
+                    "size": 6148
                 }
             ]
         },
@@ -259,7 +342,20 @@
             "type": "d",
             "name": "resources",
             "size": 4096,
-            "files": []
+            "files": [
+                {
+                    "type": "d",
+                    "name": "views",
+                    "size": 0,
+                    "files": [
+                        {
+                            "type": "-",
+                            "name": "index-eli.blade.php",
+                            "size": 8815
+                        }
+                    ]
+                }
+            ]
         },
         {
             "type": "d",

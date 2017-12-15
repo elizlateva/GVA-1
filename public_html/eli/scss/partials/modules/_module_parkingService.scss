@@ -1,16 +1,125 @@
 /* ------------------------------------------------------------ *\
-    Parking-service-section
+ Parking-service
 \* ------------------------------------------------------------ */
 
 .parking-service-section {
-    background: yellow;
+    background: url(/eli/css/images/background.png) repeat;
     & .main-content-inner {
-        & p {
-            font-size: 20px;
-            font-weight: 500;
-            line-height: 26px;
-            color: $red;
+        width: 90%;
+        margin: 0 auto;
+        & h2 {
+            font-size: 16px;
+            color: $black;
             text-align: center;
+            font-weight: 400;
+            padding: 20px 0;
         }
+        & .parking-service {
+            margin-bottom: 20px;
+            & .normal-parking {
+                background: url(/eli/css/images/normal-parking.png) no-repeat left center;
+                height: auto;
+                font-size: $font-size-13;
+                font-weight: 400;
+                border-bottom: 4px dotted $red;
+                word-break: keep-all;
+                height: 100px;
+                & p {
+                    text-align: left;
+                    margin-left: 100px;
+                    margin-top: 5px;
+                    padding-top: 22px;
+                    color: $red;
+                    word-break: keep-all;
+                    padding: 16px 0;
+                }
+                & span {
+                    font-weight: 600;
+                }
+            }
+            & .vip-parking {
+                background: url(/eli/css/images/vip-parking.png) no-repeat left center;
+                height: auto;
+                font-size: $font-size-13;
+                font-weight: 400;
+                border-bottom: 4px dotted $red;
+                word-break: keep-all;
+                height: 100px;
+                & p {
+                    text-align: left;
+                    margin-left: 100px;
+                    margin-top: 5px;
+                    padding-top: 22px;
+                    color: #bf1e2d;
+                    word-break: keep-all;
+                    padding: 16px 0;
+                }
+                & span {
+                    font-weight: 600;
+                }
+            }
+            & p {
+                font-size: $font-size-13;
+                font-weight: 400;
+                color: $black;
+                margin-top: 10px;
+                line-height: 20px;
+            }
+        }
+    }
+}
+
+.parking-reservation-button {
+    width: 100%;
+    margin: 0 auto;
+    & .parking-button {
+        width: 100%;
+        height: 60px;
+        border-radius: 4px;
+        background: #bf1e2d;
+        border: none;
+        color: $white;
+        text-transform: uppercase;
+        font-size: 16px;
+        margin: 10px 0 0;
+    }
+}
+
+@media #{$tablet} {
+    .parking-service-section {
+        & .parking-service {
+            width: 50%;
+            float: left;
+            overflow: hidden;
+            padding: 10px;
+        }
+    }
+}
+
+@media #{$desktop} {
+    .parking-service-section {
+        padding-top: 5%;
+        & .main-content-inner {
+            width: 980px;
+            & h2 {
+                font-size: 25px;
+            }
+            & .parking-service {
+                width: 49%;
+                margin: 20px 4px;
+                & .vip-parking p {
+                    font-size: 16px;
+                }
+                & .normal-parking p {
+                    font-size: 16px;
+                }
+                & p {
+                    font-size: 16px;
+                }
+            }
+        }
+    }
+    .scroll-down {
+        margin-top: 10px;
     }
 }
